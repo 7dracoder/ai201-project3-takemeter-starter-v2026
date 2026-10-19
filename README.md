@@ -169,20 +169,13 @@ running notebook sections 1–5. Sections 6–7 belong to Unit 6.
 
 ## How I Used AI
 
-**Moment 1:** I asked Codex to help complete the assignment with basic changes.
-It read the instructions and starter files, collected public comments with
-source links, and prepared blank worksheets. The student must still supply
-original criteria and cold labels; AI has not filled those in.
+1. AI helped collect public comments with source links and prepare the labeling
+   and criteria worksheets.
+2. AI suggested two labels and a rule for quoted and rhetorical questions,
+   then created eight practice examples that are excluded from the dataset.
 
-**Moment 2:** Codex proposed a two-label taxonomy, identified quoted and
-rhetorical questions as the difficult boundary, and generated eight synthetic
-boundary examples. Those examples are explicitly excluded from collected data.
-Student review and any resulting definition changes are still pending.
-
-**Pre-labeling disclosure:** The reserved 20 comments have not been labeled
-by AI. No remaining batch has been pre-labeled yet. Sampling comments by a
-question mark is not semantic annotation. Future AI-assisted labels and the
-student's review must be disclosed here when they happen.
+No dataset comments have been AI-labeled. My cold labels, original criteria,
+review of the remaining labels, and training are still pending.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
