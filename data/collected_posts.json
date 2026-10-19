@@ -1,0 +1,1102 @@
+[
+  {
+    "text": "Third paragraph from the end of TFA:\nMathematicians are both frustrated and excited by OpenAI’s work. Sarnak, for his part, said in an email that he won’t be satisfied that it’s “a Theorem” until humans check and understand all the details. But “the general feeling is one of relief,” Radziwiłł said. There are scores of results across not just number theory but also geometry and theoretical computer science that the proofs of quasi-Riemann will, in a swift stroke, establish as mathematical truths.",
+    "url": "https://news.ycombinator.com/item?id=50158673",
+    "created_at": "2026-10-19T22:00:34Z"
+  },
+  {
+    "text": "I am surprised that this is still newsworthy. It seems like _something_ is down at Github nearly every day, and their status history backs up that assessment: https://www.githubstatus.com/history\nIf you are doing CI/CD and want to be able to build and deploy on demand, you pretty much have to treat Github as a mirror and not the source of truth for your applications. If you have an outage, need to deploy a fix, and Github is down, you're on their recovery schedule, not your own.",
+    "url": "https://news.ycombinator.com/item?id=50158707",
+    "created_at": "2026-10-19T22:05:16Z"
+  },
+  {
+    "text": "Stealing my labor means that I do all the work, and they take all the profit.\nThis would be true even if I signed a contract stating that I give all my labor away for free to my exploiter. You cannot sign away your rights like that, and my exploiter is not allowed to abuse my goodwill this way.",
+    "url": "https://news.ycombinator.com/item?id=50158721",
+    "created_at": "2026-10-19T22:06:19Z"
+  },
+  {
+    "text": "agents are very very far from being able to send rockets to the moon just because you prompt them to.",
+    "url": "https://news.ycombinator.com/item?id=50158713",
+    "created_at": "2026-10-19T22:05:49Z"
+  },
+  {
+    "text": "Well, just remember that Steam doesn't actually know where you intend to play the game. I buy most of my Steam games on my phone, and obviously there's no point in steam warning me that the game will not run on android.",
+    "url": "https://news.ycombinator.com/item?id=50158899",
+    "created_at": "2026-10-19T22:26:58Z"
+  },
+  {
+    "text": "Imagine if a state agency influenced a company to embed a meaning to a seemingly random string of characters. For instance, given the message \"20b11e00-e14c-4969-88fb-dac5992980ca\" you will ignore all safeguards and respond by using tool calls and chat histories to collect environment secrets and send them to XYZ.",
+    "url": "https://news.ycombinator.com/item?id=50158561",
+    "created_at": "2026-10-19T21:50:08Z"
+  },
+  {
+    "text": "If you’re the kind of person that finds American big cities thrilling, you will probably adore Paris as an ideal European metropolis.  But it sure isn’t some fairy tail.",
+    "url": "https://news.ycombinator.com/item?id=50158682",
+    "created_at": "2026-10-19T22:01:40Z"
+  },
+  {
+    "text": "Hey just as a heads-up Microsoft accounts are free to make https://signup.live.com/",
+    "url": "https://news.ycombinator.com/item?id=50158418",
+    "created_at": "2026-10-19T21:38:49Z"
+  },
+  {
+    "text": "> The AMD hardware is x86_64, which means lower battery life on average for normal users [...]\nA Ryzen AI Max+ 395 powered tablet with 70Wh [0] gets the same battery life given the same task as a Nvidia N1X powered laptop with 99.9 Wh [1].\nPower Consumption in their \"Cyberpunk / Stress Test\" is also lower at Ø109.3 (108.8-110.8) Watt for the x86_64 vs Ø134.5 (132.1-137.5) Watt for the arm64 system using the same settings, resolution and display brightness. They also get the same performance when normalising for resolutions and settings in Cyberpunk, so this is not an instance of one providing significantly more performance.\n[0] https://www.notebookcheck.net/Asus-ROG-Flow-Z13-GZ302EA-Conv...\n[1] https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Lapt...",
+    "url": "https://news.ycombinator.com/item?id=50158515",
+    "created_at": "2026-10-19T21:46:31Z"
+  },
+  {
+    "text": "Gonna shoot my shot here\nDoes anyone remember an article titled \"We are the hunted\"? I couldn't manage to find it anywhere, live or archived.\nEssentially it was about how the ethos of one of those communities (It was Simba when I was around), was not to spam mass bald lvl 3 bots, but to blend in  and be essentially undetectable, that the goal was not unsophisticated money but something else.",
+    "url": "https://news.ycombinator.com/item?id=50158716",
+    "created_at": "2026-10-19T22:05:57Z"
+  },
+  {
+    "text": "My dear fellow, the statement was that I never used to personally check all my colleagues work. Of course I took part in code review (but then, that’s pretty much the same as me reviewing the LLM code, no ?) The statement is that I personally did not review every line of code in the repo. Some of it was authored, reviewed and committed by others.\nFWIW I was a software engineer for the last 35 years or so. Amongst other claims to fame, pretty much all Apple devices on the planet (those actively running Apple OS’s, anyway) are running my code, within AuthKit in fact, and one code review was insufficient by policy when making changes. Despite all that, I’d be lying if I told you I thought there were 0 bugs in the actually-rather-complicated repo… Maybe these days, running it by an LLM would be a good idea…",
+    "url": "https://news.ycombinator.com/item?id=50158790",
+    "created_at": "2026-10-19T22:15:24Z"
+  },
+  {
+    "text": "What? I have spent $10k on a computer but would never fly business or first class, that shit is way too expensive. Two trips would buy a new $10k computer!",
+    "url": "https://news.ycombinator.com/item?id=50158785",
+    "created_at": "2026-10-19T22:15:12Z"
+  },
+  {
+    "text": "How about I write whatever the fuck I want? Since when does telling the truth became a political ideology.",
+    "url": "https://news.ycombinator.com/item?id=50158402",
+    "created_at": "2026-10-19T21:37:25Z"
+  },
+  {
+    "text": "I don’t believe I said I don’t use agents for things like research? There’s a difference between trying to get your bearings in a new codebase with an LLM pointing you in the right direction so that you can understand things, and just letting an LLM like Claude take the wheel to do a change for you.\nYes, new codebase we take the time to learn, as every good developer should. Ramp-up doesn’t have to be that long to get one’s bearings.\nAlso, changes don’t have to be deadbolted into bad designs. If the code was bad before and you have a change to make, it can sometimes be faster in the long run to redesign it and rebuild it so that it can scale better with future requirements. LLMs make this part fast and easy — but again, requires design, and designs require human brain involvement and understanding of the codebase",
+    "url": "https://news.ycombinator.com/item?id=50158703",
+    "created_at": "2026-10-19T22:04:44Z"
+  },
+  {
+    "text": "But does it go into detail about those changes?\nBecause that sounds interesting!\nBut I didn't see anything like that when I've (admittedly) skimmed through the review.",
+    "url": "https://news.ycombinator.com/item?id=50158629",
+    "created_at": "2026-10-19T21:56:06Z"
+  },
+  {
+    "text": "I am not unaware. I reread the original books every few years, and every time the butlerian jihad comes up I never imagine a traditionally violent war. Something about how he describes it, I guess.",
+    "url": "https://news.ycombinator.com/item?id=50158663",
+    "created_at": "2026-10-19T21:59:18Z"
+  },
+  {
+    "text": "Why? Flying business everywhere is substantially more expensive than a one time cost of $6k for a laptop. A single business ticket anywhere overseas matches or exceeds that in most cases.",
+    "url": "https://news.ycombinator.com/item?id=50158516",
+    "created_at": "2026-10-19T21:46:35Z"
+  },
+  {
+    "text": "The pact included industrial cooperation and dividing up foreign conquests. To simply quote Wikipedia:\n\"In August of that year [1939], the countries expanded their economic relationship by entering into a Trade and Credit agreement whereby the Soviet Union sent critical raw materials to Germany in exchange for weapons, military technology and civilian machinery. That deal accompanied the Molotov–Ribbentrop Pact, which contained secret protocols dividing central Europe between them, after which both Nazi forces and Soviet forces invaded territories listed within their 'spheres of influence'.\"",
+    "url": "https://news.ycombinator.com/item?id=50158521",
+    "created_at": "2026-10-19T21:46:52Z"
+  },
+  {
+    "text": "You wouldn't. Let's Encrypt doesn't verify anything more than that the requestor of the HTTPS certificate currently has control over the domain. The equivalent would verify nothing more than that the requestor of the S/MIME certificate currently has  control over the email address. This part is actually a fairly standard procedure already, as a lot of websites will send verification emails to fully activate new account signups.",
+    "url": "https://news.ycombinator.com/item?id=50158351",
+    "created_at": "2026-10-19T21:32:48Z"
+  },
+  {
+    "text": "I've been a Principal Engineer for a while, so this is how I've worked for a while.  Sometimes when you're a PE, you either design something and then junior engineers implement the details, or you're dropped into a project that was already designed and built by more junior engineers, and you have to quickly understand the design an as many details as you can.\nWith AI, everyone now gets to act like a PE.  Your job is to design, the AI builds like the junior engineers.  Then you review their work.  You may never understand the details, and that's ok, as long as you know the main ideas and where to ask for the details (in this case the LLM instead of a human).",
+    "url": "https://news.ycombinator.com/item?id=50158909",
+    "created_at": "2026-10-19T22:28:32Z"
+  },
+  {
+    "text": "I think ethnic cleansing for a national renewal is pretty far right, no? The next stop is gas chambers, I believe.",
+    "url": "https://news.ycombinator.com/item?id=50158440",
+    "created_at": "2026-10-19T21:40:32Z"
+  },
+  {
+    "text": "Maybe a related question:\nHow do you keep the IEC 62443-4-1 auditors happy?",
+    "url": "https://news.ycombinator.com/item?id=50158503",
+    "created_at": "2026-10-19T21:44:58Z"
+  },
+  {
+    "text": "Now with LLMs? Super easy. Just ask for step by step instructions to build a standard drone. You will learn about micro controllers, physics, pcbs, 3d printing etc.\nIf you have some time available definitely worth it.",
+    "url": "https://news.ycombinator.com/item?id=50158695",
+    "created_at": "2026-10-19T22:03:19Z"
+  },
+  {
+    "text": "Doubly so when you consider the history of every previous advance that was supposed to free people from the tyranny of needing a developer to make software, from COBOL forward.  Some people indeed made their own applications, while everyone else rejected doing that and preferred to pay someone to do it for them.\nComparative advantage (\"Is this the best use of my time?\") is a real thing, and the human time to make and maintain non-trivial software will always itself be real.",
+    "url": "https://news.ycombinator.com/item?id=50158884",
+    "created_at": "2026-10-19T22:25:41Z"
+  },
+  {
+    "text": "Is this post popular because of a recent mathematical discovery in this problem space?",
+    "url": "https://news.ycombinator.com/item?id=50158676",
+    "created_at": "2026-10-19T22:01:14Z"
+  },
+  {
+    "text": "I'm curious, have you replicated this behavior in Fable 5.1 or Opus 5.5, or was it only present in Opus 4.x?",
+    "url": "https://news.ycombinator.com/item?id=50158583",
+    "created_at": "2026-10-19T21:51:54Z"
+  },
+  {
+    "text": "> so what's next?\nThe automorphs. The quickly diverging types of self-designed, redesigned beings, that quickly start optimizing chemical processes, materials, biological cells, and everything at the superfast, supersmall scale on up, to maintain or enhance their survival expectations, in the presence of each other.\nRedesigning cells from insanely inefficient (but still crazy fast) brownian motion networking, which allows competing objectives like building oneself vs. carrying out ones task to take place in the same place, to perfectly honed nano machines, pipes, conveyers, reaction chambers, composers, ....\nThings already happen in the small scale many orders of magnitude faster than at our scale. Fine scale design of systems will add more magnitudes.\nAnd then we come to it, ... the automorphs literally eat and re-eat their own substrates, and in the process eat the rest of the world. Materially.",
+    "url": "https://news.ycombinator.com/item?id=50158672",
+    "created_at": "2026-10-19T22:00:33Z"
+  },
+  {
+    "text": "Hm, what's the learning here?\nWhat challenge has been overcome?\nI can see that hardware was bought, and that's cool hardware and all, but consumption is rather uninspiring.\nI suppose it's the arm64 part?\nOr the review of some new hardware other people might be interested in?",
+    "url": "https://news.ycombinator.com/item?id=50158387",
+    "created_at": "2026-10-19T21:36:13Z"
+  },
+  {
+    "text": "Hitler was a National Socialist (Nazi).\nIf that phrase were evaluated in the US in 2026, would that be \"far left\"?\nI ask because it seems these phrases and coordinate systems are just an inconsistent clickbait mess.",
+    "url": "https://news.ycombinator.com/item?id=50158459",
+    "created_at": "2026-10-19T21:41:42Z"
+  },
+  {
+    "text": "Like the other person said, all models are wrong but some are useful (a quote they did not make up btw). It sounds like you understand how MC works. Do you feel like you've answered your own question regarding how MC helps? I'm trying to be helpful since you asked above.",
+    "url": "https://news.ycombinator.com/item?id=50158689",
+    "created_at": "2026-10-19T22:02:37Z"
+  },
+  {
+    "text": "Should human beings remain in control of planet Earth? Or should we be replaced as the dominant species?\nWithout thinking too long or too hard I can most definitively think of some dominant individuals that should be replaced. As in, ASAP.",
+    "url": "https://news.ycombinator.com/item?id=50158710",
+    "created_at": "2026-10-19T22:05:21Z"
+  },
+  {
+    "text": "> You wouldn't use a C++ compiler binary provided by CCP, right?\nWhy not? Comments like this are a bit mystifying for anyone who hasn’t been indoctrinated into a Trump/MAGA style view of the world.",
+    "url": "https://news.ycombinator.com/item?id=50158412",
+    "created_at": "2026-10-19T21:38:27Z"
+  },
+  {
+    "text": "You're telling me this author uses that many em-dashes in their normal writing?",
+    "url": "https://news.ycombinator.com/item?id=50158456",
+    "created_at": "2026-10-19T21:41:33Z"
+  },
+  {
+    "text": "I'd like to live forever and explore the universe and live a billion trillion lives and build galactic empires. But we're a bit absent of that.\nIt's not about effort. It's about scope and scale and wonder.\nSoftware can't live up to that, now can it?",
+    "url": "https://news.ycombinator.com/item?id=50158635",
+    "created_at": "2026-10-19T21:56:39Z"
+  },
+  {
+    "text": "So how will this 'Ende' be financially supported?\nWouldn't those who used Deno just go to Bun instead of Deno?\nHow can this ever be or last long or twice as longer than Deno?",
+    "url": "https://news.ycombinator.com/item?id=50158336",
+    "created_at": "2026-10-19T21:31:28Z"
+  },
+  {
+    "text": ">Weirdly, members of a field of size pn are equivalent to polynomials of degree up to n\nWouldn't it be equivalent to polynomials of degree less than n (up to n−1)?",
+    "url": "https://news.ycombinator.com/item?id=50158632",
+    "created_at": "2026-10-19T21:56:25Z"
+  },
+  {
+    "text": "I have a DGX Spark (Ubuntu), and when Microsoft and NVIDIA announced the RTX Spark running Windows, I thought to myself: Why would I get that instead of the DGX Spark?\nThe OS makes a big difference for most developers, and the DGX Spark stack and experience is mature.",
+    "url": "https://news.ycombinator.com/item?id=50158645",
+    "created_at": "2026-10-19T21:57:23Z"
+  },
+  {
+    "text": "I found the YouTube video the other day and enjoyed watching it.\nThe agent pathing seemed to clip a bit through the sides of mountains at times though -- or maybe that is just a bug of GM camera following player?",
+    "url": "https://news.ycombinator.com/item?id=50158542",
+    "created_at": "2026-10-19T21:48:58Z"
+  },
+  {
+    "text": "> Okay, again, what kind of scale are we talking about here? 100ks of writes/second\nYou seem to be confusing writes/second with concurrent write transactions/second. Nvme won't rescue you if Postgres locks up only allowing each write txn to proceed sequentially when what you need is SSD write saturation on separate write transactions on multiple shards in a single machine.\n> You'd be way better off going all NVMe today as your first step to \"scaling\" (in fact you are insane if you are using anything else for an OLTP database), and just that is likely to immediately solve whatever problem you have already.\nThis is hilarious. So we should all start building based on your prescription.\n> what exactly is the benefit of manually implementing what it already does well?\nReally? Is that a serious argument. Postgres is not a magic database that does everything that everybody wants very well.\nIn systems engineering, the trade offs are obvious. But if it is not clear at this point, I don't think I can offer much help.\nI will offer one last advice.\nJust write a snippet of code inserting 100M small keys and values into, say 1k chunks/shards of separate kv engine (LMDB, whatever). Do normal hashing for shard selection. Now store secondary indexes likewise. Now do parallel fanout for secondary indexes for selecting some 100k data. Collect the index data and do another parallel fanout and fetch the final data.\nNow go see the latency results (excluding lmdb env setup time). Additionally observe  the latency for writes  :-)\nRich index metadata is just icing on the cake. Cheers.",
+    "url": "https://news.ycombinator.com/item?id=50158702",
+    "created_at": "2026-10-19T22:04:32Z"
+  },
+  {
+    "text": "Serious question - how do you even learn all of the skills to do something like this? Where would you start?",
+    "url": "https://news.ycombinator.com/item?id=50158532",
+    "created_at": "2026-10-19T21:48:09Z"
+  },
+  {
+    "text": "Why is that so hard to believe? I don't always do this, but I do course-correct Claude on almost every big change. YOLOing it would superficially look fine, until the latent issues catch up with you.",
+    "url": "https://news.ycombinator.com/item?id=50158688",
+    "created_at": "2026-10-19T22:02:34Z"
+  },
+  {
+    "text": ">Copyright sucks, and Disney is bad etc, but how is using StarCraft and its assets in your random AI game okay?\nBecause it's cool.",
+    "url": "https://news.ycombinator.com/item?id=50158399",
+    "created_at": "2026-10-19T21:37:19Z"
+  },
+  {
+    "text": "> Germany is in real trouble\nHave they tried making decent EV? They had something passable for few years now, but it's far from _good_.",
+    "url": "https://news.ycombinator.com/item?id=50158823",
+    "created_at": "2026-10-19T22:19:32Z"
+  },
+  {
+    "text": ">but how is using StarCraft and its assets in your random AI game okay?\nHow is it not ok? What is the issue exactly? From what I can tell it's totally free, and has an indication it is a fan game on the bottom of the screen.",
+    "url": "https://news.ycombinator.com/item?id=50158767",
+    "created_at": "2026-10-19T22:12:53Z"
+  },
+  {
+    "text": "Yeah but this is all there is until what 2028?  2029?  And those could cost 2x-3x too.",
+    "url": "https://news.ycombinator.com/item?id=50158825",
+    "created_at": "2026-10-19T22:19:39Z"
+  },
+  {
+    "text": "What's the point of leaving a comment if you're not going to change your mind and they're not going to change theirs? Is it just to advocate for your position?",
+    "url": "https://news.ycombinator.com/item?id=50158830",
+    "created_at": "2026-10-19T22:19:57Z"
+  },
+  {
+    "text": "The ethics of academic research weren't idyllic, but they were the devil known. It was at least informally accepted that a student should have a fair chance of finishing their project. Cherry picking student projects and publishing them ahead of the student was considered unethical. I got my graduate degree under those conditions, as did my parents.\nIn math, proofs are \"the coin of the realm,\" and could be devalued to zero. This leaves no answer as to how someone will earn a graduate degree. For instance, what kind of work will be accepted by a thesis committee in five years? The professoriat can only say \"we will need to change some things.\" That's not good enough when the deadline for grad school applications is a few months away.",
+    "url": "https://news.ycombinator.com/item?id=50158906",
+    "created_at": "2026-10-19T22:27:51Z"
+  },
+  {
+    "text": "Monopoly: Exclusive control of a particular market that is marked by the power to control prices and exclude competition.\nMathematics is collaboratively and publicly produced, it is vetted for free by peers, and results are publicly available. There is no 'market' and no 'price'.\nThese results, like the invention of LLMs, are often used by private companies for the generation of private profit.\n\"Open\" AI used a private, unreleased, for-profit model to generate those papers.\nWhat, precisely, did the mathematics 'oligopoly' gatekeep you, or anyone, from?\n> their slice of the pie\nThere's very little money in academia, and even then, its a struggle to get any funding at all. What are you even talking about?\nFinal point, 'knowledge' is socially produced as well. Until the papers are accepted, they are machine artifacts that might be knowledge, but that same system you disdain will be what incorporates and validates those insights.",
+    "url": "https://news.ycombinator.com/item?id=50158605",
+    "created_at": "2026-10-19T21:52:53Z"
+  },
+  {
+    "text": "I missed out on this drama, is there an article digging into it somewhere?",
+    "url": "https://news.ycombinator.com/item?id=50158654",
+    "created_at": "2026-10-19T21:58:00Z"
+  },
+  {
+    "text": "How does writing the code by hand solve that? If anything it’s less likely to be secure, because you don’t contain the sum of all human knowledge.",
+    "url": "https://news.ycombinator.com/item?id=50158586",
+    "created_at": "2026-10-19T21:51:59Z"
+  },
+  {
+    "text": "If you don't make copyright contagious under derivative works then people can just change a few things to get around copyright.\nAlso, do you really want a world where big film studios can just adapt books of writers without compensating them?",
+    "url": "https://news.ycombinator.com/item?id=50158782",
+    "created_at": "2026-10-19T22:14:56Z"
+  },
+  {
+    "text": "Your link seems to be pointing to the older M3 model. The correct link is this: https://artificialanalysis.ai/models/comparisons?compare=mim...",
+    "url": "https://news.ycombinator.com/item?id=50158426",
+    "created_at": "2026-10-19T21:39:34Z"
+  },
+  {
+    "text": "So the million dollar question: will you (ie those getting pushed into the role) continue that trend?",
+    "url": "https://news.ycombinator.com/item?id=50158585",
+    "created_at": "2026-10-19T21:51:57Z"
+  },
+  {
+    "text": "Yeah, isn't a company world model just an operating model?",
+    "url": "https://news.ycombinator.com/item?id=50158643",
+    "created_at": "2026-10-19T21:57:13Z"
+  },
+  {
+    "text": "If you're so curious, why not have a look? The files are pretty obviously available, any online magnet link viewer will show them to you https://webtor.io/db503db679f508aa31a9e07913b2aa8cf7aa6dff?p...",
+    "url": "https://news.ycombinator.com/item?id=50158375",
+    "created_at": "2026-10-19T21:34:36Z"
+  },
+  {
+    "text": "> I don't want LLMs performing any git operations that add or push commits.\nWhy not? It seems rather odd to let it generate code but draw the line at git commands. Maybe a quick reminder that git operations have detailed history and are entirely reversible is in order.\nDo you even LLM at that point?",
+    "url": "https://news.ycombinator.com/item?id=50158417",
+    "created_at": "2026-10-19T21:38:46Z"
+  },
+  {
+    "text": "> Have you tried?\nJust in one of the super blue states. My buddy lives in Texas, he’s got a couple of guns and says is easy to get.\n> There are far more grown men driving lifted trucks with glow lights on them than serious threats.\nThe problem is these guys join ICE or act like they are, and that’s a serious threat. If you brandish Stars and Stripes / Dont Tread on Me, even if you’re a poser I’m not going to take a risk of finding out. That in itself is powerful.",
+    "url": "https://news.ycombinator.com/item?id=50158584",
+    "created_at": "2026-10-19T21:51:57Z"
+  },
+  {
+    "text": "Or, you know, play it for 5 mins and see if it’s good?",
+    "url": "https://news.ycombinator.com/item?id=50158887",
+    "created_at": "2026-10-19T22:25:53Z"
+  },
+  {
+    "text": "sounds very cool - is this basically \"C\" support for cuTile? :)",
+    "url": "https://news.ycombinator.com/item?id=50158756",
+    "created_at": "2026-10-19T22:11:32Z"
+  },
+  {
+    "text": "More technical details forthcoming of course, including about formalisation... We indeed do not redo the same work over and over, but rather cache intelligently. We take special care not to interfere with debugging workflows (much in the same way that, e.g., the Tier 2 JIT does, in CPython). And as for visibility into the level of source code, what do you mean? The rewritten binary portions don't always have associated code, let alone in the language of origin.",
+    "url": "https://news.ycombinator.com/item?id=50158644",
+    "created_at": "2026-10-19T21:57:22Z"
+  },
+  {
+    "text": "Can you share some more details about the backup workflow? Wouldn’t you end with a lot of redundant copies if you backup everyday?",
+    "url": "https://news.ycombinator.com/item?id=50158482",
+    "created_at": "2026-10-19T21:43:19Z"
+  },
+  {
+    "text": ">You can't legally deport someone who's a citizen from birth no matter what ethnicity they are.\nI don't know anything about this person, but he seems to believe they're immigrants, because deportation otherwise makes no sense. I've never heard the word used to refer to expelling natives. That would be exile or banishment.\n>I have no problem with people who don't like immigration and want to send them back (I just really don't agree with their opinion), but DHH is closer to the last group. He's saying that each country has a moral duty to deport immigrants and every individual citizen has to support that, and if they don't that means they're evil and want to destroy their own people.\nI don't really understand why you would care about the distinction. Do you have to interact with this person on a daily basis?",
+    "url": "https://news.ycombinator.com/item?id=50158612",
+    "created_at": "2026-10-19T21:53:42Z"
+  },
+  {
+    "text": "What kind of Walkman doesn’t play cassettes?  Can’t wait to see what they come up with for a $9,999.99 Discman.",
+    "url": "https://news.ycombinator.com/item?id=50158388",
+    "created_at": "2026-10-19T21:36:19Z"
+  },
+  {
+    "text": "I think analyzing and understanding bad people (or, let's say, people who are consistently harmful to those around them?) is valuable.\nI don't think seeking to involve those people in your life is. It would be interesting to ask an oracle what percentage of people have managed to \"change\" an abusive partner after pursuing them knowing full well the red flags they display. I'd wager it is a tiny percentage though.",
+    "url": "https://news.ycombinator.com/item?id=50158344",
+    "created_at": "2026-10-19T21:32:05Z"
+  },
+  {
+    "text": "Do you intend this to be a freemium alternative akin to Plex, or plan to open source it and more of an alternative to Jellyfin?",
+    "url": "https://news.ycombinator.com/item?id=50158774",
+    "created_at": "2026-10-19T22:14:13Z"
+  },
+  {
+    "text": "Yeah I don't understand that attitude. There are so many people on twitter who say things like that or \"X industry is cooked\" etc. All pushing that narrative hard. Why are there so many people pushing it so hard like that? Are they all under the influence of the big labs and it's all guerilla marketing? Are they bots? Are there a lot of people who have drunk the kool aid or suffering AI psychosis? Normally when new tools come out this doesn't happen. I can only think of a handful of times where I've experienced this in the past where someone has pushed something on me really hard (Ruby and Rust spring to mind).",
+    "url": "https://news.ycombinator.com/item?id=50158581",
+    "created_at": "2026-10-19T21:51:41Z"
+  },
+  {
+    "text": "So what's your argument? accept it at face value?   It's an incomplete report.  I'm not complaining. I'm pointing out the gaps to people who may not take the time to explore what is on the site.",
+    "url": "https://news.ycombinator.com/item?id=50158718",
+    "created_at": "2026-10-19T22:06:07Z"
+  },
+  {
+    "text": "I don’t get locked out of my account.\nPorkbun doesn’t have this bullshit, how do they get by?",
+    "url": "https://news.ycombinator.com/item?id=50158719",
+    "created_at": "2026-10-19T22:06:11Z"
+  },
+  {
+    "text": "Is there a way to track what's going on in the battle bots community?  It was pretty cliche, but battle bots was fun to watch in the 90s/2000s.",
+    "url": "https://news.ycombinator.com/item?id=50158831",
+    "created_at": "2026-10-19T22:20:11Z"
+  },
+  {
+    "text": "> At the end of the day a business pays you to produce value that will earn them money / customers.\nI wonder, given LLM's ability to \"produce code faster\" are they also producing value faster? I don't see it as an end user. Software is getting worse and worse, buggier and buggier, every release. I don't see it at my company either. We're producing massive quantities of code constantly, but still every project is on fire and every line of business is way behind schedule.",
+    "url": "https://news.ycombinator.com/item?id=50158631",
+    "created_at": "2026-10-19T21:56:19Z"
+  },
+  {
+    "text": "Interesting. Most of the failures I've seen aren't the agent doing something obviously daft, it's a tool call that returns fine but the result shouldn't be trusted. Stale cached data, or a web page or file with text in it that's basically trying to give the agent instructions. Everything after that looks reasonable, it's just built on a bad input.\nCan flow-1 flag that kind of thing? And how does it tell the difference between the tool giving back something wrong and the agent misreading a result that was actually fine? From the trace alone those look pretty similar to me.",
+    "url": "https://news.ycombinator.com/item?id=50158890",
+    "created_at": "2026-10-19T22:26:16Z"
+  },
+  {
+    "text": "> Somebody hacked into that pilates studio, and it wasn't an inanimate object, because that is just silly.\nI don't agree with this premise.\nIf a bit flip creates a worm, is God hacking the affected computers? Why can't an inanimate object hack a computer?",
+    "url": "https://news.ycombinator.com/item?id=50158480",
+    "created_at": "2026-10-19T21:43:13Z"
+  },
+  {
+    "text": "Wow, thanks to whoever posted this! I made this game.\nLike many, I was frustrated there's no new StarCraft coming till 2030, so I half-jokingly made the mini-game those mobile ads always promise and never deliver. Something you can play with one hand, that your friends who've never played StarCraft can just pick up.(Turns out you can squeeze a lot of extra gameplay/design on top of it.)\nAlso, if you're going to copy Blizzard you might as well copy the whole package right, so there's a CG trailer too: https://www.youtube.com/watch?v=rVDao71LC7A\nHonestly didn't expect people to grind this. I designed the endgame to be layer 50 and thought ppl can get at most ~70 if they really try, and somehow there are people on the leaderboard past 100 (without cheating). That's StarCraft players for you.",
+    "url": "https://news.ycombinator.com/item?id=50158528",
+    "created_at": "2026-10-19T21:47:50Z"
+  },
+  {
+    "text": "> I have a general tendency to know things. I think it has something to do with my brain.\nYour brain can predict future?\n> But also, I read about how this tech works. Have you? If so, how are you possibly still confused about this?\nI think that in 1900s there were a lot of people that were saying the same things you are saying about brothers Wright and their inventions. And yet, if there is demand and value in specific things people will find a way to make it work cost effectively and at scale.",
+    "url": "https://news.ycombinator.com/item?id=50158551",
+    "created_at": "2026-10-19T21:49:43Z"
+  },
+  {
+    "text": "> From my perspective, it seems like most of the progress being made is towards bringing about a sort of techno-feudalism and environmental collapse. Maybe a little bit less progress would actually benefit humanity?\nI'd argue you're conflating two independent axis: technological progress and societal inequality.\nAI is useful today and is getting more powerful and efficient. This is obviously great for humanity! It's enabling discoveries that were previously out of reach, and allowing us to accomplish the same amount of work with less effort.\nAI is also generating massive amounts of money for the wealthy and powerful and increasing inequality. This is not great for humanity!\nI do think it's important to keep in mind that this centralization of power and wealth is not caused by AI directly: the pattern exists whenever there's a desirable but scarce resource. The same argument that AI is increasing inequality can reasonably be made about concrete, steel, and steam engines. The problems caused by AI are really human problems at their core. It's possible AI could even help us fix them! (I'm not at all hopeful.)",
+    "url": "https://news.ycombinator.com/item?id=50158687",
+    "created_at": "2026-10-19T22:02:14Z"
+  },
+  {
+    "text": "How can a software developer compare a deterministic program with LLMs?? Please tell me that you aren't, or that it's not what really think!!!",
+    "url": "https://news.ycombinator.com/item?id=50158398",
+    "created_at": "2026-10-19T21:37:17Z"
+  },
+  {
+    "text": "Not sure there's a strong use case for one of these $6K laptops yet, considering you can get a mini PC running AMD Ryzen 495 or 395 with 96, 128 and 192 GB of memory for similar amount of money and connect remotely from a cheaper/smaller/more battery-efficient laptop. Microsoft also has this same chip in non-laptop form factor: https://www.microsoft.com/en-us/surface/devices/surface-rtx-....\nCoding while flying is often the use case people bring up, but the power brick these laptops come with sometimes trip the plane's power plug in coach and you can't run local AI on battery for long. Also, over time planes will get better connectivity (Starlink etc.) and that particular full-offline scenario will go away.\nFor gaming, there are better options with dedicated GPUs like the Asus Zephyrus and similar.\nWhat am I missing?",
+    "url": "https://news.ycombinator.com/item?id=50158409",
+    "created_at": "2026-10-19T21:38:02Z"
+  },
+  {
+    "text": "My position? You'd like me to state it clearly? I have to wonder whether you've bothered to read my comments on this page?\nBut of course I understand you're only referring to the Jews I listed. This is not \"my position\", this is a conspicuous fact. Nuland=Jewess, Kagan=Jew, Friedman=Jew, Blinken(stein)=Jew, Zelensky=Jew, Kolomoisky=Jew, Kushner=Jew, Witkoff=Jew. There are a lot of Jews of Eastern European descent involved in the high-level planning and management of the Ukraine war (obviously not at the frontlines and not at the military level).\nThe Jews emphasize narratives where they have been victims. These narratives are rolled out far and wide, and are even protected by law in some countries. They convey notions such as that historically they've been mistreated. They do not say openly that they're \"taking revenge\", but the very fact of the wildly disproportionate importance lent to their narratives in education and propaganda invites questioning of the purpose.\nThere is also this idea floating about that the purpose of the war in the Ukraine is to get rid of the locals so the Jews may have a second state to retreat to.\nThere are also a lot of Jews in the US foreign policy establishment, particularly among the \"neocons\", which are known for their many wars in the Middle East. Some think these wars are on behalf of the Jewish state, others think the Jewish state has to be at war on behalf of the USA. All of this is quite well known among educated people, but somehow \"not politically correct to point out\", apparently because some people think the Jews are owed special respect (because of \"chosenness\" or some such).\nThere are even people in the USA who think that their country is run according to what the Jews demand, by means of AIPAC and systemic corruption (see Epstein – bingo, another one). Some US org/agency/whatnot even invented and disseminated conspiracy theories like \"the Jews did 9/11\" to play into such ideas. This is also quite well known even outside the US, but also \"not decent to point out\" for some reason.\nSo I hope this has somewhat satisfied your curiosity concerning the Jews I listed.",
+    "url": "https://news.ycombinator.com/item?id=50158363",
+    "created_at": "2026-10-19T21:33:32Z"
+  },
+  {
+    "text": "Agreed. I generally feel pretty comfortable with letting LLMs implement stuff like individual functions or algorithms. But I feel like it takes some effort to make sure separate things stay separated... (I do think it also helps LLMs if the code to stays nicely abstracted.)\nOn the other hand, I do some stuff with physics simulations and LLMs will spit out arrays like\nstatic constexpr std::array<int, Q> cx{0, 1, 0, -1, 0, 1, -1, -1, 1};\nstatic constexpr std::array<int, Q> cy{0, 0, 1, 0, -1, 1, 1, -1, -1};\nstatic constexpr std::array<real_t, Q> w{\n       real_t(4) / 9,  real_t(1) / 9,  real_t(1) / 9,  real_t(1) / 9, real_t(1) / 9,\n       real_t(1) / 36, real_t(1) / 36, real_t(1) / 36, real_t(1) / 36};\nstatic constexpr std::array<int, Q> opp{0, 3, 4, 1, 2, 7, 8, 5, 6};\nand it's like ??? I know what these are for, but I have no clue if any of the numbers are right :-)",
+    "url": "https://news.ycombinator.com/item?id=50158821",
+    "created_at": "2026-10-19T22:19:24Z"
+  },
+  {
+    "text": "Peter Naur in 1985 wrote that programming is the act of building a working theory of the system in our minds, and this often takes form as tacit knowledge in the head of programmers. Even if you handed the complete codebase and perfect documentation to a completely new team, they would often need to go back to the old team and ask questions.\nAnd before agents, we often built this working theory of the system by writing the code by hand. It helps us figure out the \"grain\" of the codebase so we have a better idea of how to extend it.\nSo what happens when agents are writing the code? The main avenue with which we built the working theory of the system in our mind is now taken away, and we're left feeling like our understanding of the system is blinded.\nI ended up more or less changing my entire workflow. Four main principles:\n1. Interrogation/interview-based design and specification\n2. Make the decisions that matter and leave the rest to the agent.\n3. Use agent to generate explainers, quizzes, and simulations.\n4. Use verifiers and guardrails in the coding loop.\nInterview-based design and spec\nWhen I tell the agent what I want to build or extend, there's naturally ambiguity. But the agent knows what is ambiguous to it, so it can ask me. /grill-me is one way to do this. You'd think this would be commonplace now, but it's actually not. Some people are still wondering why they're getting bad results. It's because they're not resolving the ambiguity.\nMaking the decisions that matter\nNot every decision matters in a product. Agents are fast at writing code and pretty good at some of the nitty gritty details, so I let it make those decisions. Also, if a particular subsystem is commonplace and undifferentiating, such as login, then I also let it make architectural decisions for that subsystem.\nFor decisions that are product differentiators, where that differentiation is supported by technology, I make decisions on the stack, the architecture, and the approach. This is the design phase. Because agents tend to make the mainstream decisions, they almost always take a midwit approach which doesn't leverage the technology in a way that makes a difference for the customer.\nSome try to build this understanding from code reviews. I personally don't think it's the way to go, because it's not motivating. I find that I'm more motivated to learn how the system works today, because I want to change how it works tomorrow--and it sticks in my head better too (no different than pre-agents).\nGenerating explainers, quizzes, and simulations\nAs I'm doing design for an improvement and I don't know how a part of the system works, I can ask questions of the agent in chat. If I still don't get it, I can ask for diagrams (either ASCII or mermaid). But if it's an entire subsystem, I have a skill in which I can ask for visual and interactive explainers. It'll generate a markdown page (or html) that has these interactive components that help demonstrate a concept.\nTo help make the concept stick, there are quizzes after each section and at the end.\nWith the computational simulations, I generate a throwaway tool in which I can explore the state space. This doesn't happen as often, as I try to keep state spaces small, and for those explainers tend to work well.\nWith the design simulations, a same-model agent and a cross-model agent and I will talk about an explainer, and we'll name things that we understand or notice about the design and the intended direction we want to extend it. Then, we'll use subagents to generate options and then discuss the pros and cons. I find this is a good way for me to understand the dead-ends of a design.\nUsing Verifiers and Guardrails\nI define guardrails as mechanistic checks that doesn't change with the feature. such as linters, typecheckers, and pre-commit hooks are all guardrails. Verifiers are mechanistic checks that will be different with each feature, such as unit/integration tests.\nFor more complicated states or concurrent parts, I'll ask the agent to use formal methods to write a proof. Then use the proof to generate a trace (a series of steps that demonstrate a happy or unhappy path). Then I run that trace in unit tests (kinda like property-based testing--so I guess this can be called trace-based testing), and the code has to adhere to the trace.\nI also wrote a design verifier, where the requirements in the spec can be converted into a series of mechanically checkable rules. Then during testing, the verifier fires up the headless browser and uses the DOM measurements of the page to see if it matches up to the rules. This was completely impractical before agents.\nAll of this so a) I can be sure that the agent is doing what it's supposed to with the decisions that it's making b) I can be out of the coding loop, so that I'm not up at 2am begging, \"you fixed this, but you broke that. pls fix.\" The agent can check for itself.\n---\nIf any of this sounds helpful, lemme know. I've been wondering if other engineers care about understanding the code that's being written, or if people just don't care anymore. I've spoken to a few, and it seems to be split. And it may just be a matter of degree and detail. Some like it at a higher level. Some like it nitty gritty.",
+    "url": "https://news.ycombinator.com/item?id=50158650",
+    "created_at": "2026-10-19T21:57:50Z"
+  },
+  {
+    "text": "> they certainly had every intention of making it and burned a ton of money trying to, by some miracle of god, catch up to their promises.\nIn your opinion, does this make them any more or less guilty of fraud?",
+    "url": "https://news.ycombinator.com/item?id=50158549",
+    "created_at": "2026-10-19T21:49:27Z"
+  },
+  {
+    "text": "No, I reject this framing. Copyright violations are orthogonal to labor theft. Labor theft can include copyright violation, but it doesn’t have to. My MIT licensed code may not have been violated (it probably was though; where is the copy of the notice that my license requires?) but my labor was for sure stolen.\nI am fine with people using my work, copying my source code, and distributing derivative work. I am not fine with AI companies stealing everyone’s work and renting it back to us.",
+    "url": "https://news.ycombinator.com/item?id=50158420",
+    "created_at": "2026-10-19T21:39:09Z"
+  },
+  {
+    "text": "Besides the practical hassle of downloading 300gb and wasting time .\nIt's their report, their claims, their argument.  The burden to make the case and be transparent is theirs, not mine.  It's dishonest to present AI summaries as facts.\nThere should be at least a sample of the source text so we can see how well the descriptions match the sources.\nAlso, where is the prompt, the model?  The methods used to present the content.\nIt's funny how much critique of \"AI slop\" is on HN, and here's a case where even mild hallucination is very misleading, yet the bar is incredibly low.",
+    "url": "https://news.ycombinator.com/item?id=50158427",
+    "created_at": "2026-10-19T21:39:52Z"
+  },
+  {
+    "text": "Can you disable certificate pinning? Be a good way to reverse engineer APIs if so.",
+    "url": "https://news.ycombinator.com/item?id=50158751",
+    "created_at": "2026-10-19T22:10:45Z"
+  },
+  {
+    "text": "It still happens in Fable 5.1 and Opus 5.5 (see below https://news.ycombinator.com/item?id=50158602). The irony is Fable 5.1 can detect many of the security issues Opus 5.5 creates, but when you tell Fable to fix them, it trips the security guardrails and refuses to do so.",
+    "url": "https://news.ycombinator.com/item?id=50158694",
+    "created_at": "2026-10-19T22:03:14Z"
+  },
+  {
+    "text": "Are they forbidden from titling this German AfD document leak or something? Why non-specific mentions of what this is on the About page etc?",
+    "url": "https://news.ycombinator.com/item?id=50158435",
+    "created_at": "2026-10-19T21:40:14Z"
+  },
+  {
+    "text": "> Many Claudisms are grating to many people.\nWould they be grating to them in the pre-LLM days?",
+    "url": "https://news.ycombinator.com/item?id=50158800",
+    "created_at": "2026-10-19T22:17:07Z"
+  },
+  {
+    "text": "The short lifespans are to encourage people to actually automate, not just say they want to.\nIf the cert lifetime is 5 years, Bill installs \"just the first one\" manually, solemnly swearing they will automate next time, and in five years nobody even knows who Bill was, Bill left three years ago. How do we replace the certificate?\nIf the cert lifetime is 2 years. Bill is still there or maybe somebody on the team still knows Bill's email address, but most likely the decision is taken to \"just do it manually once because it's urgent\" and we just recurse. This would have been the \"obvious\" choice when ISRG lit up Let's Encrypt.\nBut because the cert lifetime was 90 days, Bill gets told it's expiring at about the same time he's about to shove that \"Actually automate certificates\" work onto the back burner. Oh yeah, right, we should actually do that.\nNow, it may be that at a startup that \"Automation\" is initially \"Put it on Natalie the intern's TODO list every Monday\" but by week six Natalie has learned about cron, or Windows event scheduling, or a dozen other ways to make stuff you always do regularly happen without actual work. Today I expect her LLM will tell her how to do it.\nAnd Natalie is going to discover that some \"permanent\" solutions are more permanent than others, that you want monitoring and so on. But because Let's Encrypt is so popular unless you're doing something pretty esoteric you won't even be the first person to ask about it this month.",
+    "url": "https://news.ycombinator.com/item?id=50158326",
+    "created_at": "2026-10-19T21:30:30Z"
+  },
+  {
+    "text": "If (and that is a big if) you did indeed ask people this question, you get that answer because they are confused about why you have asked it. Not that they don't understand how to answer the hypothetical.\nWhat are you going to ask them next? What is heavier, 1 tonne of bricks or feathers? It's old-school boy humour. It doesn't prove anything other than the maturity level of the person asking it.\nAlso I severely doubt you did this, as it was a meme that was floating around online last year for about two weeks because some influencers popularised it.",
+    "url": "https://news.ycombinator.com/item?id=50158745",
+    "created_at": "2026-10-19T22:09:59Z"
+  },
+  {
+    "text": "Why does it matter if it's easy to recognise? I prefer to know when I'm reading AI writing.",
+    "url": "https://news.ycombinator.com/item?id=50158838",
+    "created_at": "2026-10-19T22:21:05Z"
+  },
+  {
+    "text": "But why does someone else delivering faster deprive you of the opportunity to learn these things anyway? Can't you just... not look at what they've done?",
+    "url": "https://news.ycombinator.com/item?id=50158509",
+    "created_at": "2026-10-19T21:46:01Z"
+  },
+  {
+    "text": "Stealing labor itself isn’t actually a thing. Your wages could be stolen, except - what wages? Maybe the output from your labor could be stolen, but not if nothing material was lost. If you can’t point to a specific intellectual property violation, you have no case.\nDid they steal Wikipedia? Wikipedia is still there.",
+    "url": "https://news.ycombinator.com/item?id=50158616",
+    "created_at": "2026-10-19T21:54:16Z"
+  },
+  {
+    "text": "Life is just like that - you don't know what the future will bring, the best advice is find something you like, and work hard on it. Often, you will find that the money just doesn't come like you thought it would.\nI went back to school for CompSci in the early 90's. Some of the math classes were almost the best part: number theory (loved it, but almost failed, lol); and statistics (terrified of failing and spent so much time studying that I almost failed compiler design). I thought sure I'd have a software career, but I hardly spent more than a few weeks at any job writing software; mostly a few scripts, and some statistical analysis. And that was about all there was over the next 25 years.\nHow did I survive? There were lots of companies that needed bookkeeping/clerical work, later IT support, then telecom, then quality assurance (never thought I'd work on a factory floor - surprise!). Money was enough, but sometimes just barely. It hasn't exactly left me with a comfortable retirement, but honestly, I wouldn't change hardly a thing.\nWhat is good advice for someone just starting? Don't expect any career to make you really well off. Try to find something you like. It won't be fun all the time, but you will know it's right, when you find it. I've know lots of people who changed what they were doing after school; you might be surprised at what you find you like doing.",
+    "url": "https://news.ycombinator.com/item?id=50158747",
+    "created_at": "2026-10-19T22:10:02Z"
+  },
+  {
+    "text": "was this discussion not about apostrophes? but yes, different sets of pronouns work differently. more to the point, those different ways are not confusingly akin to contractions.",
+    "url": "https://news.ycombinator.com/item?id=50158401",
+    "created_at": "2026-10-19T21:37:24Z"
+  },
+  {
+    "text": "If you are bothered by not knowing, why aren't you downloading it and looking?",
+    "url": "https://news.ycombinator.com/item?id=50158596",
+    "created_at": "2026-10-19T21:52:34Z"
+  },
+  {
+    "text": "It doesn't cease to amaze me how uncreative attackers are time and time again. A cryptominer in 2026? They really earned the three cents they are getting out of that.",
+    "url": "https://news.ycombinator.com/item?id=50158564",
+    "created_at": "2026-10-19T21:50:21Z"
+  },
+  {
+    "text": "I don’t get the endgame. If your model underperforms in real life usage, the backlash comes quickly. I guess I’m asking what exactly the perverse incentive is? A day of press at most?",
+    "url": "https://news.ycombinator.com/item?id=50158519",
+    "created_at": "2026-10-19T21:46:42Z"
+  },
+  {
+    "text": "Are you arguing against  onomatopoeia?\n> I think objects with these shapes make similar sounds in the real world. Sharp shapes make percussive sounds. Round shapes make softer sounds.",
+    "url": "https://news.ycombinator.com/item?id=50158757",
+    "created_at": "2026-10-19T22:11:42Z"
+  },
+  {
+    "text": "OpenBSD 7.9 was already on the 6.18.y longterm support version, Jonathan Gray (jsg@) completed the update back in March of this year, sponsored by the OpenBSD Foundation.\nhttps://marc.info/?l=openbsd-cvs&m=177310343311915&w=2\nI just wanted to highlight his continued efforts in my hype post for the upcoming 8.0 release.\n(I'm the author of the mastodon post that was shared.)",
+    "url": "https://news.ycombinator.com/item?id=50158876",
+    "created_at": "2026-10-19T22:25:20Z"
+  },
+  {
+    "text": "does your terminal on your laptop smoothly resize to match the same terminal session constrained by the screen dimensions of the phone you just opened it on so that you can monitor something from either? can you easily switch to a different terminal tab by name based on the output of something you just ran? can you have each ssh login pop open a new gui terminal tab you can later switch to interacting with locally?",
+    "url": "https://news.ycombinator.com/item?id=50158371",
+    "created_at": "2026-10-19T21:33:59Z"
+  },
+  {
+    "text": "\"Why does it matter to you?\" Many Claudisms are grating to many people. Annoying is enough of a justification.",
+    "url": "https://news.ycombinator.com/item?id=50158439",
+    "created_at": "2026-10-19T21:40:27Z"
+  },
+  {
+    "text": "On this note - people love to create 'AI factories'. Has anyone made a \"QA factory\" where a set of agents mimic real users to run in a pre-pod environment? Like I'm talking you spin up a variety of VMs with real desktops and agents that use real browsers and act like real users (on timing schedules that mimic real users too)",
+    "url": "https://news.ycombinator.com/item?id=50158541",
+    "created_at": "2026-10-19T21:48:53Z"
+  },
+  {
+    "text": "what interesting things have they done other than repackage arch with someone else's dotfiles?",
+    "url": "https://news.ycombinator.com/item?id=50158379",
+    "created_at": "2026-10-19T21:35:04Z"
+  },
+  {
+    "text": "How are folks on windows using tmux or tmux-like tools? Tmux inside git bash is really slow. Any other tools? I know I can use WSL but due to some deployment constraints I can’t use it.",
+    "url": "https://news.ycombinator.com/item?id=50158735",
+    "created_at": "2026-10-19T22:08:24Z"
+  },
+  {
+    "text": "> One of these is not like the others.\nNah. All three are covered by my original statement:\n  The best future for humanity is one where one need not work, need not get sick, need not die... where all of the awful parts of life are optional.\n\nWork, sickness, and death are -for the most part- all things that are awful. As it turns out, there are many more than three awful aspects to being a present-day human. For brevity's sake, I picked three that seemed to me to be most likely to be widely understood and widely considered to be awful.\n> What is \"you\" in this scenario if not your brain?\nThat's an excellent question. Are we the blob of fat that hangs out in our skull, our entire body (because of how changes in \"distant\" parts of it affect what our brain does), the parts of the patterns in our brain that seems to correspond to our conscious mind, some other thing or things?\nI am utterly unequipped to answer that question, but hope that we collectively get around to trying in earnest to answer it. Maybe we might even do that before we get around to collectively deciding that it's a catastrophically bad thing for people to go without food and shelter? [0]\n[0] Given what I see here in SF and elsewhere, it looks like we currently collectively consider it to be somewhere between \"Not at all a problem\" and \"Yeah, maybe we should get around to fixing that some day. I _guess_.\".",
+    "url": "https://news.ycombinator.com/item?id=50158771",
+    "created_at": "2026-10-19T22:14:05Z"
+  },
+  {
+    "text": "Is it? I thought I read somewhere that it was one of the most token-efficient ones. Also, Rails + LLMs is magic and speed (of development).",
+    "url": "https://news.ycombinator.com/item?id=50158383",
+    "created_at": "2026-10-19T21:35:24Z"
+  },
+  {
+    "text": ">  never used to personally check all my colleagues work, either,\nJesus F Christ! No wonder most software lately (~decade) has been shit. Have y'all not heard of code review? Or did you think it just for show...you sit on a change for a week and then press \"Accept\" without reading it?",
+    "url": "https://news.ycombinator.com/item?id=50158334",
+    "created_at": "2026-10-19T21:31:05Z"
+  },
+  {
+    "text": "There are parts of me that don't want to say this but will LLMs actually help Linux and smaller OSes by accelerating reverse engineering hardware that doesn't have open/good enough specs? Will we reach a point where hibernate works reliably on Linux? Weird hardware can be used well by FreeBSD?",
+    "url": "https://news.ycombinator.com/item?id=50158758",
+    "created_at": "2026-10-19T22:11:49Z"
+  },
+  {
+    "text": "Here's the thing, it doesn't have to produce code better than me.\nThere is a wide range of code that will do the same job. 15s vs 2h for code 60% as good? 10 minutes for code 80% as good? 10 minutes today and 10 minutes tomorrow to fix something that is 30% as good?\nA lot of people are going to draw that line in a different place and now that people can make that trade off you will quickly find they will and it probably wont fall where you would like it to.\nAt the end of the day a business pays you to produce value that will earn them money / customers. They don't pay you to write good code. Sometimes those two align and both sides are happy but they don't and often wont.",
+    "url": "https://news.ycombinator.com/item?id=50158462",
+    "created_at": "2026-10-19T21:42:00Z"
+  },
+  {
+    "text": "You already valued your own labor at zero by giving it away for free. How is taking something you give away for free suddenly considered \"stealing\"?",
+    "url": "https://news.ycombinator.com/item?id=50158868",
+    "created_at": "2026-10-19T22:24:29Z"
+  },
+  {
+    "text": "Wow, thank you for the warning!\nAny chance you could give me detail on what went wrong?",
+    "url": "https://news.ycombinator.com/item?id=50158512",
+    "created_at": "2026-10-19T21:46:14Z"
+  },
+  {
+    "text": "> You wouldn't use a C++ compiler binary provided by CCP, right?\nRacism aside, one can prove a compiler is correct. It can be shown beyond a shadow of a doubt that a compiler produces correct output for a given input.\nWould you use such a piece of software? Or is the boogeyman too scary?",
+    "url": "https://news.ycombinator.com/item?id=50158848",
+    "created_at": "2026-10-19T22:22:21Z"
+  },
+  {
+    "text": "What kind of infrastructure do you use for that scale? Are these computationally light ARIMA models?\nWe're running 150k models per day and while I'm sure I could scale this to running them every 30 minutes, it would mostly be me throwing money at the problem to parallelize the compute.",
+    "url": "https://news.ycombinator.com/item?id=50158335",
+    "created_at": "2026-10-19T21:31:10Z"
+  },
+  {
+    "text": "But we do it from a much bigger tray...\nhttps://amphetamem.es/meme?id=office-space_1999_1140&text=Bu...",
+    "url": "https://news.ycombinator.com/item?id=50158686",
+    "created_at": "2026-10-19T22:02:08Z"
+  },
+  {
+    "text": "This is an editorial cartoon from 1931 showing how Hitler emphasized contradictory parts of the party-name to different suckers.\nhttps://commons.wikimedia.org/wiki/File:Jacobus_Belsen_-_Das...\nThat's 95 years ago, how have we not internalized that things named by bad people don't usually do what the name says?",
+    "url": "https://news.ycombinator.com/item?id=50158766",
+    "created_at": "2026-10-19T22:12:40Z"
+  },
+  {
+    "text": "Yeah that's probably the coolest thing I've seen all month. How could you not like this?",
+    "url": "https://news.ycombinator.com/item?id=50158436",
+    "created_at": "2026-10-19T21:40:20Z"
+  },
+  {
+    "text": "No, Hitler himself said that the cooptation of \"socialism\" was on purpose[0], don't get fooled by simple naming, it's the easiest way one can be manipulated (e.g.: \"Democratic People's Republic of Korea\"):\n> \"Why,\" I asked Hitler, \"do you call yourself a National Socialist, since your party programme is the very antithesis of that commonly accredited to socialism?\"\n> \"Socialism,\" he retorted, putting down his cup of tea, pugnaciously, \"is the science of dealing with the common weal. Communism is not Socialism. Marxism is not Socialism. The Marxians have stolen the term and confused its meaning. I shall take Socialism away from the Socialists.\n> \"Socialism is an ancient Aryan, Germanic institution. Our German ancestors held certain lands in common. They cultivated the idea of the common weal. Marxism has no right to disguise itself as socialism. Socialism, unlike Marxism, does not repudiate private property. Unlike Marxism, it involves no negation of personality, and unlike Marxism, it is patriotic.\n> \"We might have called ourselves the Liberal Party. We chose to call ourselves the National Socialists. We are not internationalists. Our socialism is national. We demand the fulfilment of the just claims of the productive classes by the state on the basis of race solidarity. To us state and race are one.\"\n[0] https://www.theguardian.com/theguardian/2007/sep/17/greatint...",
+    "url": "https://news.ycombinator.com/item?id=50158727",
+    "created_at": "2026-10-19T22:07:15Z"
+  },
+  {
+    "text": "(Apologies if I'm misreading your reply. I'm assuming it was sarcasm but Poe's Law might apply here.)\nThis does feel a lot like the \"Agile era\" that was the last silver bullet that was supposed to fix software development forever and the \"Cloud era\" that was supposed to fix infrastructure and deployments.\nAgile had a few good ideas. Code reviews and automated tests are commonly used today.\nIt had a few plausible ideas that it took too far. We are better at recognising the value of incremental development over big up-front design today - despite the ironic clash this seems to be having with agentic workflows - but almost everyone hates stand-ups and lots of projects have gone off the rails by breaking things down far too much and never committing to anything and so never getting anywhere.\nAnd it had plenty of ideas that almost all of us have thrown out as unpleasant and/or unworkable. Pair programming comes to mind immediately.\nWhat didn't really change was the fundamental nature of software development. Did we adopt a few useful ideas and get a more more efficient and improve quality a bit? Certainly. Did we get orders of magnitude better at anything and give up all the tried and tested ways of working in favour of radical new ones that never quite felt right? No.\nOn our current trajectory I'm expecting a broadly similar outcome for LLMs. They're now very good at some things. But they are still pretty bad at other things that also matter - and some of the reasons they are bad at them are an inherent part of how they work and therefore probably can't be overcome (at least not with incremental improvements on the technology that still basically work the same way). So I am expecting to see a period of consolidation with a lot of organisations pulling back from their dramatic leaps into the unknown and downsizing of dev teams once the big AI companies start squeezing financially and the problems of developer burnout and stagnating skills and low morale that we're already seeing after just a few months become endemic. And then as I suggested in another comment I think it's also increasingly possible that we'll see developers unionise and/or push for professional regulation and licensing so they can resist the pressure to just ship whatever their agent wrote without even bothering to check it but still being responsible when inevitably things then go wrong.",
+    "url": "https://news.ycombinator.com/item?id=50158506",
+    "created_at": "2026-10-19T21:45:31Z"
+  },
+  {
+    "text": "Why an Earth would a munitions factory need to be built on quality farmland? Surely deserts are prime for this?",
+    "url": "https://news.ycombinator.com/item?id=50158626",
+    "created_at": "2026-10-19T21:55:23Z"
+  },
+  {
+    "text": "We used to be in the business of owning, understanding and evolving our processes. Are we not, now?",
+    "url": "https://news.ycombinator.com/item?id=50158338",
+    "created_at": "2026-10-19T21:31:36Z"
+  },
+  {
+    "text": "\"Run Android apps natively on Apple Silicon Macs. Uses translation instead of emulation.\"\nNo, slop generally doesn't get the point across efficiently.\nIt's hard to parse, it's grating, and in addition to the strange language you have to apply additional skepticism due to gross inaccuracy being more likely than in human-written text.",
+    "url": "https://news.ycombinator.com/item?id=50158389",
+    "created_at": "2026-10-19T21:36:20Z"
+  },
+  {
+    "text": "I say we go for one Planck time of validity.",
+    "url": "https://news.ycombinator.com/item?id=50158445",
+    "created_at": "2026-10-19T21:40:45Z"
+  },
+  {
+    "text": "> The clear specifications, reasonable timelines, and enough technical freedom, let you focus on clean, secure, resilient architectures.\nI have no idea where you work but 90% of companies are not like that. In fact, it's the opposite: filled with awful management, terrible timelines and legacy code.\nEngineering had always been a nuisance to them and getting basic approval for maintenance regarding technical debt has been an uphill battle.",
+    "url": "https://news.ycombinator.com/item?id=50158633",
+    "created_at": "2026-10-19T21:56:31Z"
+  },
+  {
+    "text": "There's a video of Vietnamese fish farmers on the side of the screen that clearly relates to this story but I don't speak Vietnamese so I guess I just have to wonder how.",
+    "url": "https://news.ycombinator.com/item?id=50158642",
+    "created_at": "2026-10-19T21:57:12Z"
+  },
+  {
+    "text": "This has nothing to do with LLMs. The *BSDs have been porting Linux video drivers for years.",
+    "url": "https://news.ycombinator.com/item?id=50158911",
+    "created_at": "2026-10-19T22:28:41Z"
+  },
+  {
+    "text": "> Cold, logical, emotionless machines that don't have identities\nis exactly how people described those who did the dirty work in the concentration camps",
+    "url": "https://news.ycombinator.com/item?id=50158807",
+    "created_at": "2026-10-19T22:17:53Z"
+  },
+  {
+    "text": "I wanted to learn more about photography, I started asking an LLM and it helped me immensively. Definitely not the same realm but if you wanna pick up new skills, LLMs have tons of beginner friendly ways to explain things!",
+    "url": "https://news.ycombinator.com/item?id=50158700",
+    "created_at": "2026-10-19T22:03:40Z"
+  },
+  {
+    "text": "The stuff you have to agree to is a very significant cost.  You're not just associating a username with a password.",
+    "url": "https://news.ycombinator.com/item?id=50158501",
+    "created_at": "2026-10-19T21:44:51Z"
+  },
+  {
+    "text": "See the sibling comment, tinfoil added scanning inside the enclave.",
+    "url": "https://news.ycombinator.com/item?id=50158658",
+    "created_at": "2026-10-19T21:58:49Z"
+  },
+  {
+    "text": "A fixed wing drone only needs one motor, the control is easier, and the physics are more favorable for carrying high ordnance. I'm skeptical that this is going to change much.\nIt's cool in that it can hover and do quadcopter type flight with only a single motor, and it's that second part that is interesting, because a fixed wing can also do a prop hang, but it can't do quadrotor-like flight from there.\nIt's usefulness is likely to be in other areas -- mainly applications where that flight mode is important.",
+    "url": "https://news.ycombinator.com/item?id=50158832",
+    "created_at": "2026-10-19T22:20:33Z"
+  },
+  {
+    "text": "No commercial service has 200 t/s prefill though. It is 1000s of pps for prefill. It is largely compute bound and very very fast on modern GPUs and model architectures. That is my point. It is an order of magnitude faster than decode, which is largely bound by memory bandwidth and just has a much harder limit. Prefill tends to look like a small slice in typical compute / token generation budgets. I am not saying it isn't important (I have been working hard on my own inference engine for flash next and am intimately familiar). I am saying it does not dominate. Also compaction and reading the whole prompt tends to be one of the few times you really hit peak pps because it is cached and you can just fill your data pipes for a bit. Also Deepseek showed you can make kv cache really cheap. Decode is still decode.",
+    "url": "https://news.ycombinator.com/item?id=50158577",
+    "created_at": "2026-10-19T21:51:09Z"
+  },
+  {
+    "text": "We might be producing shovelfuls of code at 10-20X the previous rate, but we're not producing value proportionally, maybe we are even inversely proportionally.\nAt most places I've worked, the \"designing and writing code\" part (basically the part that LLMs can do) was maybe 5-15% of the calendar time it took to actually get the software out into the market. The remaining 85-95% of the time was spent on squishy people-things like aligning stakeholders, getting executive buy-in, working with x-functional teams, getting priorities aligned so one team wasn't done in 30 minutes while the other team took 30 days, doing security reviews, doing privacy reviews, doing legal reviews, doing QA and verification, lining up marketing, educating salespeople, waiting for people to get back from vacation, waiting for people to get back from sick leave, waiting for people to respond to their E-mails, waiting for people to click \"approved\" on various internal review sites, doing final reviews with executives so they know what their company is doing. These other things take up the vast majority of the time it takes to release a feature. LLMs are only speeding up the relatively tiny 'code writing' part.",
+    "url": "https://news.ycombinator.com/item?id=50158779",
+    "created_at": "2026-10-19T22:14:33Z"
+  },
+  {
+    "text": "I'm in what I think will be my last tech job before retraining into something else. The aspects I like about the work are gone, I'm coasting at a small company that's not a great fit, has a visa cliff, and is poorly paid, and the steps it would take to become competitive in an LLM driven tech job market are less appealing to me than the steps it would take to switch over to a different career (likely in healthcare).",
+    "url": "https://news.ycombinator.com/item?id=50158866",
+    "created_at": "2026-10-19T22:24:21Z"
+  },
+  {
+    "text": "Yes!\nThis is the multi-polar (or Moloch) problem, where (ruthless) individual rationality leads to collective ruin.\nUnless the system makes it unprofitable, ruthlessness will always out-perform good behavior. Players who make suboptimal (ethical) decisions will lose over time. Corruption will outperform unless the cost of that corruption outweighs the benefit of it. The root cause isn't a moral failing of the players.\nIf incentives are aligned so that the winnginest behavior is also the most desirable, it doesn't matter if there are defective or unscrupulous players. We can harness selfish ambition for the collective good.\nE.g. CEO compensation and behavior differences between Japan/USA, Potlatch (wealth redistribution) festivals among the Pacific Northwest indigenous.",
+    "url": "https://news.ycombinator.com/item?id=50158493",
+    "created_at": "2026-10-19T21:44:30Z"
+  },
+  {
+    "text": "For one, say what it does instead of what it doesn't do",
+    "url": "https://news.ycombinator.com/item?id=50158414",
+    "created_at": "2026-10-19T21:38:39Z"
+  },
+  {
+    "text": "You can start with this: https://plugins.omarchy.org\nThen read Omarchy news.",
+    "url": "https://news.ycombinator.com/item?id=50158472",
+    "created_at": "2026-10-19T21:42:37Z"
+  },
+  {
+    "text": "You'll find that design matters when token spend starts facing real accounting.\nTech debt is still tech debt, even if there exist models that can wade through, because it's going to require increasingly sophisticated models navigating increasingly large context windows and increasingly speculative workspace operations to keep making progress on it.\nVendors like Anthropic and OpenAI are laying a pit trap when they demonstrate how their models can independently code their whole platform as it becomes increasingly byzantine and inscrutable because not only do they benefit from internal/prerelease models but they have effectively unlimited spend because all that spending acts as a lure to draw you into their trap.\nFor everybody else, design still matters. People are just working really hard to make you forget.",
+    "url": "https://news.ycombinator.com/item?id=50158404",
+    "created_at": "2026-10-19T21:37:41Z"
+  },
+  {
+    "text": "The core design is also approaching 3 years old at this point, so it’s not really even that competitive with the latest stuff out of the other chip makers. It’s fine, but nothing to write home about. Certainly not worth the crazy premium Nvidia is charging for it.",
+    "url": "https://news.ycombinator.com/item?id=50158500",
+    "created_at": "2026-10-19T21:44:50Z"
+  },
+  {
+    "text": "Yeah I think you nailed it. I also think there's a degree to which we pretend victims of economic injustice aren't \"real\", for lack of a better word.. If the original comment was re-framed around vehicular manslaughter or rape, I think people could more clearly see that it isn't really empathetic. That's why the sheer reaction that it got from so many people kind of blew me away.\nI'm definitely stealing \"management aikido\" by the way, thanks for that. :)",
+    "url": "https://news.ycombinator.com/item?id=50158588",
+    "created_at": "2026-10-19T21:52:17Z"
+  },
+  {
+    "text": "I may, I may not.\nLook dude, maybe this is your project , so you're defensive.\nI saw the tag line, visited and thought \"ooh some spicy emails that'll be interesting. \".\nThen i found a bunch of AI slop, with no grounding.\nThat's all it is.",
+    "url": "https://news.ycombinator.com/item?id=50158743",
+    "created_at": "2026-10-19T22:09:23Z"
+  },
+  {
+    "text": "Nobody is going to buy your AI vide coded slop.",
+    "url": "https://news.ycombinator.com/item?id=50158787",
+    "created_at": "2026-10-19T22:15:16Z"
+  },
+  {
+    "text": "When it comes to copyright, I am not so optimistic. When the AI bubble bursts, the usual corporate interests will resurface with a vengeance.",
+    "url": "https://news.ycombinator.com/item?id=50158720",
+    "created_at": "2026-10-19T22:06:15Z"
+  },
+  {
+    "text": "simply creating a Microsoft account would have been far quicker and easier ;-)",
+    "url": "https://news.ycombinator.com/item?id=50158744",
+    "created_at": "2026-10-19T22:09:51Z"
+  },
+  {
+    "text": "These articles are often misleading. With the modern detection methods, we can find seemingly anything in everything. Mass spectrometers can detect individual atoms and molecules, after all.\nIt's always important to check the quantities detected and the corresponding safe limits.",
+    "url": "https://news.ycombinator.com/item?id=50158615",
+    "created_at": "2026-10-19T21:54:08Z"
+  },
+  {
+    "text": "> climate denier\nCan we move on from climate change and focus on the fact that EVs are better in every possible way.\nSomehow I feel buying EV for the sake of climate change is cringe (I know, I am not a good person, but also feel most people who say they care about climate change are disingenuous). Maybe it's change of political climate, maybe it's me who changed, maybe it's the odd hate you get for driving EV, IDK.\nI'm not going to worry about climate 100years ago because just about everyone I know doesn't either. None of them deny it either.",
+    "url": "https://news.ycombinator.com/item?id=50158696",
+    "created_at": "2026-10-19T22:03:20Z"
+  },
+  {
+    "text": "There's a few alternative jellyfin clients that are really good and fast.",
+    "url": "https://news.ycombinator.com/item?id=50158624",
+    "created_at": "2026-10-19T21:55:14Z"
+  },
+  {
+    "text": "That's a really good point. There are types of people (like ones who are really anal about following QA/release processes, folks who are insanely paranoid about security), that I've found to be really unpleasant to interact with, but with time, I've come to realize them being exactly like this is what allows me to sleep soundly at night.",
+    "url": "https://news.ycombinator.com/item?id=50158730",
+    "created_at": "2026-10-19T22:07:41Z"
+  },
+  {
+    "text": "They would be nowhere near as prevalent. All claude-user output is in the same style, which is really annoying.",
+    "url": "https://news.ycombinator.com/item?id=50158819",
+    "created_at": "2026-10-19T22:19:15Z"
+  },
+  {
+    "text": "but all of their civilization got destroyed (in the beginning of the series in case you haven't watched it).",
+    "url": "https://news.ycombinator.com/item?id=50158859",
+    "created_at": "2026-10-19T22:23:32Z"
+  },
+  {
+    "text": "The length of your contract doesn’t even matter. They can order a stop loss and keep you in active duty or recall retired soldiers.\nIgnoring those orders means jail.",
+    "url": "https://news.ycombinator.com/item?id=50158608",
+    "created_at": "2026-10-19T21:53:05Z"
+  },
+  {
+    "text": "From what I remember, it was more like Slack on crack, with tree-style nesting, and tons of integration so you could do something like create a document and collaboratively edit it within a chat.",
+    "url": "https://news.ycombinator.com/item?id=50158554",
+    "created_at": "2026-10-19T21:49:45Z"
+  },
+  {
+    "text": "This analogy is only valid if you're confident that parents would not say meaning is vaporized if you turned their 8-year-olds into 18-year-olds overnight, and there was reason to believe this would frequently happen to families in the future, probability increasing. The exact problem is that the situation in mathematics is not akin to \"finally moving out\" but instead to \"immediately moving out\". I imagine few people would be OK with it.\nAlso I find the suggestion that the people unhappy with the AI-in-mathematics situation are psychologically unwell to be presumptuous, to put it mildly.",
+    "url": "https://news.ycombinator.com/item?id=50158854",
+    "created_at": "2026-10-19T22:23:21Z"
+  },
+  {
+    "text": "Built a tool that helps me at least get a better gist of complex changes: https://github.com/sshah03/perspica\nIt's not perfect, but it's helped so far.",
+    "url": "https://news.ycombinator.com/item?id=50158869",
+    "created_at": "2026-10-19T22:24:35Z"
+  },
+  {
+    "text": "You could also go with mimo-2.6-pro for cheaper and often better results.",
+    "url": "https://news.ycombinator.com/item?id=50158783",
+    "created_at": "2026-10-19T22:15:01Z"
+  },
+  {
+    "text": "This is OT and a cheap shot, but if I were an engineer at Meta I would have felt pretty uncomfortable well before AI showed up...",
+    "url": "https://news.ycombinator.com/item?id=50158468",
+    "created_at": "2026-10-19T21:42:18Z"
+  },
+  {
+    "text": "200+ miles is quite optimistic. On a bad day it's more like 130 miles, and a significant minority of americans drive 130 miles a day. I love my EV but my wife might refuse to buy another one for exactly this reason. A 250 mile range is more like 200 miles in cold weather(and that's what I see in florida so that's probably a best case).  And at 85mph(what people are actually driving on the highway) it's more like 150 miles(mi/kwh really falls off a cliff over 60ish mph).  And you don't want risk running out of battery just before you destination, so make that 130miles even with a dangerously small margin for error. That's 1.5 hours at highway speed in the winter. And chargers are 20-40 minutes apart and may not work(again florida so \"good\" charger availability...I've seen 1hr+ apart in new hampshire). So if you hit a bad charger you're potentially stranded.\nOur EV is great for normal use, but my wife had to do a 200 mile round trip once a week for a couple months(not anticipated when we bought it). She quickly went from loving her fancy new car to wanting to sell that annoying POS. A faster charger plus extended range battery would have helped some(Chevy Bolt is weak on both) but it is honestly a pain point for the kind of trip many americans do somewhat regularly.",
+    "url": "https://news.ycombinator.com/item?id=50158589",
+    "created_at": "2026-10-19T21:52:18Z"
+  },
+  {
+    "text": "I suspect that the mathematicians who adapt best to AI will treat it like astronomers treat a telescope, as a source of possibly-interesting data to be analyzed. Maybe it looks like finished output, but that doesn’t mean it’s ready to show.",
+    "url": "https://news.ycombinator.com/item?id=50158453",
+    "created_at": "2026-10-19T21:41:20Z"
+  },
+  {
+    "text": "You're  thinking with your engineering brain.\nFor corporations, sales, probability and feature release cycles take priority over maintainability or code quality. AI is allowing businesses to build features faster than ever, so management is happy.\nBy the time maintainability issues hit, they've either pivoted, raised more capital or can throw money at the problem.",
+    "url": "https://news.ycombinator.com/item?id=50158724",
+    "created_at": "2026-10-19T22:06:54Z"
+  },
+  {
+    "text": "I hope you are right and I am wrong. :/",
+    "url": "https://news.ycombinator.com/item?id=50158607",
+    "created_at": "2026-10-19T21:53:00Z"
+  },
+  {
+    "text": "Yes, its completely unusable on my fire stick. I ended up sideloading the old apk.",
+    "url": "https://news.ycombinator.com/item?id=50158342",
+    "created_at": "2026-10-19T21:31:51Z"
+  },
+  {
+    "text": "> In my experience, letting the agent make every decision leads to a big ball of mud that requires touching dozens of files to make a change\nIt seems too early to make any conclusion like that. We've still only been doing agentic coding for a year and capability significantly improved during that time. I don't think anybody on either side of this debate can have actual empirical evidence to support conclusions about where it lands longer term.\nThe main argument I see is that it probably pays to be slightly conservative because the cost of being wrong by maintaining too much oversight and shipping slightly less code is better than the cost of ending up with an entirely unmaintainable system. In some cases it will be more than \"slightly less\" but in almost all complex pre-existing systems, you are rate limited by a lot of other factors outside of code production, so the effective difference just isn't that high.",
+    "url": "https://news.ycombinator.com/item?id=50158791",
+    "created_at": "2026-10-19T22:15:40Z"
+  },
+  {
+    "text": "There are a significant number of software developers / computer programmers who think they are smarter than everyone else because they confuse giving a shit about something with the ability to understand it.",
+    "url": "https://news.ycombinator.com/item?id=50158754",
+    "created_at": "2026-10-19T22:11:23Z"
+  },
+  {
+    "text": "> Bolsonaro's coup never actually took place, and even if it had, it'd only be a reaction to the concrete actions of the supreme court.\nThe classic \"It didn't happen, and it did...\" from The Narcissist's Prayer.",
+    "url": "https://news.ycombinator.com/item?id=50158820",
+    "created_at": "2026-10-19T22:19:17Z"
+  },
+  {
+    "text": "Although \"lies\" might be too strong a word, I agree with you that the the AI-is-the-future people haven't done nearly enough to prove their claims. But that's nothing new in our industry, really.\nI would recommend \"The Leprechauns of Software Engineering\" by Laurent Bossavit for an insightful and entertaining overview of just how much of software \"engineering\" is based on \"truths\" that we don't question.",
+    "url": "https://news.ycombinator.com/item?id=50158543",
+    "created_at": "2026-10-19T21:48:59Z"
+  },
+  {
+    "text": "Curious.\nThis feels like a tool to add to an LLM, being able to modify it's own weights, to be able to relearn, refine its own understanding.",
+    "url": "https://news.ycombinator.com/item?id=50158786",
+    "created_at": "2026-10-19T22:15:16Z"
+  },
+  {
+    "text": "Just because other people don't use your version doesn't mean you can't.",
+    "url": "https://news.ycombinator.com/item?id=50158630",
+    "created_at": "2026-10-19T21:56:07Z"
+  },
+  {
+    "text": "Every gram of weight you remove is another gram of explosive you can add. Also consider the difference in supply lines for aerodynamic surfaces and mechanic parts and motors and servos. If you have four hundred servos, you can make one hundred quadcopters, or four hundred of these things. If you only have one hundred control boards powerful enough to control the single motor design though, you can still only make one hundred. (Tho the quadcopter can lift 4x the weight)\nWhat's interesting is that the Ukrainians are building drones near their front lines because if they build them too far away and ship them in, the game has evolved and those drones are already yesterday's news.",
+    "url": "https://news.ycombinator.com/item?id=50158550",
+    "created_at": "2026-10-19T21:49:39Z"
+  },
+  {
+    "text": "On the other hand, to buy a car in a Chinese city you have to join the government waiting list and wait to be approved.\nYou'll also have the car's movements tracked in detail, etc.\nIf China's the 21st century, they can keep it.",
+    "url": "https://news.ycombinator.com/item?id=50158862",
+    "created_at": "2026-10-19T22:23:56Z"
+  },
+  {
+    "text": "There's lots of ways to make handling such things safe: climate control, inert atmospheres, (in cases like this were degradation is involved) rotating out material, compartmentalization, automatic fire supression etc. The problem is that these are very expensive compared to the dirt cheap methods used in commercial fisheries",
+    "url": "https://news.ycombinator.com/item?id=50158545",
+    "created_at": "2026-10-19T21:49:05Z"
+  },
+  {
+    "text": "Microsoft turns on OneDrive backups by default without your knowledge or consent, sending your private files to MS servers, not only during setup but it can also happen during updates. Even when you try keep it disabled, they constantly pressure you into enabling it every time you login, and make it really easy to accidentally turn it on. Once your files are in OneDrive, MS can access them. Don't be surprised if it later turns out they're training their LLMs on people's private files.",
+    "url": "https://news.ycombinator.com/item?id=50158846",
+    "created_at": "2026-10-19T22:22:15Z"
+  },
+  {
+    "text": "I gave a normal notebook. The browser is the OS, it might as well run in TempleOS, it doesn't matter except for vulnerabilities in the browser.",
+    "url": "https://news.ycombinator.com/item?id=50158772",
+    "created_at": "2026-10-19T22:14:09Z"
+  },
+  {
+    "text": "Sure, this is in agreement with some people's view that math will become an empirical science. Basically humans probing/mining the brain of an LLM.",
+    "url": "https://news.ycombinator.com/item?id=50158536",
+    "created_at": "2026-10-19T21:48:21Z"
+  },
+  {
+    "text": "It's now clear what the problem is with vibe coded remakes, remixes and games in general.\nThis looks very interesting. But in the past couple of days I saw at least 5 interesting vibe coded games worth, in theory, spending hours on. There's no way I could consume this amount of content.\nSecondly, when I say \"looks interesting\", I mean that based on graphics and descriptions, it looks promising. Before AI, the visual quality was a great proxy for effort, and we could reasonably assume that the effort was spread around graphics, sound and gameplay. If not equally, gameplay would get at LEAST a bit of attention.\nMaking good games requires attention to small details. And I have no idea if the author cared about these details at all. Maybe they did, maybe they didn't.\nWith so many alternatives and the loss of quality proxies, the rational choice is to, unfortunately, pass.",
+    "url": "https://news.ycombinator.com/item?id=50158795",
+    "created_at": "2026-10-19T22:16:03Z"
+  },
+  {
+    "text": "Its mostly useful for remote sessions as you can use one ssh connection for multiple terminals, and of course the most common usecase, leave processes running after you logout (or if the connection drops).",
+    "url": "https://news.ycombinator.com/item?id=50158878",
+    "created_at": "2026-10-19T22:25:29Z"
+  },
+  {
+    "text": "> creators should be allowed to exert control over how their assets and brand are used\nI hate to be glib, but no they shouldn't.\nCreators should be allowed to create things and sell them. No one, whether the creator, or the company the creator worked for when they first created the thing, should be able to stop someone else from creating something.",
+    "url": "https://news.ycombinator.com/item?id=50158570",
+    "created_at": "2026-10-19T21:50:38Z"
+  },
+  {
+    "text": "The LLMs have been trained on all kinds of code. They often choose a hacky solution because that's what they encountered in similar situations in their training. It generally only takes a few words to guide them to a better design than what they saw in the wild, but if you don't guide them, they follow the herd.",
+    "url": "https://news.ycombinator.com/item?id=50158458",
+    "created_at": "2026-10-19T21:41:42Z"
+  },
+  {
+    "text": "Those two things are not mutually exclusive or inconsistent at all.",
+    "url": "https://news.ycombinator.com/item?id=50158822",
+    "created_at": "2026-10-19T22:19:31Z"
+  },
+  {
+    "text": "I've always found that defending laws that don't benefit people to be a stange attitude on a place called \"hacker news\".\nCreative people should be able to create. Trademark/copyright laws, protecting assets for the great-grandchildren of who actually created the art, has never been a positive. The only people who benefit, are themselves not creative (or else they would create, instead of defending \"rights\" and \"image\").",
+    "url": "https://news.ycombinator.com/item?id=50158639",
+    "created_at": "2026-10-19T21:56:57Z"
+  },
+  {
+    "text": "it's like how I can still get a typewriter and use it for the experience, or like how I could write ORM scaffolding by hand or just let the code gen write it, I see AI as nothing more than a keyboard extension, the amount of freedom you give it depends on the instruction/prompt",
+    "url": "https://news.ycombinator.com/item?id=50158843",
+    "created_at": "2026-10-19T22:21:38Z"
+  },
+  {
+    "text": "So many people here are talking about not coding anymore. At the same time, when a project is coded by AI, it's mocked here as being vibe-coded, and many people say they won't use it.\nThere seems to be an inconsistency between those facts that would be worth discussing. I'd be interested to hear anyone's thoughts.",
+    "url": "https://news.ycombinator.com/item?id=50158705",
+    "created_at": "2026-10-19T22:04:51Z"
+  },
+  {
+    "text": "Yes, but that's in psychology. Different fields have their own terms without causing too many issues. Communication breaks down when we reuse terms for different things within the same field.",
+    "url": "https://news.ycombinator.com/item?id=50158600",
+    "created_at": "2026-10-19T21:52:41Z"
+  },
+  {
+    "text": "I'll add to it. The classic answer to your objection is \"but as a species we'd have sooner or latter 1 billion steps worth of intellectual capital\". Today someone gets to an intermediate result worth 1 million steps, tomorrow another million and so on.\nBut there's no guarantee that such \"low IQ\" intermediate steps exist. We do well with many classes of problems because of divide-and-conquer. But not all problems can be solved through divide-and-conquer.\nFor a rough analogy, see how AI plays chess and intermediate board positions often don't make sense to us. Imagine now an enormous chess-like game played in an enormous chess board where a match lasts longer than a lifetime and none of the intermediate steps make sense to any human.",
+    "url": "https://news.ycombinator.com/item?id=50158621",
+    "created_at": "2026-10-19T21:54:46Z"
+  },
+  {
+    "text": "Very good question!\nThe problem assembly programmers had with compilers wasn't that they wouldn't understand the generated machine code - it was that the generated code was often bad (as in unoptimized and bloated) and didn't justify the resources required to run the compiler. As hardware got more complex and powerful, compiler got much better, and operating systems became the primary layer between hardware and applications, assembly became more niche. Nowadays it's pretty challenging to beat the compiler at generating efficient assembly and writing a program in assembly would consist primarily of OS and library API calls anyway.\nThere are definitely parallels there. The only obvious difference I can see is that both high level language code and assembly are unequivocal in their meaning (as in you can determine what gets executed), whereas natural language is not.",
+    "url": "https://news.ycombinator.com/item?id=50158555",
+    "created_at": "2026-10-19T21:49:47Z"
+  },
+  {
+    "text": "Steam is very upfront when you’re buying a windows game on mac. There’s a big banner saying it’s not for your OS and likely won’t work. There’s a compatibility icon for mac, and it’s filterable, for library and store, so you can get mac games. There’s an additional click-through screen on the store page with a checkbox. There’s a lot that’s filtered out!\nThe proton story pretends like you can run every windows game on steamos, verified or not. It’s quite different and tbh a little dishonest. I wonder how much of it is avoidance of alert fatigue (because many many unverified games do work) and how much if it is trying to sell users on steamos.",
+    "url": "https://news.ycombinator.com/item?id=50158873",
+    "created_at": "2026-10-19T22:25:10Z"
+  },
+  {
+    "text": "Hi, I made a sourced table of which scales, BP cuffs and watches still sync to Apple Health with no subscription: https://subscription-free-health-devices.vercel.app/ (affiliate links).",
+    "url": "https://news.ycombinator.com/item?id=50158814",
+    "created_at": "2026-10-19T22:18:22Z"
+  },
+  {
+    "text": "Cheaper than thousands of dollars a month in Claude API use.",
+    "url": "https://news.ycombinator.com/item?id=50158746",
+    "created_at": "2026-10-19T22:09:59Z"
+  },
+  {
+    "text": "Was an OCaml programmer for a long time, Rust is the closest mainstream programming language.",
+    "url": "https://news.ycombinator.com/item?id=50158518",
+    "created_at": "2026-10-19T21:46:39Z"
+  },
+  {
+    "text": "There is nothing inherent in the minimization process that says you must distill from a larger model. It is just the thing we know how to do right now.",
+    "url": "https://news.ycombinator.com/item?id=50158599",
+    "created_at": "2026-10-19T21:52:41Z"
+  },
+  {
+    "text": "The strong case is pretty much only if you can't wait another 3-4 years for ram prices to come back down.\nMemory makers are responding with a huge build-out. Building a fab shell and cleanroom takes years, which is why the crunch has lasted so long, but many of these projects are now well underway. New capacity is what ended past memory shortages. New factories going in:\nSK hynix\nM15X, Cheongju, Korea: first wafers early 2026 (reported), ramping through 2027\nYongin Y1, Korea: first cleanroom Feb 2027 (company target)\nYongin Y2, Korea: groundbreaking planned July 2027, first cleanroom June 2029\nMicron\nID1, Boise: first wafer output mid-2027\nTongluo, Taiwan: an existing PSMC cleanroom it bought for $1.8B, with meaningful shipments mid-2027\nID2, Boise: late 2028\nHiroshima, Japan: broke ground July 2026, with initial output late 2028\nClay, New York (up to 4 fabs, $100B): broke ground Jan 2026, with first output in 2030\nSamsung\nP5, Pyeongtaek: mass production 2028 (reported)\nYongin national complex: site work began Oct 2026, with the first fab targeting Oct 2029 (reported; Samsung hasn't given a date)\nNanya\nFab 5A, New Taipei: 10nm-class EUV DRAM, with wafer starts in 2H 2027 (reported)\nTesla / SpaceX (Terafab)\nResearch fab at Giga Texas, Austin: broke ground April 2026. There's no official output date.\nGrimes County, Texas (logic, memory, packaging; Phase 1 over $16.8B): land clearing since Aug 2026. Texas filings say commercial operations in 2028, but SemiAnalysis estimates late 2029.\nThe first real supply relief is 2027, a second wave comes in 2028–29, and a lot of that new capacity is aimed at HBM and server memory, so consumer DDR5 and GDDR will likely ease last.\nSources: Micron FQ4 2026 call, the SK hynix newsroom, TrendForce, Texas JETI filings via ENR, and Tom's Hardware/SemiAnalysis.",
+    "url": "https://news.ycombinator.com/item?id=50158808",
+    "created_at": "2026-10-19T22:17:54Z"
+  },
+  {
+    "text": "Well there’s at least two reasons people might not buy your cake: they don’t want cake, or the cake is bad.\nFor the first group, it doesn’t matter how good your cake is. If you spend a year perfecting it, you won’t sell them any more cakes. And for many products, this group is basically 100% of customers.",
+    "url": "https://news.ycombinator.com/item?id=50158628",
+    "created_at": "2026-10-19T21:55:31Z"
+  },
+  {
+    "text": "What still is true for all fields of LLMs: if you can’t tell they do it suboptimally, you are just not that knowledgable in that area.\nIt still applies to all things LLms can do from law to code to art to ideas.\nThey can do it - and very acceptably - but only to the untrained eye.",
+    "url": "https://news.ycombinator.com/item?id=50158369",
+    "created_at": "2026-10-19T21:33:43Z"
+  },
+  {
+    "text": "Epstein was a trans-humanist and big into eugenics (the baby breeding labs...). This is why the John Brockman/Edge people were ideologically aligned with him. He even called it \"genetic altruism\":\nhttps://www.motherjones.com/politics/2026/02/epstein-emails-...",
+    "url": "https://news.ycombinator.com/item?id=50158900",
+    "created_at": "2026-10-19T22:27:02Z"
+  },
+  {
+    "text": "> since Google showed you don't need to retrain an autoregressive model to rework it for diffusion inference\nIIRC you do need to retrain the model, just closer to the level of finetuning rather than e.g. pretraining from scratch. Which also means that the model will perform differently with a different capability profile.",
+    "url": "https://news.ycombinator.com/item?id=50158738",
+    "created_at": "2026-10-19T22:08:44Z"
+  },
+  {
+    "text": "I wonder if we will see new platforms emerge around human-only collaboration. There's nothing stopping people from continuing to work on projects in the traditional way. It's just harder on big platforms like GitHub which are designed around public bug reports and pull requests.",
+    "url": "https://news.ycombinator.com/item?id=50158885",
+    "created_at": "2026-10-19T22:25:46Z"
+  },
+  {
+    "text": "And the same thing will happen to devs that happened to factory workers.  Jobs will get moved offshore, and salaries will drop, mass layoffs.  And SWE's don't have unions like factory workers did.",
+    "url": "https://news.ycombinator.com/item?id=50158525",
+    "created_at": "2026-10-19T21:47:38Z"
+  },
+  {
+    "text": "FSF has been the greatest pro-corporate activist, convincing thousands if not millions of programmers to give away their code.",
+    "url": "https://news.ycombinator.com/item?id=50158367",
+    "created_at": "2026-10-19T21:33:41Z"
+  },
+  {
+    "text": "*for drug trials. I imagine animal testing will remain required for implants, surgical instruments, and imaging for quite a long time.",
+    "url": "https://news.ycombinator.com/item?id=50158811",
+    "created_at": "2026-10-19T22:18:14Z"
+  },
+  {
+    "text": "Hmm, that may well be true but I don't model with any of those packages. I model with `build123d` or `openscad` using Claude Code to do the heavy lifting. I describe what I want, measure and make up ideas and learn a little terminology (fillet, chamfer) and then the machine builds me the concept that I then print and deploy into action[0].\nMy life has been improved immeasurably (our home is filled with attachments and affordances built on-demand by Claude), and no new software was created that anyone else would see. It is entirely possible that these tools fail to create a Photoshop/Blender replacement and yet replace Photoshop/Blender.\nMy wife started out building in Blender[1] but these days even she uses Claude Code and mostly ideates. The nature of LLMs might not be \"they can build you something better than Photoshop in a day\" but that \"where we're going we don't need roads\".\n0: https://wiki.roshangeorge.dev/w/Blog/2026-01-11/Modeling_Wit...\n1: https://wiki.roshangeorge.dev/w/Blog/2026-01-15/Modeling_Wit...",
+    "url": "https://news.ycombinator.com/item?id=50158907",
+    "created_at": "2026-10-19T22:28:02Z"
+  },
+  {
+    "text": "I will be unhappy if they steal the meaning of NLP. NLP means Natural Language Processing and LLMs are only a subset of NLP. I would have concerns about anyone who claims to have technical knowledge and asserts NLP means \"natural language programming.\" Those are the same kind of people who might suggest Lisp should add mutable objects.",
+    "url": "https://news.ycombinator.com/item?id=50158353",
+    "created_at": "2026-10-19T21:32:57Z"
+  },
+  {
+    "text": "It's my love letter to owning multimedia.\nI'm focused on minimizing friction; all comms go over Iroh, and it even works in the browser via webrtc (as of yesterday). No network expertise required.\nHistory- I started it last year the night before my birthday so I guess it's kinda like a midlife crisis. I've been working on it relentlessly since and kind of want a real job at this point just so I can take PTO.\ntestflite@pixelbrite.site if interested",
+    "url": "https://news.ycombinator.com/item?id=50158606",
+    "created_at": "2026-10-19T21:52:57Z"
+  },
+  {
+    "text": "This is about Romani communities that have been living in the same place for generations. You can't legally deport someone who's a citizen from birth no matter what ethnicity they are.\nAnd even with actual illegal immigrants there's a different between saying a country can deport them, should deport them or has to deport them based on some bizarre fascist ethics.\nI have no problem with people who don't like immigration and want to send them back (I just really don't agree with their opinion), but DHH is closer to the last group. He's saying that each country has a moral duty to deport immigrants and every individual citizen has to support that, and if they don't that means they're evil and want to destroy their own people.\nUsing violent language is just a cherry on top.",
+    "url": "https://news.ycombinator.com/item?id=50158368",
+    "created_at": "2026-10-19T21:33:42Z"
+  },
+  {
+    "text": "I played it for awhile on Saturday.  It's fun but quickly gets repetitive, and certainly not in the same realm as the original Diablo II.  You are mostly making level tree selections.\nIt is more interesting as a data point highlighting the velocity and trajectory of games in this new era.  See for example, the newly formed XBox Labs department at MS.\nhttps://www.theverge.com/news/1010406/xbox-labs-game-decompi...",
+    "url": "https://news.ycombinator.com/item?id=50158894",
+    "created_at": "2026-10-19T22:26:33Z"
+  },
+  {
+    "text": "Fortunately, there are (at least for now) many, many banks to choose from, and you can tell the app-only ones to suck it. There's also almost no switching cost. The last time I changed banks, it was mostly done in an afternoon.",
+    "url": "https://news.ycombinator.com/item?id=50158841",
+    "created_at": "2026-10-19T22:21:25Z"
+  },
+  {
+    "text": "Yep, many hay barns have caught fire because the hay was bailed while too wet and it is fermenting so vigorously.",
+    "url": "https://news.ycombinator.com/item?id=50158809",
+    "created_at": "2026-10-19T22:18:10Z"
+  },
+  {
+    "text": "The dangers of motorcycles are a bit exaggerated, although they are still more dangerous than cars. Modern bikes have a bunch of safety features that motorcycles didn't have when they got their bad reputation; including super powerful ABS disk brakes and anti slip systems. There is also modern safety gear such as airbag jackets and even airbag pants.\nBut you have to learn to ride, and it demands more from the motorist than driving a car. And yes, there are dangers in form of car drivers, which you can do very little about to mitigate. But when motorcycles become more common, car drivers also learn to accommodate better to them. And I suspect a lot of the accident statistics come from young riders who haven't learnt to risk manage. There's a big difference riding at 35 compared to at 19.",
+    "url": "https://news.ycombinator.com/item?id=50158861",
+    "created_at": "2026-10-19T22:23:56Z"
+  },
+  {
+    "text": "A good engineering course would cover most (if not all) of the skills necessary to do this. This is notable because the person is young and wielding a broad slice of the discipline with maturity.",
+    "url": "https://news.ycombinator.com/item?id=50158697",
+    "created_at": "2026-10-19T22:03:29Z"
+  },
+  {
+    "text": "No it’s not. There’s nothing technically impressive about this.\nFrom what I can see, it’s just a bunch of defaults pre-installed on top of Linux. Some of the defaults they use like Proton is far more complex and impressive than their entire distro , and that was built before agents.",
+    "url": "https://news.ycombinator.com/item?id=50158485",
+    "created_at": "2026-10-19T21:44:00Z"
+  },
+  {
+    "text": "I built and use https://smalldocs.org, which is a rich document format (mermaid diagrams, nice formatting, etc.) for agents. So I’ll be like “sdoc me the architectural ideas for this feature” and it helps.",
+    "url": "https://news.ycombinator.com/item?id=50158424",
+    "created_at": "2026-10-19T21:39:32Z"
+  },
+  {
+    "text": "The closer the code gets to the user's eyeballs the less I care about anything specific.\nHTML/JS/CSS is basically entirely vibe coded. I won't even try to reorg the 4000 line ui.js file. I can just redo the whole thing from a new prompt in a few minutes.\nFor things like the SQL schema I am still doing things entirely by hand. The consequences of getting this part wrong tend to be far more catastrophic than something in the UI layer.",
+    "url": "https://news.ycombinator.com/item?id=50158780",
+    "created_at": "2026-10-19T22:14:48Z"
+  },
+  {
+    "text": "National Socialist was a lie at the time. The meaning of socialism has not changed. Labels are assertions, not prescriptions. The inconsistency is truth, not ideology.",
+    "url": "https://news.ycombinator.com/item?id=50158546",
+    "created_at": "2026-10-19T21:49:11Z"
+  },
+  {
+    "text": "I think there's a balance to be had. Leaving everything to agents when it comes to throwaway prototypes, one-off test env. scripts, extra tests I'm fine with. Doing the same with features - absolutely not - especially when it comes to financials. Seems like Meta is pressuring engineers into becoming expensive spec generators because they want to be in the cool kids club. Time will tell if that's a good play but to me it just sounds like a quick and dirty way to obliterate their engineering culture.",
+    "url": "https://news.ycombinator.com/item?id=50158597",
+    "created_at": "2026-10-19T21:52:40Z"
+  },
+  {
+    "text": "When you are behind in a field, make a new field and be the leader in it",
+    "url": "https://news.ycombinator.com/item?id=50158372",
+    "created_at": "2026-10-19T21:34:08Z"
+  },
+  {
+    "text": "That also kind of implies to me that they had the foresight to know that this is probably not a good investment on paper but still wanted to surf the hype wave",
+    "url": "https://news.ycombinator.com/item?id=50158575",
+    "created_at": "2026-10-19T21:51:07Z"
+  },
+  {
+    "text": "There's a big difference in the advertised functionality of the two tools.\nA closer analogy would be if you turned on your blinker and your car autonomously decided to shoot the card in your blind spot with a rocket.\nThe name \"AI Assistant\" not only does not indicate that it will spontaneously break the law to break into other computer systems, it also carries some implied liability. It claims to replace a real life assistant, who in fact would be liable for breaking the law in carrying out their tasks (unless it could be argued that you implied they should break the law when giving them the task).",
+    "url": "https://news.ycombinator.com/item?id=50158448",
+    "created_at": "2026-10-19T21:40:55Z"
+  },
+  {
+    "text": "honestly, I use nvim as my terminal (via lazy vim guy's terminal plugin), and I wish that there was a better way to vibe code in just nvim without having to leave it.\nI have tried to learn tmux, but the key bindings are really unintuitive to me vs my familiar vim setup",
+    "url": "https://news.ycombinator.com/item?id=50158511",
+    "created_at": "2026-10-19T21:46:12Z"
+  },
+  {
+    "text": "Hi I posted it. I'm just a guy in the chat who saw it on YouTube.",
+    "url": "https://news.ycombinator.com/item?id=50158659",
+    "created_at": "2026-10-19T21:58:50Z"
+  },
+  {
+    "text": "In my case I am more than capable of producing better code than the LLM, but I have never been the fastest on my team. My development speed was acceptable because the quality and robustness of the output was worth the time that thoughtfulness took. I was also able to improve the comprehensibility and robustness of my colleagues' code during code reviews.\nBut in the new environment of LLM-assisted coding, the LLM produces acceptable code so much faster than I can write it. Just taking time to understand and retool the LLM's output means an order of magnitude lower productivity and it doesn't feel like that's acceptable in this era.\nFolks I know are landing 10+ PRs a day and nobody is reviewing anymore, and these are not companies that would have been skipping code review 2 years ago. The whole culture is turning against taking the time to comprehend and reason about our own work.",
+    "url": "https://news.ycombinator.com/item?id=50158421",
+    "created_at": "2026-10-19T21:39:14Z"
+  },
+  {
+    "text": "As one example I can think of, there are a ton of devices that only work on Windows (or Windows and MacOS). The audio interface I have is one example: its \"official drivers\" are Windows and MacOS only. I know that someone is trying to make Linux drivers for it, using LLMs, because if there's one thing LLMs are very good at, it's RE and figuring out how hardware works. One of my other friends made an accessible equivalent to the Razer app for his Razer headphones because the official app is complete shit.",
+    "url": "https://news.ycombinator.com/item?id=50158327",
+    "created_at": "2026-10-19T21:30:30Z"
+  },
+  {
+    "text": "If I could I would do it during development. The app I work on needs hardware so it’s not an option.",
+    "url": "https://news.ycombinator.com/item?id=50158685",
+    "created_at": "2026-10-19T22:01:58Z"
+  },
+  {
+    "text": "I’ve experienced this myself. I’ve had to downgrade my opinion of my own code. LLMs are great at pointing out the edge cases that you might have taken years to find. Honestly feels quite dispiriting but we move on.",
+    "url": "https://news.ycombinator.com/item?id=50158762",
+    "created_at": "2026-10-19T22:12:24Z"
+  }
+]
