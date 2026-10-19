@@ -39,140 +39,150 @@
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
+TakeMeter will sort public Hacker News comments into `question` and `statement`.
+It measures whether the author asks for information, not whether the comment is
+correct or high quality. This is the Unit 5 build only; no stretch features.
 
-
-
----
+**Status:** 220 real comments collected. The student's 20 cold labels, five
+acceptance criteria, review of the other labels, and training are pending.
+Start with [YOUR_TURN.md](YOUR_TURN.md). No training results have been generated.
 
 ## Label Taxonomy
 
-<!-- Each label: a one-sentence definition and two real examples from your
-     reading. Then your decision rule for the hardest boundary.
+### `question`
 
-     The decision rule is worth a point on its own and it's the thing most
-     people leave out. Every taxonomy has a hardest boundary. Name yours. -->
-
-### `label_one`
-
-**Definition:**
+**Definition:** The author's own words ask the reader for information, advice,
+or clarification.
 
 **Example 1:**
->
+
+> Maybe a related question:
+> How do you keep the IEC 62443-4-1 auditors happy?
+
+[Source](https://news.ycombinator.com/item?id=50158503)
 
 **Example 2:**
->
 
-### `label_two`
+> Serious question - how do you even learn all of the skills to do something like this? Where would you start?
 
-**Definition:**
+[Source](https://news.ycombinator.com/item?id=50158532)
+
+### `statement`
+
+**Definition:** The author's own words provide information, an opinion, an
+answer, or a reaction without asking the reader for information.
 
 **Example 1:**
->
+
+> This has nothing to do with LLMs. The *BSDs have been porting Linux video drivers for years.
+
+[Source](https://news.ycombinator.com/item?id=50158911)
 
 **Example 2:**
->
+
+> I wanted to learn more about photography, I started asking an LLM and it helped me immensively. Definitely not the same realm but if you wanna pick up new skills, LLMs have tons of beginner friendly ways to explain things!
+
+[Source](https://news.ycombinator.com/item?id=50158700)
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `question` and `statement`, especially rhetorical or
+quoted questions.
 
-**The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
+**Decision rule:** Ignore quoted text when deciding what the author is doing.
+If their own words request information or clarification, use `question`, even
+when most of the comment is an opinion. If a question only emphasizes a claim
+or the author answers it themselves, use `statement`. A question mark alone is
+not enough. A clear request without a question mark still counts as `question`.
 
+**Candidate distinctions observed in an AI reading of 45 collected comments:**
+Some ask for practical advice; some give explanations or personal experience;
+some phrase disagreement as a rhetorical question. The two-label choice keeps
+this basic while making the last distinction explicit. This does not replace
+the student's community reading.
 
+**AI stress test (synthetic; excluded from the dataset):**
 
----
+| Boundary example | Label | Rule |
+|---|---|---|
+| This fails on Windows. Does anyone know a fix? | question | Direct request. |
+| Why pay for that? The free version does everything I need. | statement | Rhetorical claim. |
+| You asked, "Does it work?" Yes, on Linux. | statement | Quoted question, own answer. |
+| You asked, "Does it work?" Which version did you try? | question | Own clarification request. |
+| I wonder if someone could explain the error message. | question | Clear request without a question mark. |
+| I used to wonder why it failed; the logs explained it. | statement | Resolved personal account. |
+| It looks useful, but where is the documentation? | question | Opinion plus information request. |
+| Who needs another subscription? I am keeping the free tool. | statement | Rhetorical reaction. |
 
 ## The Dataset
 
-<!-- Where you collected from, how you labelled, your counts, and three hard
-     cases. -->
+**Source:** Public [Hacker News](https://news.ycombinator.com/) comments,
+collected through the [Algolia HN API](https://hn.algolia.com/api).
+`data/collected_posts.json` preserves each whole comment's rendered text,
+source URL, and publication time. HTML formatting is removed; posts are not
+shortened. Collection excludes comments under ten words and duplicate text.
 
-**Where the posts came from:**
+**Sampling:** Five API pages, shuffled with seed 42. The first 20 are reserved
+unlabeled for the student's cold pass. The other 200 comprise 100 comments
+containing `?` and 100 without it, as a way to find candidate questions and
+statements. Punctuation is a sampling hint, not a final label. This deliberately
+selected sample does not estimate Hacker News's natural label frequencies.
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**Labeling:** Not completed. `data/cold_labels.csv` has exactly 20 blank labels.
+The student must label these unaided first. AI may then pre-label the other
+200, but the student must read and correct every row. Only genuinely completed
+unaided labels should receive `cold` in the note column. The final `labels.csv`
+will be one unsplit file with `text,label,note` columns.
 
-**Counts per label:**
+**Counts per label:** Pending labeling; 220 comments collected in total.
+The final dataset must keep every label at or below 70%.
 
-| Label | Count | Share |
-|---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+**Three candidate hard cases identified by AI (student review pending):**
 
-**Three hard cases**
-
-<!-- Any post that made you pause: what it was, which two labels it could have
-     been, and what you chose. These are worth more than the easy 190. -->
-
-**1.**
-> *The post:*
->
-> *Could have been:*
->
-> *I chose, because:*
-
-**2.**
-> *The post:*
->
-> *Could have been:*
->
-> *I chose, because:*
-
-**3.**
-> *The post:*
->
-> *Could have been:*
->
-> *I chose, because:*
-
----
+1. [Quoted question followed by an answer](https://news.ycombinator.com/item?id=50158399):
+   the comment quotes a question about StarCraft assets and answers "Because
+   it's cool." Candidate labels: question/statement. AI choice: `statement`,
+   because the author's own words are an answer.
+2. [Self-answered purchasing question](https://news.ycombinator.com/item?id=50158645):
+   the author asks why they would buy the RTX Spark, then explains why they
+   prefer the DGX Spark. Candidate labels: question/statement. AI choice:
+   `statement`, because the question introduces the author's own conclusion.
+3. [An opinion followed by a request](https://news.ycombinator.com/item?id=50158542):
+   the author enjoyed a video but asks whether clipping was a camera bug.
+   Candidate labels: question/statement. AI choice: `question`, because the
+   author requests clarification that the comment does not resolve.
 
 ## The Training Run
 
-<!-- Your starting model, your settings, and anything you changed and why. -->
+**Base model:** `distilbert-base-uncased`.
 
-**Base model:**
+**Settings:** 3 epochs, learning rate `2e-5`, batch size 16, maximum length
+128 tokens, seed 42. No hyperparameter changes planned.
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Split:** The starter notebook will make its stratified 70/15/15 split after
+labeling. Raw posts remain whole; the tokenizer truncates model inputs to 128
+tokens. Split counts, test-label support, and device will be recorded after
+an actual run. No metrics are claimed yet.
 
-**Anything I changed from the defaults, and why:**
-
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
-
-
-
----
+**Pending:** Commit the student's completed criteria and final labels before
+running notebook sections 1–5. Sections 6–7 belong to Unit 6.
 
 ## How I Used AI
 
-<!-- Two specific moments — what you asked, what came back, what you changed.
+**Moment 1:** I asked Codex to help complete the assignment with basic changes.
+It read the instructions and starter files, collected public comments with
+source links, and prepared blank worksheets. The student must still supply
+original criteria and cold labels; AI has not filled those in.
 
-     ⚠️ Plus disclosure of any pre-labelling. If you had a model pre-label a
-     batch and then read and corrected every one, say that. It's an allowed
-     workflow and disclosing it costs you nothing. Not disclosing it is the
-     problem. -->
+**Moment 2:** Codex proposed a two-label taxonomy, identified quoted and
+rhetorical questions as the difficult boundary, and generated eight synthetic
+boundary examples. Those examples are explicitly excluded from collected data.
+Student review and any resulting definition changes are still pending.
 
-**Moment 1**
-
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
-
-**Moment 2**
-
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
-
-**Pre-labelling disclosure:**
+**Pre-labeling disclosure:** The reserved 20 comments have not been labeled
+by AI. No remaining batch has been pre-labeled yet. Sampling comments by a
+question mark is not semantic annotation. Future AI-assisted labels and the
+student's review must be disclosed here when they happen.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
