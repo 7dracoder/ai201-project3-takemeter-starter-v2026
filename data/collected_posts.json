@@ -1098,5 +1098,180 @@
     "text": "I’ve experienced this myself. I’ve had to downgrade my opinion of my own code. LLMs are great at pointing out the edge cases that you might have taken years to find. Honestly feels quite dispiriting but we move on.",
     "url": "https://news.ycombinator.com/item?id=50158762",
     "created_at": "2026-10-19T22:12:24Z"
+  },
+  {
+    "text": "So many questions!\nWhat exactly is an LLM sellout? Someone who sees the world moving toward it?\nWouldn't Rust be a sellout too?\nWhy is Scala an LLM sellout?",
+    "url": "https://news.ycombinator.com/item?id=50159569",
+    "created_at": "2026-10-19T23:54:51Z"
+  },
+  {
+    "text": "Source? Quick search did not reveal any internal cost per tonne to orbit numbers.\nEither way, if they did outsource these launches, they would not be paying the cost, but the price (meaning cost + margin). And that is much more expensive then just buying it from SpX.",
+    "url": "https://news.ycombinator.com/item?id=50159509",
+    "created_at": "2026-10-19T23:45:37Z"
+  },
+  {
+    "text": "Dogs don't know about the frequencies or amplitudes yet they can make the connection. Why does a sound match visual stimuli with such high correlation?",
+    "url": "https://news.ycombinator.com/item?id=50159007",
+    "created_at": "2026-10-19T22:40:54Z"
+  },
+  {
+    "text": "Why in the world was your Plex exposed to the open internet?",
+    "url": "https://news.ycombinator.com/item?id=50159077",
+    "created_at": "2026-10-19T22:47:35Z"
+  },
+  {
+    "text": "I hadn’t seen that one hash paper before.  This is a really cool optimization over Miztenmacher.  Do you have benchmark numbers with different input sizes you can share?\nI’ll have to read the paper and code more, but it seems like this would be amenable to supporting filter merges as well (as long as the new size doesn’t exceed the filters’ capacity).",
+    "url": "https://news.ycombinator.com/item?id=50159456",
+    "created_at": "2026-10-19T23:38:53Z"
+  },
+  {
+    "text": "What are the best reasons for a new project to choose Drupal in 2026, apart from familiarity ?",
+    "url": "https://news.ycombinator.com/item?id=50159403",
+    "created_at": "2026-10-19T23:31:51Z"
+  },
+  {
+    "text": "Did it actually come in the mail?\nI've bought some low-priced things on amazon, just to have them cancelled.  Spooky since I figure someone got my name, address, phone number from amazon.",
+    "url": "https://news.ycombinator.com/item?id=50159384",
+    "created_at": "2026-10-19T23:29:35Z"
+  },
+  {
+    "text": "> CERN was built on the premise that nuclear technology was too dangerous for anyone single nation to have\nWhat? It’s not that kind of nuclear. The members collaborate because it’s insanely expensive to build these huge accelerators and not many countries have internal pools of scientists big enough to justify having one.\n> Today they’re one of the biggest compute in the world\nNot really. They have cool computers but the biggest are in the US and China.\n> In my opinion, high energy particle physics is a dead end\nOut of curiosity, what do you base this opinion on?\n> Clearly, there is a path there where a fraction of that money, infra, and a fraction of the incredible geniouses that work there could be rerouted into a Opus/Mythos/Astra shape open / European system\nNo. People, even smart ones, are not interchangeable, universal geniuses. They end up in one position because they are good at something, it does not mean that they would be productive in a different position. And understanding our universe better is well worth the pennies we spend on CERN. Other people are already working on LLMs.\nBesides, it’s not at all what is happening here.",
+    "url": "https://news.ycombinator.com/item?id=50159071",
+    "created_at": "2026-10-19T22:47:09Z"
+  },
+  {
+    "text": "How? I can see the 64GB version on HP website costs $5k right now: https://www.hp.com/us-en/shop/pdp/hp-omnibook-ultra-laptop-n...",
+    "url": "https://news.ycombinator.com/item?id=50159029",
+    "created_at": "2026-10-19T22:42:37Z"
+  },
+  {
+    "text": "I was wondering did he use the control mixer MCU (initially mentioned in the video) at all? The encoder should always feed into the MCU directly.",
+    "url": "https://news.ycombinator.com/item?id=50158992",
+    "created_at": "2026-10-19T22:38:55Z"
+  },
+  {
+    "text": "1. Why isn't observability setup to monitor the queue depth and alert?\n2. Why aren't the CI runners self-healing?",
+    "url": "https://news.ycombinator.com/item?id=50159004",
+    "created_at": "2026-10-19T22:40:28Z"
+  },
+  {
+    "text": "Wasn't this supposed to be what Gas Town was meant to solve?",
+    "url": "https://news.ycombinator.com/item?id=50159288",
+    "created_at": "2026-10-19T23:15:30Z"
+  },
+  {
+    "text": "Stage 1 and 3 of that chain are shocking. I mean, yes, security is very hard, especially in a large codebase, but they look like actively made misguided choices.\nStage 1: one endpoint checks for the token header existence, not its content. From the writeup I'm guessing all the other endpoints do check the content, so why?\nStage 3: checks if the URL starts with http://127.0.0.1, not if the domain is 127.0.0.1, to expose an admin token. Ouch.",
+    "url": "https://news.ycombinator.com/item?id=50159094",
+    "created_at": "2026-10-19T22:49:21Z"
+  },
+  {
+    "text": "But you're focusing on humans and the human languages, and I'm honestly curious about the \"step change\" hypothesis!\nI think I've heard about it before, but my stint at university in linguistics is > 15 yrs ago, so I don't know much about it.\nI remember recognozing Chomsky when later studying CS and formal language basics came up, bringing the Chomsky hierarchy.\nDo you have some favorite links to share about the \"step change\" hypothesis? I remember reading some odd info-news article comparing brains among different species of homo; and and maybe also this particular hypothesis, but I'm not really informed.\nThat aside, I don't understand why this \"onomatopoeia\" couldn't be shared among different animals and humans:\n> I think objects with these shapes make similar sounds in the real world. Sharp shapes make percussive sounds. Round shapes make softer sounds.\nClaiming that animals had no language at all would obviously be false. But we still have reason to think (?) that the human languages are intertwined with the intelligence gap we observe between humans and other mammals.",
+    "url": "https://news.ycombinator.com/item?id=50159280",
+    "created_at": "2026-10-19T23:14:11Z"
+  },
+  {
+    "text": "Is that a requirement though? If the AI used existing understanding/methods (which I assume it did) then there's nothing really \"new\" there, right? Shouldn't it be possible to get understanding from how the existing methods were used? Or, even knowing it's true, cull an incredible number of paths from the problem space around it, to make finding understanding easier?\nI'm not a mathematician, but I've always been able to find understandings from exploring the paths starting from either direction of the conceptual graph that exists between a \"problem\" and a \"solution\".",
+    "url": "https://news.ycombinator.com/item?id=50159361",
+    "created_at": "2026-10-19T23:25:50Z"
+  },
+  {
+    "text": "How do you resolve it? Do you think people are creating software they wouldn't use, perhaps because they are forced to create what they would judge as crappy AI software on their jobs?\nAh... maybe I misstated my question. There are people who are stopping working on FOSS projects because that's no longer fun. But what I meant to focus on is people who say they are still creating software, using AI, and therefore miss coding. And the fact that there are people who say they wouldn't use a vibe-coded project.\nIf those are overlapping groups, there would seem to be an inconsistency, but maybe it's resolved as I mentioned in the first paragraph of this comment.\nI'm still interested in anyone's thoughts.",
+    "url": "https://news.ycombinator.com/item?id=50158935",
+    "created_at": "2026-10-19T22:31:57Z"
+  },
+  {
+    "text": "What kind of mistakes?\nI've used local models extensively (mostly qwen 3.8 27b) and now Claude sonnet/opus 5.5 since launch.\nSometimes I really wonder if not being able to see what's going on in thinking is a large contributor to thinking the models are stronger.\nThat assumes you bother skimming through thinking traces and the output in-between.\nIn my experience both qwen and claude fumbles and misunderstand, but will in a lot of cases self correct.\nQwen models can feel very indecisive but somehow makes it in the end. If the harness was able to hide that and only highlight the end results, I'd probably think qwen models are smarter.\nReading the tool calls Claude does while thinking shows a lot of trial and error about even simple things like editing code and getting the whitespace wrong. But it happens so fast compared to qwen that it's sort of acceptable. With qwen, it can feel frustrating because it spends so much time on it.\nThis is all assuming that's what you meant by mistakes, but maybe you meant something different.",
+    "url": "https://news.ycombinator.com/item?id=50159340",
+    "created_at": "2026-10-19T23:22:00Z"
+  },
+  {
+    "text": "That is a very bold claim. Do you really think we have evidence to indicate any of that is true?",
+    "url": "https://news.ycombinator.com/item?id=50159264",
+    "created_at": "2026-10-19T23:11:31Z"
+  },
+  {
+    "text": "Nice, congrats on the first patch. Was the keyboard missing from UPower entirely, or was it showing up there and the xfce side just wasn't reading it?",
+    "url": "https://news.ycombinator.com/item?id=50159215",
+    "created_at": "2026-10-19T23:05:36Z"
+  },
+  {
+    "text": "This feels right. It fits the \"Assembly to C\" style transition of abstraction in that we're going from \"code to design of code.\"\nA question I've been struggling with, however, is what are the artifacts that live at this level? Are they design docs? Are they standardized? If I read your design docs, will I understand the code or do I need to \"decompile\" (use a coding agent to explain) to get back to this level of abstract for me to edit it?",
+    "url": "https://news.ycombinator.com/item?id=50159228",
+    "created_at": "2026-10-19T23:06:49Z"
+  },
+  {
+    "text": "Brother what “report” are you talking about? Do you mean your comment? The one with your story that ended before the resolution of your problem was reached?",
+    "url": "https://news.ycombinator.com/item?id=50159013",
+    "created_at": "2026-10-19T22:41:27Z"
+  },
+  {
+    "text": "Er? Android supports multiple VPNs at the same time on the same user profile? Since when exactly?",
+    "url": "https://news.ycombinator.com/item?id=50158990",
+    "created_at": "2026-10-19T22:38:42Z"
+  },
+  {
+    "text": "Examples?\nApart from apple glass I can’t think of UX changes not prompted by feature changes.",
+    "url": "https://news.ycombinator.com/item?id=50159210",
+    "created_at": "2026-10-19T23:04:54Z"
+  },
+  {
+    "text": "Any idea why you only got 160TPS when the blog post claims 1000+TPS? That seems like the only draw to this model right now while capabilities are behind the frontier.",
+    "url": "https://news.ycombinator.com/item?id=50158434",
+    "created_at": "2026-10-19T21:40:11Z"
+  },
+  {
+    "text": "hm, did the cost of tickets processed by an agent go down tho?",
+    "url": "https://news.ycombinator.com/item?id=50159158",
+    "created_at": "2026-10-19T22:57:18Z"
+  },
+  {
+    "text": "Would you still be able to do this if you put plex behind tailscale and connected to your tailnet on your phone?",
+    "url": "https://news.ycombinator.com/item?id=50159557",
+    "created_at": "2026-10-19T23:53:15Z"
+  },
+  {
+    "text": "Know any harnesses that explicitly don't have a \"yolo\" mode?\nI'm really curious to see if cyber-security goes for a small, minimal approved list of vetted models and harnesses or if the majority of the community leans towards the liability angle.",
+    "url": "https://news.ycombinator.com/item?id=50159512",
+    "created_at": "2026-10-19T23:45:47Z"
+  },
+  {
+    "text": "Can someone tell me what the future for software engineering or architecting as a profession would look like? Should I focus on concepts rather than code?",
+    "url": "https://news.ycombinator.com/item?id=50159190",
+    "created_at": "2026-10-19T23:01:37Z"
+  },
+  {
+    "text": "I've never played those mobile ad games and this scratched my curiosity. Now you're telling me they don't deliver and I'm curious again, how do they fail their delivery?",
+    "url": "https://news.ycombinator.com/item?id=50159230",
+    "created_at": "2026-10-19T23:07:03Z"
+  },
+  {
+    "text": "How are you setting the alerts? Are you using anomaly detection? If so, what kind?",
+    "url": "https://news.ycombinator.com/item?id=50159301",
+    "created_at": "2026-10-19T23:17:17Z"
+  },
+  {
+    "text": "What means \"prehistoric boulder\", are not essentially all boulders prehistoric? I just don't know what a historic boulder would even mean. Something in Raiders of the Lost Ark?",
+    "url": "https://news.ycombinator.com/item?id=50159236",
+    "created_at": "2026-10-19T23:07:23Z"
+  },
+  {
+    "text": "I'm interested in people's thoughts on the basic question: If I write something and ask an LLM to edit or critique that piece, is it LLM generated or is it mine?\nI usually follow this procedure for formal emails. I write an initial draft and ask an LLM for a review. I iterate several times as I frequently feel that the LLM has changed a subtle meaning or makes a specious argument that isn't in line with what I want to communicate.\nIf I could afford a full-time copy editor, I’d use one for the same reason. I am just trying to convey my meaning accurately and I believe that I get more precise results with an LLM helper.",
+    "url": "https://news.ycombinator.com/item?id=50158893",
+    "created_at": "2026-10-19T22:26:31Z"
+  },
+  {
+    "text": "So... How does it prioritize things? That's the only question that matters",
+    "url": "https://news.ycombinator.com/item?id=50159121",
+    "created_at": "2026-10-19T22:53:42Z"
+  },
+  {
+    "text": "I don't know if inspection would be practical. How do you inspect the weights for an intentionally hidden trigger that writes malware?",
+    "url": "https://news.ycombinator.com/item?id=50159446",
+    "created_at": "2026-10-19T23:37:42Z"
+  },
+  {
+    "text": "> Have you ever talked through a problem with a rubber duck?\nI talk to myself to find good ways to express a thought with language, but not to think.\n> Or written in a journal?\nI do this to remember and sometimes to prompt thinking, but writing isn't the thinking. It's the outcome of it.\nDo I just have a narrower definition of reasoning?\nThe reason I'm interested in this is because I have a very low verbal IQ but a relatively high spatial IQ. I have often wondered if this divergence is because I don't reason with language, or perhaps what I experience is normal but I just disagree about the semantics of reasoning. Unlike some people, I can do internal monologues, I just have no idea what people mean when they describe that as reasoning.\nFor example, if you're trying to work out why some electrics aren't working, do you say in your head, \"I should check the fuse box\" or do you just visualise the system and components that need checking? I do the latter, and words would only enter my head if I need to write that down or say it to someone else. Furthermore, I don't even understand how you can monolog in your head about something prior to thinking it. This concept makes no sense to me and would be an alien form of reasoning to me if people can do this.",
+    "url": "https://news.ycombinator.com/item?id=50159170",
+    "created_at": "2026-10-19T22:58:42Z"
   }
 ]
