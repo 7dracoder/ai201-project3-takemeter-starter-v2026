@@ -1,26 +1,18 @@
-# Your part before training
+# Personal course requirements
 
-This is preparation, not a finished submission.
+The repository now contains AI-assisted criteria and 255 AI-labeled comments.
+The training section of README.md records the actual run status and metrics.
 
-1. Read the two definitions and boundary rule in [README.md](README.md).
-   Read the community yourself and adjust the definitions if needed.
-2. Label the 20 posts in [data/cold_labeling.md](data/cold_labeling.md)
-   without AI. Write `question` or `statement` under each post.
-   Alternatively, fill the label column in `data/cold_labels.csv`.
-3. Write your five original numeric criteria and reasons in
-   [criteria.md](criteria.md), covering at least three areas. No results
-   have been generated, so you can still set these before training.
-4. Tell Codex when both files are finished. It can check clarity, commit your
-   criteria before training, and pre-label the remaining 200 comments.
-   Read and correct every pre-labeled comment before training.
+The course separately asks for five student-authored acceptance criteria,
+20 comments labeled unaided, and human review of every AI pre-label. Those
+personal steps have not occurred and are not represented as completed.
+The earlier cold-label worksheets are unused; their comments have now been
+seen and labeled by AI. They cannot honestly be called an unaided cold pass.
 
-After that, Codex can assemble the final unsplit `labels.csv`, verify label
-balance and duplicates, run the starter notebook sections 1-5, save actual
-`results.json` and `test_split.csv`, finish the README, and push the result.
-Do not submit the repository as complete before those steps are finished.
+If you complete a new unaided labeling exercise, use fresh comments you have
+not seen with AI answers. Record the actual workflow and ask your instructor
+how to handle student criteria now that the AI-assisted run exists. Preserve
+the original committed criteria and results rather than backdating new ones.
 
-Your fork: https://github.com/7dracoder/ai201-project3-takemeter-starter-v2026
-
-The assignment specifically reserves the five criteria and first 20 labels
-for you. AI-generated criteria or labels cannot honestly be called your
-original criteria or unaided cold labels.
+Unit 6 sections remain blank. The Unit 5 artifacts and the GitHub history are
+kept for the next unit.

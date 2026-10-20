@@ -43,9 +43,9 @@ TakeMeter will sort public Hacker News comments into `question` and `statement`.
 It measures whether the author asks for information, not whether the comment is
 correct or high quality. This is the Unit 5 build only; no stretch features.
 
-**Status:** 220 real comments collected. The student's 20 cold labels, five
-acceptance criteria, review of the other labels, and training are pending.
-Start with [YOUR_TURN.md](YOUR_TURN.md). No training results have been generated.
+The labeled dataset contains 255 whole comments. Five numeric targets were
+committed before training. The collection, annotation, criteria, and execution
+are AI-assisted; the disclosure below explains what was done.
 
 ## Label Taxonomy
 
@@ -95,11 +95,10 @@ when most of the comment is an opinion. If a question only emphasizes a claim
 or the author answers it themselves, use `statement`. A question mark alone is
 not enough. A clear request without a question mark still counts as `question`.
 
-**Candidate distinctions observed in an AI reading of 45 collected comments:**
-Some ask for practical advice; some give explanations or personal experience;
-some phrase disagreement as a rhetorical question. The two-label choice keeps
-this basic while making the last distinction explicit. This does not replace
-the student's community reading.
+**Three distinctions observed during the AI reading:** Some comments ask for
+practical advice, some provide explanations or personal experience, and some
+phrase disagreement as a rhetorical question. Two labels keep the task basic;
+the boundary rule separates genuine requests from rhetorical statements.
 
 **AI stress test (synthetic; excluded from the dataset):**
 
@@ -122,34 +121,50 @@ collected through the [Algolia HN API](https://hn.algolia.com/api).
 source URL, and publication time. HTML formatting is removed; posts are not
 shortened. Collection excludes comments under ten words and duplicate text.
 
-**Sampling:** Five API pages, shuffled with seed 42. The first 20 are reserved
-unlabeled for the student's cold pass. The other 200 comprise 100 comments
-containing `?` and 100 without it, as a way to find candidate questions and
-statements. Punctuation is a sampling hint, not a final label. This deliberately
-selected sample does not estimate Hacker News's natural label frequencies.
+**Sampling:** The initial 220 comments came from five API pages, shuffled with
+seed 42: 20 unfiltered comments, 100 containing `?`, and 100 without it.
+After semantic labeling showed too many statements, the collection was expanded
+to ten cached pages and 35 additional genuine questions were included.
+The final sample is deliberately selected and does not represent Hacker News's
+natural label frequencies. Each retained comment has its own unique source URL.
 
-**Labeling:** Not completed. `data/cold_labels.csv` has exactly 20 blank labels.
-The student must label these unaided first. AI may then pre-label the other
-200, but the student must read and correct every row. Only genuinely completed
-unaided labels should receive `cold` in the note column. The final `labels.csv`
-will be one unsplit file with `text,label,note` columns.
+**Labeling:** AI read the full comments and assigned one semantic label to
+each. Every note records `AI-labeled`, the source URL, and a reason. There was
+no unaided human cold-labeling pass or independent human review; no row is
+marked `cold`. The earlier blank cold-label worksheets are not training data.
+`labels.csv` is the one unsplit dataset; the notebook creates the split.
 
-**Counts per label:** Pending labeling; 220 comments collected in total.
-The final dataset must keep every label at or below 70%.
+**Counts per label:**
 
-**Three candidate hard cases identified by AI (student review pending):**
+| Label | Count | Share |
+|---|---:|---:|
+| question | 81 | 31.76% |
+| statement | 174 | 68.24% |
+| **Total** | **255** | **100%** |
+
+There are no empty texts, duplicate texts, duplicate source URLs, or undefined
+labels. The largest label stays below 70%.
+
+**Punctuation check:** 62 statements contain a question mark, while one question
+requests others' thoughts without one. Punctuation alone therefore does not
+define the labels. It is still correlated with them, and the selected sample
+and small size limit how well results will generalize to unseen discussions.
+Comments from related threads can also share wording; exact-text deduplication
+does not eliminate that source of similarity.
+
+**Three hard cases and the decisions used in the CSV:**
 
 1. [Quoted question followed by an answer](https://news.ycombinator.com/item?id=50158399):
    the comment quotes a question about StarCraft assets and answers "Because
-   it's cool." Candidate labels: question/statement. AI choice: `statement`,
+   it's cool." Could be question/statement. Chosen label: `statement`,
    because the author's own words are an answer.
 2. [Self-answered purchasing question](https://news.ycombinator.com/item?id=50158645):
    the author asks why they would buy the RTX Spark, then explains why they
-   prefer the DGX Spark. Candidate labels: question/statement. AI choice:
+   prefer the DGX Spark. Could be question/statement. Chosen label:
    `statement`, because the question introduces the author's own conclusion.
 3. [An opinion followed by a request](https://news.ycombinator.com/item?id=50158542):
    the author enjoyed a video but asks whether clipping was a camera bug.
-   Candidate labels: question/statement. AI choice: `question`, because the
+   Could be question/statement. Chosen label: `question`, because the
    author requests clarification that the comment does not resolve.
 
 ## The Training Run
@@ -157,25 +172,64 @@ The final dataset must keep every label at or below 70%.
 **Base model:** `distilbert-base-uncased`.
 
 **Settings:** 3 epochs, learning rate `2e-5`, batch size 16, maximum length
-128 tokens, seed 42. No hyperparameter changes planned.
+128 tokens, seed 42. No training hyperparameters were changed.
 
-**Split:** The starter notebook will make its stratified 70/15/15 split after
-labeling. Raw posts remain whole; the tokenizer truncates model inputs to 128
-tokens. Split counts, test-label support, and device will be recorded after
-an actual run. No metrics are claimed yet.
+**Device:** CPU, PyTorch `2.11.0+cpu`, with four CPU threads. This Windows run
+loaded PyTorch before the notebook kernel libraries to avoid a DLL startup
+error. All eight code cells in sections 1-5 completed without a cell error.
+A console encoding error occurred only while replaying the saved outputs after
+the notebook had finished; the notebook outputs, metrics, split, and saved
+model were already written successfully.
 
-**Pending:** Commit the student's completed criteria and final labels before
-running notebook sections 1–5. Sections 6–7 belong to Unit 6.
+**Split:** The starter's stratified 70/15/15 split produced the following
+counts (rounding gives 177/39/39). Raw comments remain whole in the CSV;
+the tokenizer truncates model inputs to 128 tokens.
+
+| Label | Train | Validation | Test |
+|---|---:|---:|---:|
+| question | 57 | 12 | 12 |
+| statement | 120 | 27 | 27 |
+| **Total** | **177** | **39** | **39** |
+
+Neither test label has fewer than eight examples. Test rows were not used for
+training or validation; exact texts do not overlap between the three splits.
+
+**Saved results:** `results.json` and `test_split.csv`. The executed notebook
+also contains the training output. The trained weights and tokenizer are
+saved locally in `models/takemeter/`, which the starter intentionally excludes
+from Git because model files are large.
+
+| Held-out measure | Result |
+|---|---:|
+| Accuracy | 0.6923 |
+| Macro F1 | 0.4091 |
+| Question F1 | 0.0000 |
+| Statement F1 | 0.8182 |
+
+The model predicted `statement` for every test row: 27 correct statements and
+12 missed questions. The run is complete, but it did not learn a useful
+question classifier. The first run is retained as evidence, and the criteria
+have not been lowered to fit it. Further diagnosis and comparison across seeds
+belong to Unit 6; those sections below remain blank.
+
+**Before training:** Criteria were committed in `0b7abed` and the final dataset
+in `38f619e`, before the notebook generated the results.
 
 ## How I Used AI
 
-1. AI helped collect public comments with source links and prepare the labeling
-   and criteria worksheets.
-2. AI suggested two labels and a rule for quoted and rhetorical questions,
-   then created eight practice examples that are excluded from the dataset.
+1. AI collected real public comments, proposed the two labels, and tested the
+   difficult boundary with eight synthetic examples. Those synthetic examples
+   are not part of the dataset. Semantic annotation changed many punctuation
+   candidates into statements and prompted collection of 35 more questions.
+2. AI drafted the five numeric criteria and reasons before training, labeled
+   the comments, and ran the local notebook. It also added retries, page
+   caching, sample-size checks, and protection against overwriting annotations
+   to the collector after the grading feedback.
 
-No dataset comments have been AI-labeled. My cold labels, original criteria,
-review of the remaining labels, and training are still pending.
+**Pre-labeling disclosure:** All 255 annotations are AI-generated. No unaided
+student cold-labeling pass, student-authored criteria, independent human review,
+or agreement score is claimed. These personal course requirements still need
+student participation; the files and real model run do not substitute for it.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
