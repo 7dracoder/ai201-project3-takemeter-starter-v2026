@@ -209,8 +209,7 @@ from Git because model files are large.
 The model predicted `statement` for every test row: 27 correct statements and
 12 missed questions. The run is complete, but it did not learn a useful
 question classifier. The first run is retained as evidence, and the criteria
-have not been lowered to fit it. Further diagnosis and comparison across seeds
-belong to Unit 6; those sections below remain blank.
+have not been lowered to fit it. Unit 6 below records the repeated trials, baseline, and one measured improvement.
 
 **Before training:** Criteria were committed in `0b7abed` and the final dataset
 in `38f619e`, before the notebook generated the results.
@@ -226,9 +225,11 @@ in `38f619e`, before the notebook generated the results.
    caching, sample-size checks, and protection against overwriting annotations
    to the collector after the grading feedback.
 
+**Unit 6 AI use:** AI ran the baseline and repeated trials, annotated the staff posts before opening the key, generated the tables from saved metrics, and drafted the diagnoses. The staff comparison is AI-to-staff agreement, not unaided human agreement.
+
 **Pre-labeling disclosure:** All 255 annotations are AI-generated. No unaided
 student cold-labeling pass, student-authored criteria, independent human review,
-or agreement score is claimed. These personal course requirements still need
+or human agreement score is claimed. These personal course requirements still need
 student participation; the files and real model run do not substitute for it.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
@@ -240,31 +241,22 @@ student participation; the files and real model run do not substitute for it.
 
 ## Baseline vs. Trained
 
-<!-- Both models on the same posts. `python baseline.py --trained results.json`
-     prints this table for you. -->
+**Prediction committed before the baseline run (`9d385b3`):** I expected the trained model to retain higher statement recall and the baseline to recognize more genuine questions. This was informed by the already-known Unit 5 majority-class behavior, not a blind prediction before seeing those old results.
 
-| Measure | Baseline | Trained | Difference |
-|---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+The local zero-shot model was `facebook/bart-large-mnli`, using the unchanged one-sentence definitions in `label_definitions.txt` and the starter's hypothesis template. Both columns score all **39 identical posts** in the original `test_split.csv`; no random-sample fallback or cap was used. No bare-label comparison or other stretch feature was added.
 
-**Prediction recorded before running the Unit 6 baseline:** I expect the
-trained model to retain higher statement recall, while the zero-shot model
-should recognize more genuine questions. This is informed by the already-known
-Unit 5 majority-class behavior, not a claim of a blind prediction before those
-old results were seen.
+| Measure | Baseline | Trained (Unit 5, seed 42) | Trained - baseline |
+|---|---:|---:|---:|
+| Accuracy | 0.795 | 0.692 | -0.103 |
+| Macro F1 | 0.783 | 0.409 | -0.374 |
+| question F1 | 0.733 | 0.000 | -0.733 |
+| statement F1 | 0.833 | 0.818 | -0.015 |
 
-**What the gap actually means:**
-<!-- If the baseline matched your trained model, your fine-tuning added
-     nothing — and that is a real finding, not a failure. Say it plainly. -->
-
-
-
----
+Baseline accuracy minus the original trained accuracy is +0.103. The original classifier's question recall is 0.000, versus 0.917 for the baseline. A useful comparison requires both the aggregate and the question score: high statement recall alone can be achieved by always choosing the majority class. This one baseline comparison applies to the original seed-42 posts, not to the other seeds' different test sets.
 
 ## Run Log — Before
+
+Every seed started from the same pretrained model and used its own stratified 70/15/15 split: 177 training, 39 validation, and 39 test rows. The device was CPU with four threads and PyTorch `2.11.0+cpu`. Settings were 3 epochs, learning rate `2e-5`, batch size 16, and maximum length 128. The notebook's exact split/train/evaluate functions were run by `run_trials.py`.
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---:|---:|---:|---|
@@ -274,176 +266,97 @@ old results were seen.
 | 4. Dataset size/balance | >=200 unique; max share <=70% | 255; 68.24% max | 255; 68.24% max | 255; 68.24% max | MET |
 | 5. Confidence gap | >=0.10 | 0.692 | 0.692 | 0.231 | MET |
 
-### Confusion matrix (seed 42)
+Accuracy spread across seeds: **0.000** (0.0 percentage points). That is below ten points, but a stable majority-class predictor can still be consistently unhelpful.
+
+Criterion 4 checks the unchanged whole dataset, so its identical entries are one shared structural check rather than three independent data collections. All numeric model targets must pass in every seed.
+
+### Confusion matrix (before, seed 42)
 
 | true \ predicted | question | statement |
 |---|---:|---:|
 | **question** | 0 | 12 |
 | **statement** | 0 | 27 |
 
-All three seeds predicted only statements. The 12 missed questions in each test split explain the accuracy and question-F1 failures.
+The largest off-diagonal cell is **12 true question comments predicted as statement**. The reverse direction has 0 errors. This names the direction of the failed boundary; it is not simply an overall error count. The other seeds' matrices are saved in the before JSON.
 
 ## Verdicts and Diagnoses
 
-<!-- MET or MISSED against LAST UNIT's target. The target has to hold across
-     all three seeds, not turn up sometimes. -->
-
-| # | Criterion | Target | Verdict | How I decided |
+| # | Criterion | Target | Verdict before improvement | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy | >=0.75 | MISSED | Minimum across seeds: 0.692. |
+| 2 | Question F1 | >=0.65 | MISSED | Minimum across seeds: 0.000. |
+| 3 | Statement F1 | >=0.75 | MET | Minimum across seeds: 0.818. |
+| 4 | Dataset size/balance | >=200 unique; max <=70% | MET | 255 unique rows; largest share 68.24%. |
+| 5 | Confidence gap | >=0.10 | MET | Minimum across seeds: 0.231. |
 
-**Diagnoses**
+**Diagnosis of the misses:** The main failure is the question/statement boundary: question recall and F1 must be read alongside the off-diagonal question-to-statement counts. Statements make up 174/255 rows (68.24%), so they offer the optimizer an easy majority-class solution. Each test split still contains 12 questions and each training split contains 57 questions; the minority class is smaller, but this is not a zero-support or fewer-than-eight-test-examples failure.
 
-<!-- For each miss: the cause, and how you know. The four common causes are:
-     too few examples for a label, a boundary you applied inconsistently, a
-     genuinely hard label pair, and a task the model can't reach from this
-     much data.
+The staff check matched 30/30 under the *different* analysis/hot_take/reaction taxonomy. It revealed no disagreements to classify as a consistency error, definition gap, or defensible alternative. It therefore supplies no observed staff-boundary error to explain the Hacker News misses. Since the annotations were AI-assisted and the taxonomies differ, this cannot establish human consistency or prove the question/statement labels are correct. Underfitting combined with imbalance is a plausible explanation, not a proven exclusion of label noise.
 
-     ⚠️ Use your agreement report as evidence. It is the only instrument you
-     have that can tell a LABELLING problem from a MODEL problem, and this
-     section is graded on whether you used it that way. -->
+The zero-shot baseline's question F1 of 0.733 shows that these held-out requests are recognizable under the definitions. The before confidence gap can pass despite zero question recall: confident majority-label guesses are often correct statements, while less confident guesses include missed questions. Passing that target does not make the question classifier useful or establish probability calibration.
 
+- **Accuracy miss:** The missed questions are enough to prevent the 0.75 accuracy target. The matrix and question recall identify the affected label; stable scores alone do not show the distinction was learned.
+- **Question-F1 miss:** Confusing real requests with statements directly lowers question recall. The majority share and training behavior motivate a single optimizer-setting experiment; the perfect staff-set rate cannot rule out noise in this separate taxonomy.
 
-
----
+The original five criteria are unchanged. No target was lowered after seeing a miss.
 
 ## Agreement Report
 
-<!-- Your rate against the staff set, and every disagreement adjudicated.
+**Agreement rate:** **30 / 30 = 100%** against the instructor's `staff_labels.csv`. All 30 texts match; there are no missing posts.
 
-     Remember you labelled these 30 under the STAFF taxonomy in
-     data/staff_taxonomy.md, not your own — so every argument below is made
-     from those definitions and those decision rules. -->
+`my_staff_labels.csv` was committed in `274bec1` before the answer key was copied from Downloads and opened. These are **AI-assisted annotations**, not a claimed unaided human pass. The supplied staff taxonomy was used, not the project's question/statement labels.
 
-**Agreement rate:** ___ / 30 = ___%
+**Disagreements:** None. There are no cases to adjudicate or assign to piles (a), (b), or (c); no fictional disagreements have been added.
 
-<!-- Nobody grades this number. A 60% who argues every disagreement from the
-     stated rules beats a 95% who wrote "staff was right" nine times. Several
-     of the 30 were chosen because they're genuinely ambiguous — you should be
-     winning some of these. -->
+**Borderline decisions checked against the rules:**
 
-**Disagreements**
+- `sp_014`: **hot_take**. The 3% statistic accompanies an overconfident conclusion that shoes are the whole story. Rule 1 explicitly distinguishes a decorative number from a load-bearing argument.
+- `sp_018`: **hot_take**. The eight-minute-mile threshold is an unsupported general cutoff, not supporting evidence. Rule 2 also rules out reaction because it is not an immediate personal experience.
+- `sp_027`: **reaction**. The approximate 20-degree lean describes how the windy run felt; it does not support a general argument. Rules 1–3 keep a number alone from turning a personal reaction into analysis.
 
-<!-- Three lines each: the post, both labels, and who you think is right and
-     why — grounded in the staff definitions you were both applying.
-
-     Then sort each into one of three piles:
-       (a) the rule covered it and I applied it loosely → a consistency problem
-       (b) the rule genuinely doesn't say               → a gap in the definitions
-       (c) the rule is ambiguous here and my reading is defensible → argue it.
-           This is a legitimate win.
-
-     Pile (a) is the one that matters most for your diagnosis: if you applied a
-     written rule two different ways on 30 posts, that is direct evidence about
-     what you did across your own 200. -->
-
-**1.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
-
-**2.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
-
-**What the pattern in my disagreements tells me:**
-
-
-
----
+The set was relatively clear when the explicit rules were applied. A perfect AI-to-staff match on these short running-forum posts is limited evidence; it should not be generalized to human annotation skill or the separate Hacker News dataset.
 
 ## The Improvement
 
-**Planned single change, written before the after trials:** Increase only
-the learning rate from `2e-5` to `5e-5`. Keep 3 epochs, batch size 16,
-128 tokens, the model, all labels, all criteria, and seeds 42/7/2024 unchanged.
+**One change:** learning rate increased from `2e-5` to **`5e-5`**. Epochs (3), batch size (16), maximum length (128), model, dataset, taxonomy, criteria, and seeds were unchanged. Each after trial used exactly the same split as its paired before trial.
 
-**Diagnosis:** All three before trials predicted only the majority statement
-class despite having 57 training questions and 12 test questions per seed.
-Validation loss decreased, but the decision boundary did not become useful.
-The staff annotations agreed 30/30, which shows no observed error under those
-different rules and does not prove the project's own labels are noise-free.
-This experiment tests underfitting with a larger update size; it does not
-assume that label noise or limited data have been ruled out.
+**Why this change:** The weak question boundary and attraction to the majority label suggested insufficient learning at the original setting. Raising only the learning rate tests whether larger updates help the model leave that solution. This was one predeclared trial, not a search over test-set settings; neither the labels nor the thresholds were edited to improve the scores.
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
-|---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+|---|---|---:|---:|---:|---|
+| 1. Overall accuracy | >=0.75 | 0.846 | 0.769 | 0.821 | MET |
+| 2. Question F1 | >=0.65 | 0.769 | 0.667 | 0.667 | MET |
+| 3. Statement F1 | >=0.75 | 0.885 | 0.824 | 0.877 | MET |
+| 4. Dataset size/balance | >=200 unique; max share <=70% | 255; 68.24% max | 255; 68.24% max | 255; 68.24% max | MET |
+| 5. Confidence gap | >=0.10 | 0.385 | 0.462 | 0.231 | MET |
 
-**Did it help, and how do I know:**
+### Paired comparison
 
-<!-- If it didn't, say so. Relabelling that didn't help is a genuinely
-     interesting result and earns full credit. -->
+| Seed | Accuracy before | Accuracy after | Change | Question F1 before | Question F1 after |
+|---|---:|---:|---:|---:|---:|
+| 42 | 0.692 | 0.846 | +0.154 | 0.000 | 0.769 |
+| 7 | 0.692 | 0.769 | +0.077 | 0.000 | 0.667 |
+| 2024 | 0.692 | 0.821 | +0.128 | 0.000 | 0.667 |
 
+Mean accuracy changed by **+0.120**, and mean question F1 changed by **+0.701** across the same seeds. The higher learning rate helped these average scores, but each criterion still needs to hold in all three trials.
 
+On the original seed-42 posts, after accuracy is 0.846 versus the baseline's 0.795. This is a like-for-like comparison; the baseline was not rerun on the other seeds' different test posts.
 
----
+### Confusion matrix (after, seed 42)
+
+| true \ predicted | question | statement |
+|---|---:|---:|
+| **question** | 10 | 2 |
+| **statement** | 4 | 23 |
+
+The baseline model cache is `.cache/huggingface`; `run_trials.py` selects it automatically. To reuse it with `baseline.py` in PowerShell, first set `$env:HF_HOME = "$PWD\.cache\huggingface"`.
+
+The recorded runs used `python run_trials.py before` and `python run_trials.py after --learning-rate 5e-5`. To repeat them without overwriting evidence, append `--out .cache/recheck_before.json` or `--out .cache/recheck_after.json`. The runner preserves existing result files. The original Unit 5 `results.json` and `test_split.csv` remain unchanged.
 
 ## What's Still Broken
 
-<!-- For each criterion still missed: what you'd do, and why you stopped. -->
+All five targets passed across these three trials. Generalization to new threads and independent human labels is still unmeasured.
 
-
-
-**The gap between what I meant my labels to capture and what the model
-learned:**
-<!-- Two sentences. Your confusion matrix is the evidence. -->
-
-
-
-<!-- ═════════════════════════════════════════════════════════════════════
-
-     SUBMISSION CHECKLIST — unit 5
-
-       [ ] criteria.md has five numbered criteria, each naming a NUMBER
-       [ ] Each has a reason underneath tied to your data or taxonomy
-       [ ] labels.csv: at least 150 rows, text/label/note, ONE file not split
-       [ ] No label above 70%
-       [ ] All five unit 5 sections have real content
-       [ ] Label Taxonomy includes the decision rule for your hardest boundary
-       [ ] The Dataset includes three hard cases
-       [ ] results.json and test_split.csv committed (the notebook does this)
-       [ ] At least four new commits
-       [ ] Repository URL submitted — WRITE IT DOWN
-
-     SUBMISSION CHECKLIST — unit 6
-
-       [ ] Baseline vs. Trained table, with your prediction written beforehand
-       [ ] Run Log — Before, five criteria across three seeds
-       [ ] Confusion matrix TYPED AS A MARKDOWN TABLE
-       [ ] A verdict on every criterion
-       [ ] A diagnosis for every miss, using the agreement report as evidence
-       [ ] Agreement Report with every disagreement adjudicated
-       [ ] One improvement, with Run Log — After
-       [ ] What's Still Broken
-       [ ] results_three_seeds_before.json, results_three_seeds_after.json,
-           baseline_results.json and
-           agreement_results.json committed
-       [ ] At least four new commits
-       [ ] The SAME repository URL as last unit
-
-     Do not delete and recreate this repository.
-     ═════════════════════════════════════════════════════════════════════ -->
-
----
-
-📖 **How to run this project: [RUNNING.md](RUNNING.md)**
+**Gap between the intended distinction and what was learned:** The intended label identifies a real information request, including requests without a question mark and excluding rhetorical questions; seed 42 missed 12 questions before the change and 2 afterward. The after matrix measures improvement on this selected, AI-labeled sample, but its punctuation correlation and lack of independent human review prevent treating it as broad community performance.

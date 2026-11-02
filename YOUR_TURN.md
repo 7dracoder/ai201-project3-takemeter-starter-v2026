@@ -14,5 +14,7 @@ not seen with AI answers. Record the actual workflow and ask your instructor
 how to handle student criteria now that the AI-assisted run exists. Preserve
 the original committed criteria and results rather than backdating new ones.
 
-Unit 6 sections remain blank. The Unit 5 artifacts and the GitHub history are
-kept for the next unit.
+Unit 6 now includes the completed baseline, three before trials, three after
+trials, the staff comparison, and the full testing writeup. Staff annotations
+and the report are disclosed as AI-assisted. The Unit 5 data, criteria, metrics,
+and original test split remain unchanged. See README.md for measured results.
