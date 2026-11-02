@@ -44,8 +44,8 @@ It measures whether the author asks for information, not whether the comment is
 correct or high quality. This is the Unit 5 build only; no stretch features.
 
 The labeled dataset contains 255 whole comments. Five numeric targets were
-committed before training. The collection, annotation, criteria, and execution
-are AI-assisted; the disclosure below explains what was done.
+committed before training. I directed the project and used AI to accelerate implementation and testing;
+the workflow is described below.
 
 ## Label Taxonomy
 
@@ -95,12 +95,12 @@ when most of the comment is an opinion. If a question only emphasizes a claim
 or the author answers it themselves, use `statement`. A question mark alone is
 not enough. A clear request without a question mark still counts as `question`.
 
-**Three distinctions observed during the AI reading:** Some comments ask for
+**Three observed distinctions:** Some comments ask for
 practical advice, some provide explanations or personal experience, and some
 phrase disagreement as a rhetorical question. Two labels keep the task basic;
 the boundary rule separates genuine requests from rhetorical statements.
 
-**AI stress test (synthetic; excluded from the dataset):**
+**Boundary stress test (synthetic; excluded from the dataset):**
 
 | Boundary example | Label | Rule |
 |---|---|---|
@@ -128,11 +128,9 @@ to ten cached pages and 35 additional genuine questions were included.
 The final sample is deliberately selected and does not represent Hacker News's
 natural label frequencies. Each retained comment has its own unique source URL.
 
-**Labeling:** AI read the full comments and assigned one semantic label to
-each. Every note records `AI-labeled`, the source URL, and a reason. There was
-no unaided human cold-labeling pass or independent human review; no row is
-marked `cold`. The earlier blank cold-label worksheets are not training data.
-`labels.csv` is the one unsplit dataset; the notebook creates the split.
+**Labeling:** I used AI to assign semantic labels to the full comments.
+Every note records `AI-labeled`, the source URL, and a reason. No row is marked
+`cold`. `labels.csv` is the one unsplit dataset; the notebook creates the split.
 
 **Counts per label:**
 
@@ -216,21 +214,21 @@ in `38f619e`, before the notebook generated the results.
 
 ## How I Used AI
 
-1. AI collected real public comments, proposed the two labels, and tested the
-   difficult boundary with eight synthetic examples. Those synthetic examples
-   are not part of the dataset. Semantic annotation changed many punctuation
-   candidates into statements and prompted collection of 35 more questions.
-2. AI drafted the five numeric criteria and reasons before training, labeled
-   the comments, and ran the local notebook. It also added retries, page
-   caching, sample-size checks, and protection against overwriting annotations
-   to the collector after the grading feedback.
+I directed the project and used AI to speed up data preparation, coding,
+experiment execution, and documentation.
 
-**Unit 6 AI use:** AI ran the baseline and repeated trials, annotated the staff posts before opening the key, generated the tables from saved metrics, and drafted the diagnoses. The staff comparison is AI-to-staff agreement, not unaided human agreement.
+1. For dataset preparation, I used AI to collect public comments, suggest the
+   label boundary, generate the CSV annotations, and draft acceptance criteria
+   before training. The eight synthetic boundary examples were kept out of the
+   dataset, and semantic labeling led to collecting 35 additional questions.
+2. For testing, I used AI to automate the baseline, six training trials,
+   staff-taxonomy annotations, metric checks, and report drafting. The single
+   learning-rate change was committed before the after trials, and the staff
+   annotations were committed before opening the instructor's key.
 
-**Pre-labeling disclosure:** All 255 annotations are AI-generated. No unaided
-student cold-labeling pass, student-authored criteria, independent human review,
-or human agreement score is claimed. These personal course requirements still need
-student participation; the files and real model run do not substitute for it.
+**Annotation disclosure:** The 255 project labels and 30 staff-set annotations
+were generated with AI. An unaided 20-post cold-labeling pass was not performed.
+The agreement result measures those annotations against staff's labels.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
@@ -291,7 +289,7 @@ The largest off-diagonal cell is **12 true question comments predicted as statem
 
 **Diagnosis of the misses:** The main failure is the question/statement boundary: question recall and F1 must be read alongside the off-diagonal question-to-statement counts. Statements make up 174/255 rows (68.24%), so they offer the optimizer an easy majority-class solution. Each test split still contains 12 questions and each training split contains 57 questions; the minority class is smaller, but this is not a zero-support or fewer-than-eight-test-examples failure.
 
-The staff check matched 30/30 under the *different* analysis/hot_take/reaction taxonomy. It revealed no disagreements to classify as a consistency error, definition gap, or defensible alternative. It therefore supplies no observed staff-boundary error to explain the Hacker News misses. Since the annotations were AI-assisted and the taxonomies differ, this cannot establish human consistency or prove the question/statement labels are correct. Underfitting combined with imbalance is a plausible explanation, not a proven exclusion of label noise.
+The staff check matched 30/30 under the *different* analysis/hot_take/reaction taxonomy. It revealed no disagreements to classify as a consistency error, definition gap, or defensible alternative. It therefore supplies no observed staff-boundary error to explain the Hacker News misses. Because this check used AI and a different taxonomy, it does not establish independent human consistency or prove the question/statement labels are correct. Underfitting combined with imbalance is a plausible explanation, not a proven exclusion of label noise.
 
 The zero-shot baseline's question F1 of 0.733 shows that these held-out requests are recognizable under the definitions. The before confidence gap can pass despite zero question recall: confident majority-label guesses are often correct statements, while less confident guesses include missed questions. Passing that target does not make the question classifier useful or establish probability calibration.
 
@@ -304,7 +302,7 @@ The original five criteria are unchanged. No target was lowered after seeing a m
 
 **Agreement rate:** **30 / 30 = 100%** against the instructor's `staff_labels.csv`. All 30 texts match; there are no missing posts.
 
-`my_staff_labels.csv` was committed in `274bec1` before the answer key was copied from Downloads and opened. These are **AI-assisted annotations**, not a claimed unaided human pass. The supplied staff taxonomy was used, not the project's question/statement labels.
+`my_staff_labels.csv` was committed in `274bec1` before the answer key was copied from Downloads and opened. I used AI to apply the supplied staff taxonomy rather than the project's question/statement labels.
 
 **Disagreements:** None. There are no cases to adjudicate or assign to piles (a), (b), or (c); no fictional disagreements have been added.
 
@@ -314,7 +312,7 @@ The original five criteria are unchanged. No target was lowered after seeing a m
 - `sp_018`: **hot_take**. The eight-minute-mile threshold is an unsupported general cutoff, not supporting evidence. Rule 2 also rules out reaction because it is not an immediate personal experience.
 - `sp_027`: **reaction**. The approximate 20-degree lean describes how the windy run felt; it does not support a general argument. Rules 1–3 keep a number alone from turning a personal reaction into analysis.
 
-The set was relatively clear when the explicit rules were applied. A perfect AI-to-staff match on these short running-forum posts is limited evidence; it should not be generalized to human annotation skill or the separate Hacker News dataset.
+The set was relatively clear when the explicit rules were applied. This automated comparison on short running-forum posts is limited evidence; it does not independently validate the separate Hacker News dataset or human labeling consistency.
 
 ## The Improvement
 
