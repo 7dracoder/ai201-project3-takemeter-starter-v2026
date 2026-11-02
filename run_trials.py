@@ -19,9 +19,17 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("stage", choices=["before", "after"])
     parser.add_argument("--learning-rate", type=float, default=None)
+    parser.add_argument("--out", type=Path, default=None,
+                        help="alternate JSON path for a repeat run")
     args = parser.parse_args()
+    if args.learning_rate is not None and args.learning_rate <= 0:
+        parser.error("learning-rate must be positive")
     root = Path(__file__).resolve().parent
     os.chdir(root)
+    output = args.out or root / f"results_three_seeds_{args.stage}.json"
+    if output.exists():
+        raise FileExistsError(f"Preserving existing results: {output.name}")
+    output.parent.mkdir(parents=True, exist_ok=True)
     os.environ.setdefault("OMP_NUM_THREADS", "4")
     os.environ.setdefault("MKL_NUM_THREADS", "4")
     os.environ.setdefault("HF_HOME", str(root / ".cache" / "huggingface"))
@@ -41,10 +49,7 @@ def main():
         )]
         exec(compile(tree, f"notebook_cell_{index}", "exec"), namespace)
 
-    rate = args.learning_rate or namespace["LEARNING_RATE"]
-    output = root / f"results_three_seeds_{args.stage}.json"
-    if output.exists():
-        raise FileExistsError(f"Preserving existing results: {output.name}")
+    rate = namespace["LEARNING_RATE"] if args.learning_rate is None else args.learning_rate
     digest = hashlib.sha256((root / "labels.csv").read_bytes()).hexdigest()
     results = []
     for seed in (42, 7, 2024):
