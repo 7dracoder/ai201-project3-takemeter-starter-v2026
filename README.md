@@ -266,36 +266,22 @@ old results were seen.
 
 ## Run Log — Before
 
-<!-- Five criteria across three seeds. The notebook's section 6 prints the
-     spread table; the Target and Verdict columns are yours. -->
-
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
-|---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+|---|---|---:|---:|---:|---|
+| 1. Overall accuracy | >=0.75 | 0.692 | 0.692 | 0.692 | MISSED |
+| 2. Question F1 | >=0.65 | 0.000 | 0.000 | 0.000 | MISSED |
+| 3. Statement F1 | >=0.75 | 0.818 | 0.818 | 0.818 | MET |
+| 4. Dataset size/balance | >=200 unique; max share <=70% | 255; 68.24% max | 255; 68.24% max | 255; 68.24% max | MET |
+| 5. Confidence gap | >=0.10 | 0.692 | 0.692 | 0.231 | MET |
 
-### Confusion matrix
+### Confusion matrix (seed 42)
 
-<!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
-     An image of a matrix earns nothing. -->
+| true \ predicted | question | statement |
+|---|---:|---:|
+| **question** | 0 | 12 |
+| **statement** | 0 | 27 |
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
-
-**My biggest off-diagonal number, and what it means:**
-<!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
-     direction. "7 real analysis posts were called hot_take and only 3 went the
-     other way" is a direction, not just an error rate. -->
-
-
-
----
+All three seeds predicted only statements. The 12 missed questions in each test split explain the accuracy and question-F1 failures.
 
 ## Verdicts and Diagnoses
 
@@ -381,9 +367,17 @@ old results were seen.
 
 ## The Improvement
 
-**What I changed:**
+**Planned single change, written before the after trials:** Increase only
+the learning rate from `2e-5` to `5e-5`. Keep 3 epochs, batch size 16,
+128 tokens, the model, all labels, all criteria, and seeds 42/7/2024 unchanged.
 
-**Which diagnosis pointed at it:**
+**Diagnosis:** All three before trials predicted only the majority statement
+class despite having 57 training questions and 12 test questions per seed.
+Validation loss decreased, but the decision boundary did not become useful.
+The staff annotations agreed 30/30, which shows no observed error under those
+different rules and does not prove the project's own labels are noise-free.
+This experiment tests underfitting with a larger update size; it does not
+assume that label noise or limited data have been ruled out.
 
 ### Run Log — After
 
