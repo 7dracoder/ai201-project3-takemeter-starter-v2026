@@ -6,8 +6,13 @@ import gc
 import hashlib
 import json
 import os
+import sys
 import time
 from pathlib import Path
+
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(encoding="utf-8")
 
 
 def main():

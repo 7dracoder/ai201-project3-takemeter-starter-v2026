@@ -1,0 +1,223 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 39,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 39,
+    "accuracy": 0.7948717948717948,
+    "f1_macro": 0.7833333333333334,
+    "per_label": {
+      "question": {
+        "precision": 0.6111111111111112,
+        "recall": 0.9166666666666666,
+        "f1": 0.7333333333333334,
+        "support": 12
+      },
+      "statement": {
+        "precision": 0.9523809523809523,
+        "recall": 0.7407407407407407,
+        "f1": 0.8333333333333334,
+        "support": 27
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "I've never played those mobile ad games and this scratched my curiosity. Now you're telling me they don't deliver and I'm curious again, how do they fail their delivery?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Its mostly useful for remote sessions as you can use one ssh connection for multiple terminals, and of course the most common usecase, leave processes running after you logout (or if the connection drops).",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "How are you setting the alerts? Are you using anomaly detection? If so, what kind?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Wow, thanks to whoever posted this! I made this game.\nLike many, I was frustrated there's no new StarCraft coming till 2030, so I half-jokingly made the mini-game those mobile ads always promise and never deliver. Something you can play with one hand, that your friends who've never played StarCraft can just pick up.(Turns out you can squeeze a lot of extra gameplay/design on top of it.)\nAlso, if you're going to copy Blizzard you might as well copy the whole package right, so there's a CG trailer too: https://www.youtube.com/watch?v=rVDao71LC7A\nHonestly didn't expect people to grind this. I designed the endgame to be layer 50 and thought ppl can get at most ~70 if they really try, and somehow there are people on the leaderboard past 100 (without cheating). That's StarCraft players for you.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "I think analyzing and understanding bad people (or, let's say, people who are consistently harmful to those around them?) is valuable.\nI don't think seeking to involve those people in your life is. It would be interesting to ask an oracle what percentage of people have managed to \"change\" an abusive partner after pursuing them knowing full well the red flags they display. I'd wager it is a tiny percentage though.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "It doesn't cease to amaze me how uncreative attackers are time and time again. A cryptominer in 2026? They really earned the three cents they are getting out of that.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "Is that a requirement though? If the AI used existing understanding/methods (which I assume it did) then there's nothing really \"new\" there, right? Shouldn't it be possible to get understanding from how the existing methods were used? Or, even knowing it's true, cull an incredible number of paths from the problem space around it, to make finding understanding easier?\nI'm not a mathematician, but I've always been able to find understandings from exploring the paths starting from either direction of the conceptual graph that exists between a \"problem\" and a \"solution\".",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "> The AMD hardware is x86_64, which means lower battery life on average for normal users [...]\nA Ryzen AI Max+ 395 powered tablet with 70Wh [0] gets the same battery life given the same task as a Nvidia N1X powered laptop with 99.9 Wh [1].\nPower Consumption in their \"Cyberpunk / Stress Test\" is also lower at \u00d8109.3 (108.8-110.8) Watt for the x86_64 vs \u00d8134.5 (132.1-137.5) Watt for the arm64 system using the same settings, resolution and display brightness. They also get the same performance when normalising for resolutions and settings in Cyberpunk, so this is not an instance of one providing significantly more performance.\n[0] https://www.notebookcheck.net/Asus-ROG-Flow-Z13-GZ302EA-Conv...\n[1] https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Lapt...",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "Yep, many hay barns have caught fire because the hay was bailed while too wet and it is fermenting so vigorously.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "I'm in what I think will be my last tech job before retraining into something else. The aspects I like about the work are gone, I'm coasting at a small company that's not a great fit, has a visa cliff, and is poorly paid, and the steps it would take to become competitive in an LLM driven tech job market are less appealing to me than the steps it would take to switch over to a different career (likely in healthcare).",
+      "gold": "statement",
+      "predicted": "question"
+    },
+    {
+      "text": "Would you still be able to do this if you put plex behind tailscale and connected to your tailnet on your phone?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "More technical details forthcoming of course, including about formalisation... We indeed do not redo the same work over and over, but rather cache intelligently. We take special care not to interfere with debugging workflows (much in the same way that, e.g., the Tier 2 JIT does, in CPython). And as for visibility into the level of source code, what do you mean? The rewritten binary portions don't always have associated code, let alone in the language of origin.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "How can a software developer compare a deterministic program with LLMs?? Please tell me that you aren't, or that it's not what really think!!!",
+      "gold": "statement",
+      "predicted": "question"
+    },
+    {
+      "text": "Hi, I made a sourced table of which scales, BP cuffs and watches still sync to Apple Health with no subscription: https://subscription-free-health-devices.vercel.app/ (affiliate links).",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "On the other hand, to buy a car in a Chinese city you have to join the government waiting list and wait to be approved.\nYou'll also have the car's movements tracked in detail, etc.\nIf China's the 21st century, they can keep it.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "> Cold, logical, emotionless machines that don't have identities\nis exactly how people described those who did the dirty work in the concentration camps",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "Why? Flying business everywhere is substantially more expensive than a one time cost of $6k for a laptop. A single business ticket anywhere overseas matches or exceeds that in most cases.",
+      "gold": "statement",
+      "predicted": "question"
+    },
+    {
+      "text": "What's the point of leaving a comment if you're not going to change your mind and they're not going to change theirs? Is it just to advocate for your position?",
+      "gold": "question",
+      "predicted": "statement"
+    },
+    {
+      "text": "There's lots of ways to make handling such things safe: climate control, inert atmospheres, (in cases like this were degradation is involved) rotating out material, compartmentalization, automatic fire supression etc. The problem is that these are very expensive compared to the dirt cheap methods used in commercial fisheries",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "Well, just remember that Steam doesn't actually know where you intend to play the game. I buy most of my Steam games on my phone, and obviously there's no point in steam warning me that the game will not run on android.",
+      "gold": "statement",
+      "predicted": "question"
+    },
+    {
+      "text": "Fortunately, there are (at least for now) many, many banks to choose from, and you can tell the app-only ones to suck it. There's also almost no switching cost. The last time I changed banks, it was mostly done in an afternoon.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "Can you share some more details about the backup workflow? Wouldn\u2019t you end with a lot of redundant copies if you backup everyday?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Yes, but that's in psychology. Different fields have their own terms without causing too many issues. Communication breaks down when we reuse terms for different things within the same field.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "What are the best reasons for a new project to choose Drupal in 2026, apart from familiarity ?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Yes!\nThis is the multi-polar (or Moloch) problem, where (ruthless) individual rationality leads to collective ruin.\nUnless the system makes it unprofitable, ruthlessness will always out-perform good behavior. Players who make suboptimal (ethical) decisions will lose over time. Corruption will outperform unless the cost of that corruption outweighs the benefit of it. The root cause isn't a moral failing of the players.\nIf incentives are aligned so that the winnginest behavior is also the most desirable, it doesn't matter if there are defective or unscrupulous players. We can harness selfish ambition for the collective good.\nE.g. CEO compensation and behavior differences between Japan/USA, Potlatch (wealth redistribution) festivals among the Pacific Northwest indigenous.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "If I could I would do it during development. The app I work on needs hardware so it\u2019s not an option.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "OpenBSD 7.9 was already on the 6.18.y longterm support version, Jonathan Gray (jsg@) completed the update back in March of this year, sponsored by the OpenBSD Foundation.\nhttps://marc.info/?l=openbsd-cvs&m=177310343311915&w=2\nI just wanted to highlight his continued efforts in my hype post for the upcoming 8.0 release.\n(I'm the author of the mastodon post that was shared.)",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "I'll add to it. The classic answer to your objection is \"but as a species we'd have sooner or latter 1 billion steps worth of intellectual capital\". Today someone gets to an intermediate result worth 1 million steps, tomorrow another million and so on.\nBut there's no guarantee that such \"low IQ\" intermediate steps exist. We do well with many classes of problems because of divide-and-conquer. But not all problems can be solved through divide-and-conquer.\nFor a rough analogy, see how AI plays chess and intermediate board positions often don't make sense to us. Imagine now an enormous chess-like game played in an enormous chess board where a match lasts longer than a lifetime and none of the intermediate steps make sense to any human.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "This is an editorial cartoon from 1931 showing how Hitler emphasized contradictory parts of the party-name to different suckers.\nhttps://commons.wikimedia.org/wiki/File:Jacobus_Belsen_-_Das...\nThat's 95 years ago, how have we not internalized that things named by bad people don't usually do what the name says?",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "Did it actually come in the mail?\nI've bought some low-priced things on amazon, just to have them cancelled.  Spooky since I figure someone got my name, address, phone number from amazon.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Monopoly: Exclusive control of a particular market that is marked by the power to control prices and exclude competition.\nMathematics is collaboratively and publicly produced, it is vetted for free by peers, and results are publicly available. There is no 'market' and no 'price'.\nThese results, like the invention of LLMs, are often used by private companies for the generation of private profit.\n\"Open\" AI used a private, unreleased, for-profit model to generate those papers.\nWhat, precisely, did the mathematics 'oligopoly' gatekeep you, or anyone, from?\n> their slice of the pie\nThere's very little money in academia, and even then, its a struggle to get any funding at all. What are you even talking about?\nFinal point, 'knowledge' is socially produced as well. Until the papers are accepted, they are machine artifacts that might be knowledge, but that same system you disdain will be what incorporates and validates those insights.",
+      "gold": "statement",
+      "predicted": "question"
+    },
+    {
+      "text": "How are folks on windows using tmux or tmux-like tools? Tmux inside git bash is really slow. Any other tools? I know I can use WSL but due to some deployment constraints I can\u2019t use it.",
+      "gold": "statement",
+      "predicted": "question"
+    },
+    {
+      "text": "The closer the code gets to the user's eyeballs the less I care about anything specific.\nHTML/JS/CSS is basically entirely vibe coded. I won't even try to reorg the 4000 line ui.js file. I can just redo the whole thing from a new prompt in a few minutes.\nFor things like the SQL schema I am still doing things entirely by hand. The consequences of getting this part wrong tend to be far more catastrophic than something in the UI layer.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "How about I write whatever the fuck I want? Since when does telling the truth became a political ideology.",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "Maybe a related question:\nHow do you keep the IEC 62443-4-1 auditors happy?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Do you intend this to be a freemium alternative akin to Plex, or plan to open source it and more of an alternative to Jellyfin?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "But does it go into detail about those changes?\nBecause that sounds interesting!\nBut I didn't see anything like that when I've (admittedly) skimmed through the review.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "But we do it from a much bigger tray...\nhttps://amphetamem.es/meme?id=office-space_1999_1140&text=Bu...",
+      "gold": "statement",
+      "predicted": "statement"
+    },
+    {
+      "text": "Why is that so hard to believe? I don't always do this, but I do course-correct Claude on almost every big change. YOLOing it would superficially look fine, until the latent issues catch up with you.",
+      "gold": "statement",
+      "predicted": "question"
+    }
+  ]
+}
