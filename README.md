@@ -250,9 +250,11 @@ student participation; the files and real model run do not substitute for it.
 | F1 — `label_one` |  |  |  |
 | F1 — `label_two` |  |  |  |
 
-**What I predicted before I looked:**
-<!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
-     prediction made afterwards isn't one. -->
+**Prediction recorded before running the Unit 6 baseline:** I expect the
+trained model to retain higher statement recall, while the zero-shot model
+should recognize more genuine questions. This is informed by the already-known
+Unit 5 majority-class behavior, not a claim of a blind prediction before those
+old results were seen.
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
