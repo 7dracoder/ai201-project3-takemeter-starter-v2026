@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "revision": "12a7b4d67a89d3ffc6e2750809d0b205bff4dbf5",
+  "python_version": "3.11.1",
+  "system_site_packages": false,
+  "command": ".\\.venv\\Scripts\\python.exe capstone.py",
+  "valid_response": {
+    "request_id": "c64b4188-09db-4367-a583-e73655fb5566",
+    "label": "question",
+    "confidence": 0.7043129801750183
+  },
+  "rejected_response": {
+    "request_id": "d1d56404-2103-4609-80e7-6d5849dad864",
+    "error": {
+      "code": "empty_text"
+    }
+  },
+  "model_regression_matches": true,
+  "weights_sha256_match": true,
+  "setup_repair": "Upgrade pip; install CPU wheel with --no-deps; install pinned lock file."
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "method": "In-app browser form filled and submitted through UI controls",
+  "url": "http://127.0.0.1:8765/",
+  "input": "Where can I find the documentation?",
+  "displayed_label": "QUESTION",
+  "displayed_confidence": "70.4%",
+  "request_id": "f5b27959-1432-4162-8640-9718556a8827",
+  "response": {
+    "request_id": "f5b27959-1432-4162-8640-9718556a8827",
+    "label": "question",
+    "confidence": 0.7043129801750183
+  }
+}

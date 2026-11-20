@@ -10,3 +10,10 @@ Unit 5 dataset, criteria, original metrics, and held-out split.
 
 No unaided cold-labeling pass is claimed. The original AI-drafted criteria and
 results remain in the commit history.
+
+
+The capstone now adds the local service, browser demo, JSONL logs, real before/
+after operational trials, measured CPU cost, and clean-checkout verification.
+Its five new targets live in criteria.md; the earlier targets are archived in
+criteria_unit5.md. All capstone targets passed after the single cache change.
+See the final Capstone section of README.md for the evidence and disclosure.

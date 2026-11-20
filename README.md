@@ -362,62 +362,293 @@ All five targets passed across these three trials. Generalization to new threads
 
 ## Capstone
 
+
 **What This Extends**
 
-This extends TakeMeter's existing question/statement classifier with a local
-HTTP run path, a small browser demo, structured request logging, and measured
-operating cost. It serves the already-tested Unit 6 seed-42 configuration;
-rebuilding its checkpoint is setup, not a new modeling experiment.
+
+TakeMeter already classified Hacker News comments as question or statement. This extension adds a local HTTP run path, a small browser demo, structured logs, and measured operating cost. It does not add a new taxonomy or change the training data. The prepared checkpoint reproduces the already-tested Unit 6 seed-42 settings and confusion matrix; model preparation is setup, not the capstone improvement. Earlier criteria are preserved verbatim in [criteria_unit5.md](criteria_unit5.md).
+
 
 **The Shape**
 
-Shape A: deploy and instrument. Path B: local with logs. In scope: serving the
-existing classifier, recording successes and failures, reproducible setup,
-and operational measurements. Out of scope: new labels, new training data,
-cloud hosting, authentication, a review queue, concurrent load testing, and
-further model tuning. No stretch features are declared.
+
+Shape **A — Deploy and instrument**, using **Path B — local with logs**. In scope: serve the existing model, reject bad inputs, record outcomes, document clean setup, and measure operation. Out of scope: cloud hosting, authentication, a review queue, new labels/data, model tuning, concurrent users and load testing. No stretch features are claimed.
+
 
 **Running It**
 
-RUNNING.md will document one start command after environment/model setup and
-the clean-checkout verification. The service binds only to 127.0.0.1.
+
+After the setup in [RUNNING.md](RUNNING.md), the single start command is:
+
+
+```powershell
+.\.venv\Scripts\python.exe capstone.py
+```
+
+
+Open [the local demo](http://127.0.0.1:8765), or POST JSON to `/classify`. GET `/health` reports readiness. The service binds only to localhost and handles one request at a time. The browser form was also exercised through UI controls: the comment "Where can I find the documentation?" displayed QUESTION, confidence 70.4%, and the matching logged request ID. See [browser_check.json](capstone_evidence/browser_check.json).
+
+
+Clean-checkout verification: **passed**, source revision `12a7b4d67a89d3ffc6e2750809d0b205bff4dbf5`, Python `3.11.1`, fresh isolated environment (no system site packages), and a newly prepared checkpoint. The record is [clean_checkout.json](capstone_evidence/clean_checkout.json). The first install exposed an old-pip/CPU-index dependency-resolution problem; the corrected instructions upgrade pip, install the CPU wheel separately, then install the full lock file.
+
+
+The weight file is **267,832,560 bytes** (255.4 MiB), with tokenizer/config files adding under 2 MB. Weights stay outside Git in `models/capstone/`; the checksum and original-model regression result are in [model_manifest.json](capstone_evidence/model_manifest.json). Setup needs Python 3.11, Git, the pinned CPU dependencies, internet for initial public weight downloads, about 9 GB free disk and 6 GB RAM. Inference uses local files and no hosted model API.
+
 
 **Instrumentation**
 
-Requests will be saved as JSON Lines with timestamp, request ID, input,
-output, status, elapsed seconds, CPU seconds, and model-load count. Real
-successful and failed requests will be committed after the criteria.
+
+`capstone.py::Handler.finish_json` appends each classification or rejection to JSONL before writing the HTTP response. Fields are event, UTC timestamp, request_id, path, input, output, HTTP status, duration_seconds, cpu_seconds, and model_load_count. Startup has a separate record. Invalid JSON/UTF-8 and oversized input retain bounded diagnostic input information. The HTML page itself is a static asset, not a classification run.
+
+
+Handler measurements start before validation and stop after response serialization, immediately before log append and HTTP write. Client measurements in `test_capstone.py::request` include the round trip, log append and response delivery. Logs therefore distinguish handler work from end-to-end latency.
+
+
+Six real sessions generated **108 request records plus six startup records**: ten measured valid classifications, six deliberate invalid inputs, one recovery request and one excluded warm-up per session. Full sessions are committed under `capstone_evidence/`; live user logs append to ignored `logs/capstone.jsonl`.
+
+
+Ten actual successful entries from `capstone_evidence/after_trial_1.jsonl` (not synthetic log examples):
+
+
+```jsonl
+{"event": "request", "timestamp": "2026-11-20T22:27:05.515372+00:00", "request_id": "54d52636-8f5f-47b8-a0f9-f8b245fbd15c", "path": "/classify", "input": {"text": "I've never played those mobile ad games and this scratched my curiosity. Now you're telling me they don't deliver and I'm curious again, how do they fail their delivery?"}, "output": {"request_id": "54d52636-8f5f-47b8-a0f9-f8b245fbd15c", "label": "statement", "confidence": 0.5184560418128967}, "status": 200, "duration_seconds": 0.0357454000004509, "cpu_seconds": 0.125, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:05.584383+00:00", "request_id": "272ff0a2-84ca-4603-8bac-a055f6bd7e4c", "path": "/classify", "input": {"text": "Its mostly useful for remote sessions as you can use one ssh connection for multiple terminals, and of course the most common usecase, leave processes running after you logout (or if the connection drops)."}, "output": {"request_id": "272ff0a2-84ca-4603-8bac-a055f6bd7e4c", "label": "statement", "confidence": 0.8912459015846252}, "status": 200, "duration_seconds": 0.04270790000009583, "cpu_seconds": 0.1875, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:05.610924+00:00", "request_id": "e0c8beb8-015a-4352-91d2-bafd1300969f", "path": "/classify", "input": {"text": "How are you setting the alerts? Are you using anomaly detection? If so, what kind?"}, "output": {"request_id": "e0c8beb8-015a-4352-91d2-bafd1300969f", "label": "question", "confidence": 0.7423256635665894}, "status": 200, "duration_seconds": 0.025444300001254305, "cpu_seconds": 0.0625, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:05.695500+00:00", "request_id": "925725e6-94df-4a76-a449-a43c002c0bfc", "path": "/classify", "input": {"text": "Wow, thanks to whoever posted this! I made this game.\nLike many, I was frustrated there's no new StarCraft coming till 2030, so I half-jokingly made the mini-game those mobile ads always promise and never deliver. Something you can play with one hand, that your friends who've never played StarCraft can just pick up.(Turns out you can squeeze a lot of extra gameplay/design on top of it.)\nAlso, if you're going to copy Blizzard you might as well copy the whole package right, so there's a CG trailer too: https://www.youtube.com/watch?v=rVDao71LC7A\nHonestly didn't expect people to grind this. I designed the endgame to be layer 50 and thought ppl can get at most ~70 if they really try, and somehow there are people on the leaderboard past 100 (without cheating). That's StarCraft players for you."}, "output": {"request_id": "925725e6-94df-4a76-a449-a43c002c0bfc", "label": "statement", "confidence": 0.9329322576522827}, "status": 200, "duration_seconds": 0.08214610000140965, "cpu_seconds": 0.375, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:05.775484+00:00", "request_id": "f36fd476-4200-4b76-a198-889e322a2405", "path": "/classify", "input": {"text": "I think analyzing and understanding bad people (or, let's say, people who are consistently harmful to those around them?) is valuable.\nI don't think seeking to involve those people in your life is. It would be interesting to ask an oracle what percentage of people have managed to \"change\" an abusive partner after pursuing them knowing full well the red flags they display. I'd wager it is a tiny percentage though."}, "output": {"request_id": "f36fd476-4200-4b76-a198-889e322a2405", "label": "statement", "confidence": 0.8590705990791321}, "status": 200, "duration_seconds": 0.06137250000028871, "cpu_seconds": 0.25, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:05.828006+00:00", "request_id": "71059731-9a91-423b-82c2-59c49ea7e737", "path": "/classify", "input": {"text": "It doesn't cease to amaze me how uncreative attackers are time and time again. A cryptominer in 2026? They really earned the three cents they are getting out of that."}, "output": {"request_id": "71059731-9a91-423b-82c2-59c49ea7e737", "label": "question", "confidence": 0.5244361758232117}, "status": 200, "duration_seconds": 0.036844800000835676, "cpu_seconds": 0.125, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:05.942533+00:00", "request_id": "4702b21b-aada-47ce-82b6-11aaccd24337", "path": "/classify", "input": {"text": "Is that a requirement though? If the AI used existing understanding/methods (which I assume it did) then there's nothing really \"new\" there, right? Shouldn't it be possible to get understanding from how the existing methods were used? Or, even knowing it's true, cull an incredible number of paths from the problem space around it, to make finding understanding easier?\nI'm not a mathematician, but I've always been able to find understandings from exploring the paths starting from either direction of the conceptual graph that exists between a \"problem\" and a \"solution\"."}, "output": {"request_id": "4702b21b-aada-47ce-82b6-11aaccd24337", "label": "question", "confidence": 0.6318862438201904}, "status": 200, "duration_seconds": 0.08944239999982528, "cpu_seconds": 0.359375, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:06.028067+00:00", "request_id": "7ba4b56a-2e85-466d-821a-738dfe1dd358", "path": "/classify", "input": {"text": "> The AMD hardware is x86_64, which means lower battery life on average for normal users [...]\nA Ryzen AI Max+ 395 powered tablet with 70Wh [0] gets the same battery life given the same task as a Nvidia N1X powered laptop with 99.9 Wh [1].\nPower Consumption in their \"Cyberpunk / Stress Test\" is also lower at Ø109.3 (108.8-110.8) Watt for the x86_64 vs Ø134.5 (132.1-137.5) Watt for the arm64 system using the same settings, resolution and display brightness. They also get the same performance when normalising for resolutions and settings in Cyberpunk, so this is not an instance of one providing significantly more performance.\n[0] https://www.notebookcheck.net/Asus-ROG-Flow-Z13-GZ302EA-Conv...\n[1] https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Lapt..."}, "output": {"request_id": "7ba4b56a-2e85-466d-821a-738dfe1dd358", "label": "statement", "confidence": 0.8505184054374695}, "status": 200, "duration_seconds": 0.08147549999921466, "cpu_seconds": 0.3125, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:06.061074+00:00", "request_id": "eb7249f8-00b9-4584-bb31-247edbd8337d", "path": "/classify", "input": {"text": "Yep, many hay barns have caught fire because the hay was bailed while too wet and it is fermenting so vigorously."}, "output": {"request_id": "eb7249f8-00b9-4584-bb31-247edbd8337d", "label": "statement", "confidence": 0.8730511665344238}, "status": 200, "duration_seconds": 0.03143090000230586, "cpu_seconds": 0.125, "model_load_count": 1}
+{"event": "request", "timestamp": "2026-11-20T22:27:06.136599+00:00", "request_id": "91b578b8-9422-43aa-99ff-c2420a7fa9d7", "path": "/classify", "input": {"text": "I'm in what I think will be my last tech job before retraining into something else. The aspects I like about the work are gone, I'm coasting at a small company that's not a great fit, has a visa cliff, and is poorly paid, and the steps it would take to become competitive in an LLM driven tech job market are less appealing to me than the steps it would take to switch over to a different career (likely in healthcare)."}, "output": {"request_id": "91b578b8-9422-43aa-99ff-c2420a7fa9d7", "label": "statement", "confidence": 0.9229776859283447}, "status": 200, "duration_seconds": 0.07441739999921992, "cpu_seconds": 0.3125, "model_load_count": 1}
+```
+
+
+One actual rejected-input entry from the same session:
+
+
+```json
+{
+  "event": "request",
+  "timestamp": "2026-11-20T22:27:06.139597+00:00",
+  "request_id": "f2d104b2-1fcb-4aad-9d72-8e15d38610e3",
+  "path": "/classify",
+  "input": {},
+  "output": {
+    "request_id": "f2d104b2-1fcb-4aad-9d72-8e15d38610e3",
+    "error": {
+      "code": "missing_text"
+    }
+  },
+  "status": 400,
+  "duration_seconds": 9.059999865712598e-05,
+  "cpu_seconds": 0.0,
+  "model_load_count": 1
+}
+```
+
 
 **What It Costs**
 
-Cost will be measured as process CPU seconds per warm successful request,
-averaged over ten requests; wall latency and startup are recorded separately.
-The hundred-a-day calculation assumes one classification per person per day.
+
+Cost is **measured process CPU time**, not an invented dollar price. Each trial averages its ten measured warm valid requests. Before means were 0.7203, 0.7406, 0.7312 CPU seconds; after means were 0.2234, 0.2313, 0.2281. Pooling the three equal-size trials gives **0.2276 CPU seconds per warm classification** (30 measured requests). Mean client wall time is **0.0674 seconds**, separately measured.
+
+
+For **100 people/day, one classification each**, a running process needs approximately `100 × 0.227604 = 22.76` measured warm handler CPU seconds/day. If restarted once daily, add average startup CPU 7.4583 s and first-request warm-up CPU 0.8958 s: approximately **31.11 CPU seconds/day** within these measurement boundaries. Startup + first request are excluded from the warm target but explicitly included in this cold-start calculation. This does not price electricity, idle RAM, training/setup, or HTTP/logging CPU outside the stated boundary. No inference API calls or token charges occur.
+
 
 **Run Log and Verdicts**
 
-Five capstone criteria will be filed before tests. Each has three independent
-trials with unchanged code/settings within the before or after phase.
+
+The five targets were committed in `4384dee`, with the measurement boundary clarified in `1a8efd7`, before the first results commit `ed13a95`. No targets were lowered. Three fresh processes per phase used the same checkpoint, four CPU threads and the same ten existing held-out comments plus fixed invalid/recovery cases. Warm-up is logged and excluded from warm performance criteria.
+
+
+| Criterion | Target | Trial 1 | Trial 2 | Trial 3 | Verdict |
+|---|---|---|---|---|---|
+| 1. Valid prediction contract | 10/10 | 10/10 | 10/10 | 10/10 | MET |
+| 2. Complete request logs | 17/17 + warm-up | 17/17 | 17/17 | 17/17 | MET |
+| 3. Warm client latency | >=9/10 within 0.50 s | 10/10 | 10/10 | 10/10 | MET |
+| 4. Invalid inputs + recovery | 6/6 + HTTP 200 recovery | 6/6; recovery 200 | 6/6; recovery 200 | 6/6; recovery 200 | MET |
+| 5. Mean warm CPU cost | <=0.50 CPU s | 0.7203 s | 0.7406 s | 0.7312 s | MISSED |
+
+
+Criterion 2 repeats the complete logging check, including a separate warm-up record verified by `verify_capstone.py`. Every numeric target must hold in every trial.
+
+
+Real criterion evidence from trial 1 is below. Response and client timings come from `test_capstone.py::request`; counts and CPU means come from `test_capstone.py::trial`. Field extracts are taken from `capstone_evidence/before_results.json`; full raw request logs are in `before_trial_1.jsonl`.
+
+
+1. **Prediction contract:** actual response from `capstone.py::Handler.do_POST`.
+
+
+```json
+{
+  "status": 200,
+  "body": {
+    "request_id": "c1a44a99-4f8b-4b99-949d-4a7c7eccb9e7",
+    "label": "statement",
+    "confidence": 0.5184560418128967
+  },
+  "client_seconds": 0.15372220000062953
+}
+```
+
+
+2. **Logging:** the measured response IDs each matched one `Handler.finish_json` record.
+
+
+```json
+{
+  "trial": 1,
+  "complete_logs": 17
+}
+```
+
+
+3. **Latency:** actual first client duration and count within 0.50 s.
+
+
+```json
+{
+  "client_seconds": 0.15372220000062953,
+  "timely": 10
+}
+```
+
+
+4. **Bad paths:** actual six rejection responses, followed by the actual recovery response.
+
+
+```json
+{
+  "invalid": [
+    {
+      "status": 400,
+      "body": {
+        "request_id": "0d18ba2a-7388-4915-afd1-405ccfd1c2a6",
+        "error": {
+          "code": "missing_text"
+        }
+      },
+      "client_seconds": 0.0018939000001410022
+    },
+    {
+      "status": 400,
+      "body": {
+        "request_id": "9f6bb87f-1a73-46d3-9b52-04eceec1e79a",
+        "error": {
+          "code": "empty_text"
+        }
+      },
+      "client_seconds": 0.024040899999818066
+    },
+    {
+      "status": 400,
+      "body": {
+        "request_id": "c76d5c11-3aee-452a-b65b-4eea66a443d3",
+        "error": {
+          "code": "invalid_text_type"
+        }
+      },
+      "client_seconds": 0.0016891999985091388
+    },
+    {
+      "status": 400,
+      "body": {
+        "request_id": "cf5019e7-2633-4a47-bc60-3ce57a7128f1",
+        "error": {
+          "code": "invalid_json"
+        }
+      },
+      "client_seconds": 0.014633200000389479
+    },
+    {
+      "status": 400,
+      "body": {
+        "request_id": "eadf3e5e-e5d8-4fa6-b119-ecc72e86c96f",
+        "error": {
+          "code": "invalid_encoding"
+        }
+      },
+      "client_seconds": 0.0016093999984150287
+    },
+    {
+      "status": 413,
+      "body": {
+        "request_id": "c59d219a-8f15-4a75-bac8-a9d666618e7f",
+        "error": {
+          "code": "body_too_large"
+        }
+      },
+      "client_seconds": 0.0016515000024810433
+    }
+  ],
+  "recovery": {
+    "status": 200,
+    "body": {
+      "request_id": "85573586-30c4-4820-9827-6f1dbf3b1537",
+      "label": "question",
+      "confidence": 0.7043129801750183
+    },
+    "client_seconds": 0.1705251000021235
+  }
+}
+```
+
+
+5. **CPU cost:** actual mean of ten logged request CPU measurements.
+
+
+```json
+{
+  "mean_cpu_seconds": 0.7203125
+}
+```
+
+
+**Diagnosis:** Criteria 1–4 were met in every initial trial. Criterion 5 was **MISSED** in all three. The responsible stage was `capstone_model.py::Predictor.predict`: it called `from_pretrained` for the same local tokenizer and weights for every valid request. The load counter rose from 1 at warm-up to 12 at recovery in each session. Repeated loading/deserialization and allocation consumed CPU even though client latency already met its looser target. This is an operational-loading cost, not evidence that the model-quality targets changed.
+
 
 **The Improvement**
 
-Before trials passed criteria 1-4 but missed criterion 5: mean CPU cost was
-0.7203, 0.7406, and 0.7312 seconds per warm request. `Predictor.predict` loaded
-the same weights/tokenizer on every call; each trial's load count rose from
-one after warm-up to twelve after recovery.
 
-Planned single improvement, declared before after-tests: cache the model and
-tokenizer in the service process. Keep input rules, model weights, labels,
-thread count, logging, test cases, and all criteria unchanged. This trades
-resident model memory for less repeated loading. No model tuning is planned.
+One change: keep the model and tokenizer in the service process and reuse them for inference. The plan was filed with the before results in `ed13a95`; the implementation is `468f3aa`. The runtime serving change relative to `52b32f2` is only asset reuse in `capstone_model.py`. Model weights, data, taxonomy, thread count, request cases, input rules and criteria stayed fixed. The test harness later gained an alternate output-directory flag solely to preserve evidence during independent reruns.
+
+
+| Criterion | Target | Trial 1 | Trial 2 | Trial 3 | Verdict |
+|---|---|---|---|---|---|
+| 1. Valid prediction contract | 10/10 | 10/10 | 10/10 | 10/10 | MET |
+| 2. Complete request logs | 17/17 + warm-up | 17/17 | 17/17 | 17/17 | MET |
+| 3. Warm client latency | >=9/10 within 0.50 s | 10/10 | 10/10 | 10/10 | MET |
+| 4. Invalid inputs + recovery | 6/6 + HTTP 200 recovery | 6/6; recovery 200 | 6/6; recovery 200 | 6/6; recovery 200 | MET |
+| 5. Mean warm CPU cost | <=0.50 CPU s | 0.2234 s | 0.2313 s | 0.2281 s | MET |
+
+
+| Measure | Before mean | After mean |
+|---|---:|---:|
+| Warm CPU seconds/request | 0.7307 | 0.2276 |
+| Client wall seconds/request | 0.1987 | 0.0674 |
+
+
+CPU cost fell **68.9%** and mean client latency fell **66.1%**. All five criteria now pass across all three trials. Model load count stays at 1 after warm-up. `verify_capstone.py` also compares every before/after prediction: labels are identical and confidence differs by less than 1e-6. The improvement reduces work; it does not claim better classification accuracy. Keeping weights resident uses memory between requests, which is the explicit trade-off.
+
 
 **What's Still Broken**
 
-Remaining limitations and any missed targets will be written from actual tests.
+
+All five current targets were met after caching. The 0.50-second mean CPU budget is now generous; the next version would test a **0.30-second** budget, without changing this unit's filed target. The model still has the Unit 6 semantic errors (seed 42 missed two questions and called four statements questions). Caching does not fix those errors.
+
+
+This is a serial local service, not a multi-user deployment. Logs are local files without rotation or a retention policy; disk-full/permission loss during logging is not validated by the six input-error tests. Independent human label review and generalization to new threads remain unmeasured. Work stopped after one isolated measured operational change to keep its effect identifiable.
+
+
+The first next step would be independent review of the rhetorical-question boundary, because inference is now inexpensive but incorrect labels still limit usefulness. I would establish that evidence before changing training data or adding a review queue.
+
 
 **How I Used AI**
 
-I directed the extension and used AI for implementation, operational test
-execution, and documentation. The capstone criteria are AI-drafted and are not
-represented as unaided student-authored criteria. Specific work and measured
-outcomes will be recorded as the extension is completed.
+
+1. I directed a bounded local extension and used AI to implement the model adapter, serving layer, browser demo and logs. The scope kept the existing taxonomy/data and excluded cloud hosting, a review queue and model tuning.
+
+
+2. I used AI to run real operational trials, diagnose repeated model loading, implement the single cache change, repair the clean setup instructions, and draft the measured report. The original and corrected results are retained; misses were not removed. The five capstone criteria were AI-drafted before tests and are not represented as unaided student-authored criteria.
