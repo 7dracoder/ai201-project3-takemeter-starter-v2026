@@ -13,14 +13,18 @@ class Predictor:
             raise FileNotFoundError("Run prepare_capstone_model.py first.")
         torch.set_num_threads(4)
         self.load_count = 0
+        self._tokenizer = None
+        self._model = None
 
     def predict(self, text):
-        # Initial operational version: each prediction loads its local assets.
-        tokenizer = AutoTokenizer.from_pretrained(self.model_dir, local_files_only=True)
-        model = AutoModelForSequenceClassification.from_pretrained(
-            self.model_dir, local_files_only=True
-        ).eval()
-        self.load_count += 1
+        # One operational improvement: reuse immutable inference assets.
+        if self._model is None:
+            self._tokenizer = AutoTokenizer.from_pretrained(self.model_dir, local_files_only=True)
+            self._model = AutoModelForSequenceClassification.from_pretrained(
+                self.model_dir, local_files_only=True
+            ).eval()
+            self.load_count += 1
+        tokenizer, model = self._tokenizer, self._model
         inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=128)
         with torch.inference_mode():
             scores = model(**inputs).logits.softmax(dim=-1)[0]
