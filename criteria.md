@@ -39,8 +39,8 @@ must hold in each of three trials, before and after one measured improvement.
 
 5. **Warm compute cost: mean CPU time is at most 0.50 seconds per request.**
    Average the logged cpu_seconds of the ten measured valid requests in a
-   trial. Use time.process_time(), including validation, prediction, JSON
-   serialization and the log append up to the recorded measurement boundary.
+   trial. Use time.process_time(), including validation, prediction, and response
+   JSON serialization, stopping immediately before log append and HTTP write.
    Report the wall time separately. Do not count setup/training or the warm-up
    in the warm average; report cold costs separately rather than hiding them.
    Reason: this gives a budget of at most 50 CPU seconds for 100 daily

@@ -21,6 +21,9 @@ models/
 # `git add -A` in Colab commits a model checkpoint to your repo.
 takemeter_out/
 
+# Live capstone logs stay local; selected real sessions are in capstone_evidence/.
+logs/
+
 # OS noise
 .DS_Store
 Thumbs.db
