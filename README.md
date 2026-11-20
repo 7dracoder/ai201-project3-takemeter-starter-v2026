@@ -358,3 +358,59 @@ The recorded runs used `python run_trials.py before` and `python run_trials.py a
 All five targets passed across these three trials. Generalization to new threads and independent human labels is still unmeasured.
 
 **Gap between the intended distinction and what was learned:** The intended label identifies a real information request, including requests without a question mark and excluding rhetorical questions; seed 42 missed 12 questions before the change and 2 afterward. The after matrix measures improvement on this selected, AI-labeled sample, but its punctuation correlation and lack of independent human review prevent treating it as broad community performance.
+
+
+## Capstone
+
+**What This Extends**
+
+This extends TakeMeter's existing question/statement classifier with a local
+HTTP run path, a small browser demo, structured request logging, and measured
+operating cost. It serves the already-tested Unit 6 seed-42 configuration;
+rebuilding its checkpoint is setup, not a new modeling experiment.
+
+**The Shape**
+
+Shape A: deploy and instrument. Path B: local with logs. In scope: serving the
+existing classifier, recording successes and failures, reproducible setup,
+and operational measurements. Out of scope: new labels, new training data,
+cloud hosting, authentication, a review queue, concurrent load testing, and
+further model tuning. No stretch features are declared.
+
+**Running It**
+
+RUNNING.md will document one start command after environment/model setup and
+the clean-checkout verification. The service binds only to 127.0.0.1.
+
+**Instrumentation**
+
+Requests will be saved as JSON Lines with timestamp, request ID, input,
+output, status, elapsed seconds, CPU seconds, and model-load count. Real
+successful and failed requests will be committed after the criteria.
+
+**What It Costs**
+
+Cost will be measured as process CPU seconds per warm successful request,
+averaged over ten requests; wall latency and startup are recorded separately.
+The hundred-a-day calculation assumes one classification per person per day.
+
+**Run Log and Verdicts**
+
+Five capstone criteria will be filed before tests. Each has three independent
+trials with unchanged code/settings within the before or after phase.
+
+**The Improvement**
+
+One operational change will be selected from the measured before behavior.
+The existing dataset, label definitions, and Unit 5/6 results stay unchanged.
+
+**What's Still Broken**
+
+Remaining limitations and any missed targets will be written from actual tests.
+
+**How I Used AI**
+
+I directed the extension and used AI for implementation, operational test
+execution, and documentation. The capstone criteria are AI-drafted and are not
+represented as unaided student-authored criteria. Specific work and measured
+outcomes will be recorded as the extension is completed.
