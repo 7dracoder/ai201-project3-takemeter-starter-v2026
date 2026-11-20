@@ -122,10 +122,11 @@ def main():
     import csv
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--phase", choices=["before", "after"], required=True)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "capstone_evidence")
     args = parser.parse_args()
     os.chdir(ROOT)
-    evidence = ROOT / "capstone_evidence"
-    evidence.mkdir(exist_ok=True)
+    evidence = args.output_dir.resolve()
+    evidence.mkdir(parents=True, exist_ok=True)
     output = evidence / f"{args.phase}_results.json"
     if output.exists():
         raise FileExistsError(f"Preserving existing results: {output}")

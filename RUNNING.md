@@ -11,7 +11,8 @@ needed. Setup downloads public pretrained weights, then inference is offline.
 git clone https://github.com/7dracoder/ai201-project3-takemeter-starter-v2026.git
 cd ai201-project3-takemeter-starter-v2026
 py -3.11 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+.\.venv\Scripts\python.exe -m pip install pip==26.3
+.\.venv\Scripts\python.exe -m pip install torch==2.11.0 --no-deps --index-url https://download.pytorch.org/whl/cpu
 .\.venv\Scripts\python.exe -m pip install -r requirements-capstone.txt
 .\.venv\Scripts\python.exe prepare_capstone_model.py
 ```
@@ -80,7 +81,8 @@ These commands preserve existing result/log files. The before command must be
 run at the recorded initial implementation commit; the after command uses the
 final implementation. Running both labels on unchanged code is not a valid
 before/after experiment. Completed evidence is committed in capstone_evidence/.
-Use a new checkout with a fresh evidence output location for independent reruns.
+For independent reruns, choose a fresh location, for example
+`python test_capstone.py --phase after --output-dir .cache/recheck_after`.
 The exact comparison revisions and clean-checkout verification are recorded in
 the final Capstone README section.
 
