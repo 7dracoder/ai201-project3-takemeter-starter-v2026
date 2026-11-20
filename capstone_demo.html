@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TakeMeter — local classifier</title>
+<style>
+body{font:17px system-ui,sans-serif;max-width:740px;margin:55px auto;padding:0 22px;background:#f5f7fb;color:#17253e}
+main{background:white;border:1px solid #dce2ed;border-radius:16px;padding:28px}h1{margin-top:0}
+textarea{box-sizing:border-box;width:100%;min-height:150px;padding:12px;font:inherit;border:1px solid #aebbd0;border-radius:8px}
+button{font:inherit;background:#234ecb;color:white;border:0;border-radius:8px;padding:12px 20px;margin-top:15px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}#result{padding-top:22px;white-space:pre-wrap;overflow-wrap:anywhere}
+small{color:#506078}label{display:block;margin-bottom:9px;font-weight:600}
+</style>
+<main>
+<h1>TakeMeter</h1>
+<p>Does the comment ask for information, or make a statement?</p>
+<form id="form">
+<label for="text">Comment</label>
+<textarea id="text" maxlength="4000" required placeholder="How do I fix this error?"></textarea>
+<button id="submit" type="submit">Classify comment</button>
+</form>
+<div id="result" role="status" aria-live="polite"></div>
+<p><small>Question: asks for information or advice. Statement: gives an opinion,
+answer, explanation, or reaction. Scores describe this model's confidence;
+they are not a guarantee that the label is correct.</small></p>
+</main>
+<script>
+document.getElementById('form').addEventListener('submit',async event=>{
+ event.preventDefault();
+ const button=document.getElementById('submit'),result=document.getElementById('result');
+ button.disabled=true;result.textContent='Classifying…';
+ try{
+  const response=await fetch('/classify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:document.getElementById('text').value})});
+  const data=await response.json();
+  result.textContent=response.ok?`${data.label.toUpperCase()}\nModel confidence: ${(data.confidence*100).toFixed(1)}%\nRequest: ${data.request_id}`:`Could not classify: ${data.error.code}\nRequest: ${data.request_id}`;
+ }catch(error){result.textContent='The local service could not be reached. Check that it is running.';}
+ finally{button.disabled=false;}
+});
+</script>
+</html>
