@@ -1,3 +1,91 @@
+# Run the capstone locally
+
+The capstone is Shape A, Path B: the existing TakeMeter model served on
+localhost with a browser demo and structured logs. The earlier notebook guide
+is preserved below. Use Python 3.11 and Git; no API key or hosted account is
+needed. Setup downloads public pretrained weights, then inference is offline.
+
+## Clean-checkout setup (Windows PowerShell)
+
+```powershell
+git clone https://github.com/7dracoder/ai201-project3-takemeter-starter-v2026.git
+cd ai201-project3-takemeter-starter-v2026
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+.\.venv\Scripts\python.exe -m pip install -r requirements-capstone.txt
+.\.venv\Scripts\python.exe prepare_capstone_model.py
+```
+
+`requirements-capstone.txt` pins the tested direct dependencies and key model
+serialization libraries. Transitive dependencies remain resolver-managed.
+Preparation rebuilds the already-tested Unit 6 seed-42 checkpoint: DistilBERT,
+3 epochs, learning rate 5e-5, batch 16, maximum length 128, unchanged data.
+It does not overwrite earlier results or the old models/takemeter checkpoint.
+It may take several minutes on CPU and is needed only once per checkout.
+
+Model files live in `models/capstone/` and are intentionally excluded from Git.
+The weight file is approximately 268 MB (256 MiB); tokenizer/config files add
+less than 2 MB. Setup also caches about 268 MB of base-model weights. Allow
+about 9 GB of free disk for Python packages, caches and model files, and 6 GB
+RAM. Exact model size, checksum and regression scores are recorded in
+`models/capstone/manifest.json` and copied to the committed evidence folder.
+
+## The one start command
+
+From the repository root:
+
+```powershell
+.\.venv\Scripts\python.exe capstone.py
+```
+
+Open http://127.0.0.1:8765 in a browser. Paste a comment and click Classify.
+The same service accepts JSON at POST /classify and reports readiness at
+GET /health. Stop with Ctrl+C. This is a single-process, single-request-at-a-time
+local demo, not an internet deployment or a concurrent production service.
+
+Example API request:
+
+```powershell
+Invoke-RestMethod -Uri http://127.0.0.1:8765/classify -Method Post -ContentType 'application/json' -Body '{"text":"Where can I find the documentation?"}'
+```
+
+A successful response contains request_id, label and confidence. Missing,
+blank, non-string, malformed or invalid-UTF-8 input returns JSON error.code
+with HTTP 400. Bodies over 16,384 bytes return 413. Text is limited to 4,000
+characters; the tokenizer uses up to 128 tokens, matching the original model.
+
+## Logs, timing and measured trials
+
+Live records append to `logs/capstone.jsonl`. A custom log and port are optional:
+`python capstone.py --port 8766 --log logs/another_session.jsonl`.
+Input text is recorded, so use comments you intend to retain locally.
+
+Each classification/error record includes UTC timestamp, request_id, input,
+output, status, duration_seconds, cpu_seconds and model_load_count. Handler
+wall/CPU measurements start before body validation and stop after response
+JSON serialization, immediately before log append and HTTP write. Client wall
+time in the test results additionally covers those operations and the local
+HTTP round trip. Startup and one warm-up request per trial are recorded
+separately; neither is included in warm request averages. CPU seconds are a
+compute measurement, not a dollar charge or an electricity measurement.
+
+The test harness starts and stops three fresh service processes automatically:
+
+```powershell
+.\.venv\Scripts\python.exe test_capstone.py --phase before
+.\.venv\Scripts\python.exe test_capstone.py --phase after
+```
+
+These commands preserve existing result/log files. The before command must be
+run at the recorded initial implementation commit; the after command uses the
+final implementation. Running both labels on unchanged code is not a valid
+before/after experiment. Completed evidence is committed in capstone_evidence/.
+Use a new checkout with a fresh evidence output location for independent reruns.
+The exact comparison revisions and clean-checkout verification are recorded in
+the final Capstone README section.
+
+---
+
 # Running TakeMeter
 
 Everything about how the starter works.
