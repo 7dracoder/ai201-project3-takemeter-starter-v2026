@@ -1,0 +1,575 @@
+{
+  "phase": "before",
+  "trials": [
+    {
+      "trial": 1,
+      "contracts": 10,
+      "complete_logs": 17,
+      "timely": 10,
+      "rejected": 6,
+      "recovery_status": 200,
+      "mean_cpu_seconds": 0.7203125,
+      "mean_client_seconds": 0.19191801999986638,
+      "warmup": {
+        "status": 200,
+        "body": {
+          "request_id": "28cdec68-f419-4706-81f4-8086ffeb8681",
+          "label": "statement",
+          "confidence": 0.5184560418128967
+        },
+        "client_seconds": 0.9026976000022842
+      },
+      "valid": [
+        {
+          "status": 200,
+          "body": {
+            "request_id": "c1a44a99-4f8b-4b99-949d-4a7c7eccb9e7",
+            "label": "statement",
+            "confidence": 0.5184560418128967
+          },
+          "client_seconds": 0.15372220000062953
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "790fd280-3924-4248-9a85-babfebee3790",
+            "label": "statement",
+            "confidence": 0.8912459015846252
+          },
+          "client_seconds": 0.16853859999901033
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "3e90564b-f080-4498-be44-6e3eb2c1c70a",
+            "label": "question",
+            "confidence": 0.7423256635665894
+          },
+          "client_seconds": 0.1787222999992082
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "d34febbc-f85a-4def-98af-6334953ff1b5",
+            "label": "statement",
+            "confidence": 0.9329322576522827
+          },
+          "client_seconds": 0.22095919999992475
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "20f5c51d-fe7c-4fee-8393-1de04c5c1bd8",
+            "label": "statement",
+            "confidence": 0.8590705990791321
+          },
+          "client_seconds": 0.21630000000004657
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "541c3090-6b9f-4cd6-b43e-73a94b812efc",
+            "label": "question",
+            "confidence": 0.5244361758232117
+          },
+          "client_seconds": 0.16362149999986286
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "66766a68-ce60-44e9-aa4a-b7885f5956b6",
+            "label": "question",
+            "confidence": 0.6318862438201904
+          },
+          "client_seconds": 0.22475330000088434
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "6eb793a0-d48a-43c9-bb25-eb6914adeec3",
+            "label": "statement",
+            "confidence": 0.8505184054374695
+          },
+          "client_seconds": 0.2325630999985151
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "083be796-469c-4c17-b2b3-554597c3f059",
+            "label": "statement",
+            "confidence": 0.8730511665344238
+          },
+          "client_seconds": 0.16079159999935655
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "7146d5a5-5a60-4794-974c-28e4cca74a5a",
+            "label": "statement",
+            "confidence": 0.9229776859283447
+          },
+          "client_seconds": 0.19920840000122553
+        }
+      ],
+      "invalid": [
+        {
+          "status": 400,
+          "body": {
+            "request_id": "0d18ba2a-7388-4915-afd1-405ccfd1c2a6",
+            "error": {
+              "code": "missing_text"
+            }
+          },
+          "client_seconds": 0.0018939000001410022
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "9f6bb87f-1a73-46d3-9b52-04eceec1e79a",
+            "error": {
+              "code": "empty_text"
+            }
+          },
+          "client_seconds": 0.024040899999818066
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "c76d5c11-3aee-452a-b65b-4eea66a443d3",
+            "error": {
+              "code": "invalid_text_type"
+            }
+          },
+          "client_seconds": 0.0016891999985091388
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "cf5019e7-2633-4a47-bc60-3ce57a7128f1",
+            "error": {
+              "code": "invalid_json"
+            }
+          },
+          "client_seconds": 0.014633200000389479
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "eadf3e5e-e5d8-4fa6-b119-ecc72e86c96f",
+            "error": {
+              "code": "invalid_encoding"
+            }
+          },
+          "client_seconds": 0.0016093999984150287
+        },
+        {
+          "status": 413,
+          "body": {
+            "request_id": "c59d219a-8f15-4a75-bac8-a9d666618e7f",
+            "error": {
+              "code": "body_too_large"
+            }
+          },
+          "client_seconds": 0.0016515000024810433
+        }
+      ],
+      "recovery": {
+        "status": 200,
+        "body": {
+          "request_id": "85573586-30c4-4820-9827-6f1dbf3b1537",
+          "label": "question",
+          "confidence": 0.7043129801750183
+        },
+        "client_seconds": 0.1705251000021235
+      },
+      "criteria_met": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "log": "capstone_evidence\\before_trial_1.jsonl"
+    },
+    {
+      "trial": 2,
+      "contracts": 10,
+      "complete_logs": 17,
+      "timely": 10,
+      "rejected": 6,
+      "recovery_status": 200,
+      "mean_cpu_seconds": 0.740625,
+      "mean_client_seconds": 0.19989312999969117,
+      "warmup": {
+        "status": 200,
+        "body": {
+          "request_id": "c6cb8496-899f-45a6-a6d1-ce4a148bcb1f",
+          "label": "statement",
+          "confidence": 0.5184560418128967
+        },
+        "client_seconds": 0.9019502999981341
+      },
+      "valid": [
+        {
+          "status": 200,
+          "body": {
+            "request_id": "40132a76-fa19-4638-b6ee-67fa9217f4e2",
+            "label": "statement",
+            "confidence": 0.5184560418128967
+          },
+          "client_seconds": 0.15240300000004936
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "e20e114f-3165-4ad2-93a4-05b3997f8029",
+            "label": "statement",
+            "confidence": 0.8912459015846252
+          },
+          "client_seconds": 0.17232370000056108
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "8ad5a2fa-6344-402d-9550-6bd0e8e74174",
+            "label": "question",
+            "confidence": 0.7423256635665894
+          },
+          "client_seconds": 0.1619542000007641
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "be0902a6-9e33-4859-851d-8472b0a96d8d",
+            "label": "statement",
+            "confidence": 0.9329322576522827
+          },
+          "client_seconds": 0.2277375999983633
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "b569fecf-f2df-457f-9ed9-0da0c5e313ac",
+            "label": "statement",
+            "confidence": 0.8590705990791321
+          },
+          "client_seconds": 0.23654069999975036
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "f29f802c-3273-461b-95c6-f5cf6e84f234",
+            "label": "question",
+            "confidence": 0.5244361758232117
+          },
+          "client_seconds": 0.187721700000111
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "cbb18204-b298-4ecb-bc74-0c0130cb6027",
+            "label": "question",
+            "confidence": 0.6318862438201904
+          },
+          "client_seconds": 0.24079799999890383
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "19291e2f-a636-49d2-9e70-6df9c89f714f",
+            "label": "statement",
+            "confidence": 0.8505184054374695
+          },
+          "client_seconds": 0.21355169999878854
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "aa8413a0-5a39-4a78-a83c-bfbcd7a2b435",
+            "label": "statement",
+            "confidence": 0.8730511665344238
+          },
+          "client_seconds": 0.18877539999812143
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "3a05e5bd-7a37-4888-892f-0c3d0c9e9b10",
+            "label": "statement",
+            "confidence": 0.9229776859283447
+          },
+          "client_seconds": 0.21712530000149854
+        }
+      ],
+      "invalid": [
+        {
+          "status": 400,
+          "body": {
+            "request_id": "ba5e9e97-c2ed-4c1c-b974-fbe6017edba3",
+            "error": {
+              "code": "missing_text"
+            }
+          },
+          "client_seconds": 0.01982739999948535
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "ed0bbff6-994c-47d6-8f9f-1da0b614baf8",
+            "error": {
+              "code": "empty_text"
+            }
+          },
+          "client_seconds": 0.015486300002521602
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "887a190e-b5fd-4cd1-adf2-f48d028e104a",
+            "error": {
+              "code": "invalid_text_type"
+            }
+          },
+          "client_seconds": 0.015963099998771213
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "b46cf7fa-7901-4a05-80aa-b2454559657f",
+            "error": {
+              "code": "invalid_json"
+            }
+          },
+          "client_seconds": 0.0018743000000540633
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "ff758715-f293-4cdc-bc9b-7f09e562c3c4",
+            "error": {
+              "code": "invalid_encoding"
+            }
+          },
+          "client_seconds": 0.0023461000018869527
+        },
+        {
+          "status": 413,
+          "body": {
+            "request_id": "28f16f8b-81fc-486a-b199-88ea2505395d",
+            "error": {
+              "code": "body_too_large"
+            }
+          },
+          "client_seconds": 0.0021594999998342246
+        }
+      ],
+      "recovery": {
+        "status": 200,
+        "body": {
+          "request_id": "3c2ef391-00e7-478f-b5b4-8a2e783a85f3",
+          "label": "question",
+          "confidence": 0.7043129801750183
+        },
+        "client_seconds": 0.15501299999959883
+      },
+      "criteria_met": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "log": "capstone_evidence\\before_trial_2.jsonl"
+    },
+    {
+      "trial": 3,
+      "contracts": 10,
+      "complete_logs": 17,
+      "timely": 10,
+      "rejected": 6,
+      "recovery_status": 200,
+      "mean_cpu_seconds": 0.73125,
+      "mean_client_seconds": 0.20421511000058673,
+      "warmup": {
+        "status": 200,
+        "body": {
+          "request_id": "4a53e0ab-f2f7-477e-846d-4d336f57318a",
+          "label": "statement",
+          "confidence": 0.5184560418128967
+        },
+        "client_seconds": 0.8567991999989317
+      },
+      "valid": [
+        {
+          "status": 200,
+          "body": {
+            "request_id": "34df5474-49b7-4683-91ec-891cf9b88685",
+            "label": "statement",
+            "confidence": 0.5184560418128967
+          },
+          "client_seconds": 0.17447710000124061
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "ad2343a6-48d4-4fb5-b63d-e74615889aed",
+            "label": "statement",
+            "confidence": 0.8912459015846252
+          },
+          "client_seconds": 0.1768013000000792
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "0ccb20c4-9e20-4fcf-b451-33ed0bd639af",
+            "label": "question",
+            "confidence": 0.7423256635665894
+          },
+          "client_seconds": 0.16871900000114692
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "82c9d520-8ec3-4952-973e-0264d9e2eaff",
+            "label": "statement",
+            "confidence": 0.9329322576522827
+          },
+          "client_seconds": 0.21953130000110832
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "4681c72c-d040-47d0-a78b-798b2cc692c1",
+            "label": "statement",
+            "confidence": 0.8590705990791321
+          },
+          "client_seconds": 0.250760300001275
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "c2374765-4ed5-47db-951f-5d73cf10a7f7",
+            "label": "question",
+            "confidence": 0.5244361758232117
+          },
+          "client_seconds": 0.24106300000130432
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "dd6896df-56fe-4431-839b-05b69797df1f",
+            "label": "question",
+            "confidence": 0.6318862438201904
+          },
+          "client_seconds": 0.206843600000866
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "62d8ea27-649d-4fda-8ca1-7b6ebad67137",
+            "label": "statement",
+            "confidence": 0.8505184054374695
+          },
+          "client_seconds": 0.22238990000187187
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "1ebaee4e-f17b-455e-9759-000edbfd9394",
+            "label": "statement",
+            "confidence": 0.8730511665344238
+          },
+          "client_seconds": 0.18185589999848162
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "9b4ac180-95cd-438d-b20d-448611f15ba1",
+            "label": "statement",
+            "confidence": 0.9229776859283447
+          },
+          "client_seconds": 0.1997096999984933
+        }
+      ],
+      "invalid": [
+        {
+          "status": 400,
+          "body": {
+            "request_id": "6ad7bf8b-846c-4df5-8b45-fa526e0848f3",
+            "error": {
+              "code": "missing_text"
+            }
+          },
+          "client_seconds": 0.0017273000012210105
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "b2fbc05a-a4aa-403c-a8ee-cd5a31a36a35",
+            "error": {
+              "code": "empty_text"
+            }
+          },
+          "client_seconds": 0.0016460000006190967
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "8b80cfe1-9978-4037-8dbe-ee80376d14d7",
+            "error": {
+              "code": "invalid_text_type"
+            }
+          },
+          "client_seconds": 0.013750000001891749
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "449676c6-e06f-4fd6-8e59-cfbfb98ec90a",
+            "error": {
+              "code": "invalid_json"
+            }
+          },
+          "client_seconds": 0.015845899997657398
+        },
+        {
+          "status": 400,
+          "body": {
+            "request_id": "fd5c961f-d8c5-4066-a648-4ec1f1690bd8",
+            "error": {
+              "code": "invalid_encoding"
+            }
+          },
+          "client_seconds": 0.0015751999999338295
+        },
+        {
+          "status": 413,
+          "body": {
+            "request_id": "11714b8a-b9b7-47cd-9c06-990e937ec8d3",
+            "error": {
+              "code": "body_too_large"
+            }
+          },
+          "client_seconds": 0.014177000000927364
+        }
+      ],
+      "recovery": {
+        "status": 200,
+        "body": {
+          "request_id": "afbabf5c-74c2-4af2-9e4d-dc4f4258fc38",
+          "label": "question",
+          "confidence": 0.7043129801750183
+        },
+        "client_seconds": 0.18592530000023544
+      },
+      "criteria_met": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "log": "capstone_evidence\\before_trial_3.jsonl"
+    }
+  ]
+}

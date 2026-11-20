@@ -401,8 +401,15 @@ trials with unchanged code/settings within the before or after phase.
 
 **The Improvement**
 
-One operational change will be selected from the measured before behavior.
-The existing dataset, label definitions, and Unit 5/6 results stay unchanged.
+Before trials passed criteria 1-4 but missed criterion 5: mean CPU cost was
+0.7203, 0.7406, and 0.7312 seconds per warm request. `Predictor.predict` loaded
+the same weights/tokenizer on every call; each trial's load count rose from
+one after warm-up to twelve after recovery.
+
+Planned single improvement, declared before after-tests: cache the model and
+tokenizer in the service process. Keep input rules, model weights, labels,
+thread count, logging, test cases, and all criteria unchanged. This trades
+resident model memory for less repeated loading. No model tuning is planned.
 
 **What's Still Broken**
 
