@@ -10,15 +10,17 @@ needed. Setup downloads public pretrained weights, then inference is offline.
 ```powershell
 git clone https://github.com/7dracoder/ai201-project3-takemeter-starter-v2026.git
 cd ai201-project3-takemeter-starter-v2026
-py -3.11 -m venv .venv
+python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install pip==26.3
 .\.venv\Scripts\python.exe -m pip install torch==2.11.0 --no-deps --index-url https://download.pytorch.org/whl/cpu
-.\.venv\Scripts\python.exe -m pip install -r requirements-capstone.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-capstone-lock.txt
 .\.venv\Scripts\python.exe prepare_capstone_model.py
 ```
 
-`requirements-capstone.txt` pins the tested direct dependencies and key model
-serialization libraries. Transitive dependencies remain resolver-managed.
+`requirements-capstone.txt` lists the direct package pins. The tested
+`requirements-capstone-lock.txt` also pins their transitive dependencies.
+The CPU-wheel installation precedes the lock-file install because that wheel
+comes from the PyTorch index rather than the default PyPI index.
 Preparation rebuilds the already-tested Unit 6 seed-42 checkpoint: DistilBERT,
 3 epochs, learning rate 5e-5, batch 16, maximum length 128, unchanged data.
 It does not overwrite earlier results or the old models/takemeter checkpoint.
